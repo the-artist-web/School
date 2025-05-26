@@ -33,6 +33,22 @@ window.addEventListener("scroll", () => {
     lastScrollTop = currentScrollTop;
 });
 
+// GSAP
+gsap.timeline()
+    .from("[data-gsap-logo]", {
+        rotate: 360,
+        scale: 0.0,
+        duration: 1,
+        ease: "back.out(2)",
+    })
+    .from("[data-gsap-header]", {
+        y: 100,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.05,
+        ease: "power1.out",
+    });
+
 /**
  * THEME
  */
