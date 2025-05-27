@@ -1,4 +1,9 @@
 /**
+ * OVERFLOW
+ */
+const overflow = document.querySelector("[data-overflow]");
+
+/**
  * HEADER
  */
 const header = document.querySelector("[data-header]");
@@ -101,4 +106,76 @@ theme_toggle.forEach(theme => {
         html.dataset.theme = html.dataset.theme === "dark" ? "light" : "dark";
         localStorage.setItem("theme", html.dataset.theme);
     });
+});
+
+/**
+ * ASIDE
+ */
+const open_aside = document.querySelectorAll("[data-aside-open]");
+const close_aside = document.querySelectorAll("[data-aside-close]");
+
+open_aside.forEach(open => {
+    open.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        const getAttribute = open.getAttribute("data-aside-target");
+        const aside = document.querySelector(getAttribute);
+        
+        aside.classList.remove("opacity-0", "top-[50px]", "invisible");
+        aside.classList.add("top-[80px]");
+
+        open.classList.add("hidden");
+        close_aside.forEach(close => close.classList.remove("hidden", "invisible"));
+    });
+});
+
+close_aside.forEach(close => {
+    close.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        const getAttribute = close.getAttribute("data-aside-target");
+        const aside = document.querySelector(getAttribute);
+        
+        aside.classList.add("opacity-0", "top-[50px]", "invisible");
+        aside.classList.remove
+        ("top-[80px]");
+
+        close.classList.add("hidden");
+        open_aside.forEach(open => open.classList.remove("hidden", "invisible"));
+    });
+});
+
+/**
+ * MODAL
+ */
+const open_modal = document.querySelectorAll("[data-modal-open]");
+
+open_modal.forEach(open => {
+    open.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        const getAttribute = open.getAttribute("data-modal-target");
+        const modal = document.querySelector(getAttribute);
+
+        modal.classList.remove("top-[30%]", "rotate-[90deg]", "opacity-[0]", "invisible");
+        modal.classList.add("top-[50%]", "rotate-[0deg]");
+
+        overflow.classList.remove("opacity-0", "invisible");
+        overflow.classList.add("opacity-[0.7]");
+    });
+});
+
+overflow.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    open_modal.forEach(open => {
+        const getAttribute = open.getAttribute("data-modal-target");
+        const modal = document.querySelector(getAttribute);
+
+        modal.classList.add("top-[30%]", "rotate-[90deg]", "opacity-[0]", "invisible");
+        modal.classList.remove("top-[50%]", "rotate-[0deg]");
+    });
+
+    overflow.classList.add("opacity-0", "invisible");
+    overflow.classList.remove("opacity-[0.7]");
 });

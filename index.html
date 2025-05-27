@@ -20,18 +20,29 @@
         <link rel="stylesheet" href="./src/assets/css/style.css" />
         <link rel="stylesheet" href="./src/assets/css/components.css" />
         <link rel="stylesheet" href="./src/assets/css/responsive.css" />
+        <link rel="stylesheet" href="./src/assets/css/style-rtl.css" />
         <!-- custom tailwind css link -->
         <script src="https://cdn.tailwindcss.com/"></script>
         <!-- custom theme js link -->
         <script src="./src/theme.js"></script>
     </head>
     <body>
+           
+
+
+        
+        <div class="fixed top-0 left-0 right-0 bottom-0 z-40 bg-[var(--second-bg-color)] opacity-0 invisible transition-all duration-[0.4s] ease-out" data-overflow></div>
+
         <!-- HEADER -->
         <header class="flex items-center fixed top-0 left-0 right-0 z-30 w-[100%] h-[80px] bg-[var(--bg-color)] transition-all duration-[0.4s]" data-header>
             <div class="container">
                 <div class="flex items-center justify-between gap-[16px]">
                     <div class="flex items-center justify-between lg:justify-start gap-[32px] w-[100%]">
                         <span data-gsap-header>
+                            <button type="button" class="hidden invisible lg:hidden text-[var(--blue-color)] hover:opacity-[0.7] transition-all duration-[0.4s]" data-aside-close data-aside-target="#aside">
+                                <svg  xmlns="http://www.w3.org/2000/svg"  width="35"  height="35"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>    
+                            </button>
+
                             <button type="button" class="lg:hidden text-[var(--blue-color)] hover:opacity-[0.7] transition-all duration-[0.4s]" data-aside-open data-aside-target="#aside">
                                 <svg  xmlns="http://www.w3.org/2000/svg"  width="35"  height="35"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
                             </button>
@@ -65,7 +76,7 @@
                                         <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 1.992a10 10 0 1 0 9.236 13.838c.341 -.82 -.476 -1.644 -1.298 -1.31a6.5 6.5 0 0 1 -6.864 -10.787l.077 -.08c.551 -.63 .113 -1.653 -.758 -1.653h-.266l-.068 -.006l-.06 -.002z" /></svg>
                                     </span>
 
-                                    <div class="circle absolute top-[50%] bottm-0 right-[3px] translate-y-[-50%] min-w-[30px] min-h-[30px] max-w-[30px] max-h-[30px] rounded-full bg-[var(--five-bg-color)] flex items-center justify-center">
+                                    <div class="circle absolute top-[50%] bottm-0 right-[3px] translate-y-[-50%] min-w-[30px] min-h-[30px] max-w-[30px] max-h-[30px] rounded-full bg-[var(--five-bg-color)] flex items-center justify-center transition-all duration-[0.5s] ease-out">
                                         <span class="hidden text-[#000] svg-1">
                                             <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z" /><path d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z" /><path d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" /></svg>
                                         </span>
@@ -120,9 +131,54 @@
             </div>
         </header>
 
+        <!-- ASIDE -->
+        <aside class="aside bg-[var(--blue-color)] fixed top-[50px] left-[16px] right-[16px] z-30 opacity-0 invisible w-[calc(100% - 32px)] p-[16px] rounded-[8px] transition-all duration-[0.4s] ease-out" id="aside">
+            <ul class="grid gap-[16px]">
+                <li>
+                    <a href="#" class="flex items-center gap-[10px] py-[8px] px-[16px] rounded-[10px] bg-[var(--second-blue-color)] hover:opacity-[0.7] transition-all duration-[0.4s] ease-out label-small">
+                        <span class="text-[var(--yellow-color)]">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-user"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" /><path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z" /></svg>
+                        </span>
+
+                        login
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="flex items-center gap-[10px] py-[8px] px-[16px] rounded-[10px] bg-[var(--second-blue-color)] hover:opacity-[0.7] transition-all duration-[0.4s] ease-out label-small">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--material-symbols" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M5 19V5zv-.025zm0 2q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v7q0 .425-.288.713T20 13t-.712-.288T19 12V5H5v14h7q.425 0 .713.288T13 20t-.288.713T12 21zm14.175-1H16q-.425 0-.712-.288T15 19t.288-.712T16 18h3.175l-.9-.9Q18 16.825 18 16.413t.3-.713q.275-.275.7-.275t.7.275l2.6 2.6q.3.3.3.7t-.3.7l-2.6 2.6q-.275.275-.687.288T18.3 22.3q-.275-.275-.275-.7t.275-.7zM11 13v3q0 .425.288.713T12 17t.713-.288T13 16v-3h3q.425 0 .713-.288T17 12t-.288-.712T16 11h-3V8q0-.425-.288-.712T12 7t-.712.288T11 8v3H8q-.425 0-.712.288T7 12t.288.713T8 13z"></path></svg>
+                        Create a new account
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- MODAL -->
+        <div class="fixed top-[30%] left-[50%] z-50 translate-y-[-50%] rotate-[90deg] opacity-[0] invisible translate-x-[-50%] p-[20px] rounded-[8px] bg-[--third-bg-color] w-[100%] max-w-[312px] max-h-500px overflow-hidden transition-all duration-[0.4s]" id="modal-search">
+            <h2 class="!mb-[20px] label-medium">Search the site's courses.</h2>
+            <form action="#" method="get" class="grid gap-[20px]">
+                <div class="box-form">
+                    <input 
+                        type="text" 
+                        name="search" 
+                        id="search" 
+                        class="form-control" 
+                    />
+
+                    <label for="search" class="label label-small">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+                        Search
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-second-primary label-small">Search</button>
+            </form>
+        </div>
+
         <main class="main">
             <article>
-                
+                <!-- HOME -->
+                <div class="grid items-center w-[100%] h-[80vh]"></div>
             </article>
         </main>
         
