@@ -1,7 +1,22 @@
 /**
  * FIT SIZE: 768PX
  */
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+    /* STYLE GUID */
+    :root {    
+        /* Font size */
+        --fs-display-large: 4rem;
+        --fs-display-medium: 3.8rem;
+        --fs-display-small: 3.6rem;
+        --fs-headline-small: 3.4rem;
+
+        /* Line height */
+        --lh-display-large: 5rem;
+        --lh-display-medium: 4.5rem;
+        --lh-display-small: 4rem;
+        --lh-headline-small: 4rem;
+    }
+}
 
 /**
  * FIT SIZE: 992px

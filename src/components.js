@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 /**
  * OVERFLOW
  */
@@ -157,7 +159,7 @@ open_modal.forEach(open => {
         const getAttribute = open.getAttribute("data-modal-target");
         const modal = document.querySelector(getAttribute);
 
-        modal.classList.remove("top-[30%]", "rotate-[90deg]", "opacity-[0]", "invisible");
+        modal.classList.remove("top-[40%]", "rotate-[30deg]", "opacity-[0]", "invisible");
         modal.classList.add("top-[50%]", "rotate-[0deg]");
 
         overflow.classList.remove("opacity-0", "invisible");
@@ -172,10 +174,45 @@ overflow.addEventListener("click", (e) => {
         const getAttribute = open.getAttribute("data-modal-target");
         const modal = document.querySelector(getAttribute);
 
-        modal.classList.add("top-[30%]", "rotate-[90deg]", "opacity-[0]", "invisible");
+        modal.classList.add("top-[40%]", "rotate-[30deg]", "opacity-[0]", "invisible");
         modal.classList.remove("top-[50%]", "rotate-[0deg]");
     });
 
     overflow.classList.add("opacity-0", "invisible");
     overflow.classList.remove("opacity-[0.7]");
+});
+
+/**
+ * TITLE SECTION GSAP
+ */
+gsap.utils.toArray(".title-section").forEach(section => {
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: section,
+            start: "top center",
+            end: "bottom center",
+            scrub: false,
+        }
+    })
+
+    tl.from(section.querySelector("h3"), {
+        opacity: 0,
+        duration: 0.4,
+        y: 100,
+    })
+    .from(section.querySelector("svg"), {
+        opacity: 0,
+        duration: 0.4,
+        y: 100,
+    })
+    .from(section.querySelector("p"), {
+        opacity: 0,
+        duration: 0.4,
+        y: 100,
+    })
+    .from(section.querySelector("div"), {
+        opacity: 0,
+        duration: 0.4,
+        y: 100,
+    });
 });

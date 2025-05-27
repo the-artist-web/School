@@ -78,6 +78,40 @@
     height: 16px !important;
 }
 
+.box-select { position: relative; }
+
+.box-select .select-control {
+    background-color: var(--bg-color);
+    color: var(--second-color) !important;
+    border-radius: 4px;
+    min-height: 36px;
+    max-height: 36px;
+    padding: 10px 36px 10px 10px;
+    transition: all 0.4s ease-out;
+}
+
+.box-select .select-control:hover { color: var(--text-color) !important; }
+
+.box-select .arrow {
+    background-color: var(--bg-color);
+    position: absolute;
+    border-radius: 0 4px 4px 0;
+    color: var(--second-color) !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 36px;
+    height: 36px;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid var(--border-color);
+    transition: all 0.4s ease-out;
+}
+
+.box-select:hover .arrow { color: var(--text-color) !important; }
+
 /**
  * LOGO
  */
@@ -141,6 +175,28 @@
     color: var(--blue-dark-color) !important;
 }
 
+.btn-red {
+    border: 1px solid transparent;
+    background-color: var(--red-color);
+}
+
+.btn-red:hover {
+    border: 1px solid var(--red-color);
+    background-color: transparent;
+    color: var(--red-color);
+}
+
+.btn-green {
+    border: 1px solid var(--green-color);
+    background-color: transparent;
+}
+
+.btn-green:hover { background-color: var(--green-color); }
+
+.btn-green-mix { background: linear-gradient(to right, var(--green-color), var(--blue-color)); }
+
+.btn-green-mix:hover { opacity: 0.7; }
+
 /**
  * DROPDOWN
  */
@@ -154,7 +210,34 @@
 /**
  * CARDS
  */
-.card { transition: all 0.4s; }
+.card { transition: all 0.4s ease-out; }
+
+.card-teachers {
+    background-color: var(--second-blue-color);
+    border-radius: 16px 0 16px 0;
+    padding: 20px;
+}
+
+.card-teachers:hover { transform: translateY(-10px); }
+
+.card-teachers img { border-radius: 16px 0 16px 0; }
+
+.card-course img { transition: all 0.4s ease-out; }
+
+.card-course:hover img { transform: scale(1.1); }
+
+.card-course .card-body {
+    border: 1px solid var(--border-color);
+    background-color: var(--second-bg-color);
+    border-radius: 8px;
+    padding: 24px 16px;
+    max-width: calc(100% - 32px);
+    margin-inline: auto;
+    transform: translateY(-50px);
+    transition: all 0.4s ease-out;
+}
+
+.card-course:hover .card-body { transform: translateY(-50px) scale(1.1); }
 
 /**
  * line 2

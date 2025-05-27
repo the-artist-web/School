@@ -27,18 +27,14 @@
         <script src="./src/theme.js"></script>
     </head>
     <body>
-           
-
-
-        
         <div class="fixed top-0 left-0 right-0 bottom-0 z-40 bg-[var(--second-bg-color)] opacity-0 invisible transition-all duration-[0.4s] ease-out" data-overflow></div>
 
         <!-- HEADER -->
         <header class="flex items-center fixed top-0 left-0 right-0 z-30 w-[100%] h-[80px] bg-[var(--bg-color)] transition-all duration-[0.4s]" data-header>
             <div class="container">
                 <div class="flex items-center justify-between gap-[16px]">
-                    <div class="flex items-center justify-between lg:justify-start gap-[32px] w-[100%]">
-                        <span data-gsap-header>
+                    <div class="flex items-center justify-between lg:justify-start gap-[32px] w-[100%] lg:w-[max-content]">
+                        <span class="lg:hidden" data-gsap-header>
                             <button type="button" class="hidden invisible lg:hidden text-[var(--blue-color)] hover:opacity-[0.7] transition-all duration-[0.4s]" data-aside-close data-aside-target="#aside">
                                 <svg  xmlns="http://www.w3.org/2000/svg"  width="35"  height="35"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>    
                             </button>
@@ -67,7 +63,7 @@
                             </span>
 
                             <span data-gsap-header>
-                                <button type="button" class="relative py-[6px] px-[8px] rounded-full bg-[var(--four-bg-color)] min-h-[36px] max-h-[36px] w-[78px] flex items-center justify-between" data-theme-toggle>
+                                <button type="button" class="relative py-[6px] px-[8px] rounded-full bg-[var(--four-bg-color)] min-h-[36px] max-h-[36px] w-[78px] flex rtl:flex-row-reverse items-center justify-between" data-theme-toggle>
                                     <span class="text-[var(--text-color)]">
                                         <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z" /><path d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z" /><path d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" /></svg>
                                     </span>
@@ -154,7 +150,7 @@
         </aside>
 
         <!-- MODAL -->
-        <div class="fixed top-[30%] left-[50%] z-50 translate-y-[-50%] rotate-[90deg] opacity-[0] invisible translate-x-[-50%] p-[20px] rounded-[8px] bg-[--third-bg-color] w-[100%] max-w-[312px] max-h-500px overflow-hidden transition-all duration-[0.4s]" id="modal-search">
+        <div class="fixed top-[40%] left-[50%] z-50 translate-y-[-50%] rotate-[90deg] opacity-[0] invisible translate-x-[-50%] p-[20px] rounded-[8px] bg-[--third-bg-color] w-[100%] max-w-[312px] max-h-500px overflow-hidden transition-all duration-[0.6s]" id="modal-search">
             <h2 class="!mb-[20px] label-medium">Search the site's courses.</h2>
             <form action="#" method="get" class="grid gap-[20px]">
                 <div class="box-form">
@@ -178,7 +174,350 @@
         <main class="main">
             <article>
                 <!-- HOME -->
-                <div class="grid items-center w-[100%] h-[80vh]"></div>
+                <div class="home w-[100%]">
+                    <div class="container">
+                        <div class="grid items-center grid-cols-1 lg:grid-cols-2 gap-[50px] w-[100%]" style="min-height: calc(100vh - 80px);">
+                             <div class="col">
+                                <div class="text-center lg:text-start grid gap-[20px]">
+                                    <h2 class="capitalize flex flex-wrap justify-center lg:justify-start gap-[12px] display-large"><span class="text-[var(--blue-color)]">Basatahlak</span> platform</h2>
+                                    <p class="title-small">An integrated platform with everything a student needs to excel</p>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <img 
+                                    src="https://bassthalk.com/static/media/New-Profile-hero.bd0ed24ff94f80d4b949b15350f35824.svg" 
+                                    alt="img home" 
+                                    loading="lazy"
+                                    class="img-cover" 
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Choose teachers -->
+                <section class="choose-teachers section">
+                    <div class="container">
+                        <div class="title-section mx-auto max-w-[750px]">
+                            <h3 class="capitalize !mb-[1.25rem] flex flex-wrap gap-[12px] font-[700] headline-small">Choose <span class="text-[var(--blue-color)]">teachers</span></h3>
+                            <svg class="!mb-[1.25rem] w-[100%] max-w-[400px] h-full" viewBox="0 0 407 49" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="path-vert" d="M1 48C30.5 5.5 261 -22.5 406 32.3365" stroke="#11BAF0" stroke-width="3"></path></svg>    
+
+                            <div class="flex flex-col lg:flex-row items-center gap-[20px] py-[12px] px-[40px] rounded-[8px] bg-[var(--third-bg-color)]">
+                                <div class="box-select">
+                                    <select name="" id="" class="select-control label-small">
+                                    <option value="1">First secondary grade</option>
+                                        <option value="2">Secondary grade</option>
+                                        <option value="3">Third secondary grade</option>
+                                    </select>
+                                    <div class="arrow">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg>
+                                    </div>
+                                </div>
+
+                                <div class="box-select">
+                                    <select name="" id="" class="select-control label-small">
+                                        <option value="2">scientific</option>
+                                        <option value="1">literary</option>
+                                    </select>
+                                    <div class="arrow">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[30px]">
+                            <div class="col">
+                                <a href="#" class="card card-teachers">
+                                    <picture>
+                                        <source 
+                                            srcset="https://api.bassthalk.com/courses_images/0VfwbGENdwePCH5yQSrfugHnB2yUwOS3KBAyFvQp.jpg" 
+                                            type="image/webp" 
+                                        />
+
+                                        <img 
+                                            src="https://api.bassthalk.com/courses_images/0VfwbGENdwePCH5yQSrfugHnB2yUwOS3KBAyFvQp.jpg" 
+                                            alt="teachers" 
+                                            loading="lazy"
+                                            class="mb-[16px] img-cover" 
+                                        />
+                                    </picture>
+
+                                    <div class="flex flex-col items-center justify-center gap-[10px]">
+                                        <h3 class="line-1 title-small">Dr. Khaled hosny</h3>
+                                        <p class="line-2 label-small">biology Teacher</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col">
+                                <a href="#" class="card card-teachers">
+                                    <picture>
+                                        <source 
+                                            srcset="https://api.bassthalk.com/courses_images/0VfwbGENdwePCH5yQSrfugHnB2yUwOS3KBAyFvQp.jpg" 
+                                            type="image/webp" 
+                                        />
+                                        
+                                        <img 
+                                            src="https://api.bassthalk.com/courses_images/0VfwbGENdwePCH5yQSrfugHnB2yUwOS3KBAyFvQp.jpg" 
+                                            alt="teachers" 
+                                            loading="lazy"
+                                            class="mb-[16px] img-cover" 
+                                        />
+                                    </picture>
+
+                                    <div class="flex flex-col items-center justify-center gap-[10px]">
+                                        <h3 class="line-1 title-small">Dr. Khaled hosny</h3>
+                                        <p class="line-2 label-small">biology Teacher</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col">
+                                <a href="#" class="card card-teachers">
+                                    <picture>
+                                        <source 
+                                            srcset="https://api.bassthalk.com/courses_images/0VfwbGENdwePCH5yQSrfugHnB2yUwOS3KBAyFvQp.jpg" 
+                                            type="image/webp" 
+                                        />
+                                        
+                                        <img 
+                                            src="https://api.bassthalk.com/courses_images/0VfwbGENdwePCH5yQSrfugHnB2yUwOS3KBAyFvQp.jpg" 
+                                            alt="teachers" 
+                                            loading="lazy"
+                                            class="mb-[16px] img-cover" 
+                                        />
+                                    </picture>
+
+                                    <div class="flex flex-col items-center justify-center gap-[10px]">
+                                        <h3 class="line-1 title-small">Dr. Khaled hosny</h3>
+                                        <p class="line-2 label-small">biology Teacher</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col">
+                                <a href="#" class="card card-teachers">
+                                    <picture>
+                                        <source 
+                                            srcset="https://api.bassthalk.com/courses_images/0VfwbGENdwePCH5yQSrfugHnB2yUwOS3KBAyFvQp.jpg" 
+                                            type="image/webp" 
+                                        />
+                                        
+                                        <img 
+                                            src="https://api.bassthalk.com/courses_images/0VfwbGENdwePCH5yQSrfugHnB2yUwOS3KBAyFvQp.jpg" 
+                                            alt="teachers" 
+                                            loading="lazy"
+                                            class="mb-[16px] img-cover" 
+                                        />
+                                    </picture>
+
+                                    <div class="flex flex-col items-center justify-center gap-[10px]">
+                                        <h3 class="line-1 title-small">Dr. Khaled hosny</h3>
+                                        <p class="line-2 label-small">biology Teacher</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-center w-[100%] mt-[72px] btn-animation">
+                            <button type="button" class="btn btn-red label-small">View more teachers</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Our suggested courses -->
+                <section class="our_suggested_courses section">
+                    <div class="container !max-w-[1440px]">
+                        <div class="title-section mx-auto max-w-[750px]">
+                            <h3 class="capitalize !mb-[1.25rem] flex flex-wrap gap-[12px] font-[700] headline-small">Choose <span class="text-[var(--blue-color)]">teachers</span></h3>
+                            <svg class="!mb-[1.25rem] w-[100%] max-w-[400px] h-full" viewBox="0 0 407 49" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="path-vert" d="M1 48C30.5 5.5 261 -22.5 406 32.3365" stroke="#11BAF0" stroke-width="3"></path></svg>    
+
+                            <p class="label-medium">We've put your mind at ease and collected courses to suit your mood, selected with love and care, as if we were shopping for the best courses that will help and develop you! 🌟</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+                            <div class="col">
+                                <div class="card card-course">
+                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                        <picture>
+                                            <source 
+                                                srcset="https://api.bassthalk.com/courses_images/k04uSOWblvdFUTf09XqySnUQKE8qzOxsIEyNwyUT.jpg" 
+                                                type="image/webp" 
+                                            />
+                                            
+                                            <img 
+                                                src="https://api.bassthalk.com/courses_images/k04uSOWblvdFUTf09XqySnUQKE8qzOxsIEyNwyUT.jpg" 
+                                                alt="teachers" 
+                                                loading="lazy"
+                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                            />
+                                        </picture>
+
+                                        <h3 class="absolute flex items-center justify-center text-center top-[40px] right-[-90px] bg-[var(--red-color)] h-[35px] rotate-[45deg] w-[300px] label-medium">Proven course</h3>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                            <div>
+                                                <h3 class="line-2 title-small">The third month of the second semester (Mohamed Salah - Arabic Language - 1st secondary)</h3>
+
+                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                <p class="text-[var(--second-color)] line-3 label-small">The month consists of 4 lectures - one lecture per week</p>
+                                            </div>
+
+                                            <div class="grid gap-[10px]">
+                                                <a href="#" class="btn btn-green rounded-full !px-[12px] !py-[4px]">Entry to the course</a>
+                                                <a href="#" class="btn btn-green-mix rounded-full !px-[12px] !py-[4px]">Subscribe now</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="border-t-[1px] border-[var(--border-color)] w-[100%] mt-[16px] pt-[16px] flex flex-wrap items-start justify-between gap-[16px]">
+                                            <div class="grid gap-[8px]">
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Sunday, May 18, 2025
+                                                </p>
+
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Saturday, April 19, 2025
+                                                </p>
+                                            </div>
+
+                                            <div class="px-[12px] py-[4px] rounded-[4px] flex items-start gap-[8px] bg-[var(--green-color)]">
+                                                <div class="py-[1px] px-[8px] rounded-[4px] bg-[var(--bg-color)]">110.00</div>
+                                                EGP
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card card-course">
+                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                        <picture>
+                                            <source 
+                                                srcset="https://api.bassthalk.com/courses_images/k04uSOWblvdFUTf09XqySnUQKE8qzOxsIEyNwyUT.jpg" 
+                                                type="image/webp" 
+                                            />
+                                            
+                                            <img 
+                                                src="https://api.bassthalk.com/courses_images/k04uSOWblvdFUTf09XqySnUQKE8qzOxsIEyNwyUT.jpg" 
+                                                alt="teachers" 
+                                                loading="lazy"
+                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                            />
+                                        </picture>
+
+                                        <h3 class="absolute flex items-center justify-center text-center top-[40px] right-[-90px] bg-[var(--red-color)] h-[35px] rotate-[45deg] w-[300px] label-medium">Proven course</h3>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                            <div>
+                                                <h3 class="line-2 title-small">The third month of the second semester (Mohamed Salah - Arabic Language - 1st secondary)</h3>
+
+                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                <p class="text-[var(--second-color)] line-3 label-small">The month consists of 4 lectures - one lecture per week</p>
+                                            </div>
+
+                                            <div class="grid gap-[10px]">
+                                                <a href="#" class="btn btn-green rounded-full !px-[12px] !py-[4px]">Entry to the course</a>
+                                                <a href="#" class="btn btn-green-mix rounded-full !px-[12px] !py-[4px]">Subscribe now</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="border-t-[1px] border-[var(--border-color)] w-[100%] mt-[16px] pt-[16px] flex flex-wrap items-start justify-between gap-[16px]">
+                                            <div class="grid gap-[8px]">
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Sunday, May 18, 2025
+                                                </p>
+
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Saturday, April 19, 2025
+                                                </p>
+                                            </div>
+
+                                            <div class="px-[12px] py-[4px] rounded-[4px] flex items-start gap-[8px] bg-[var(--green-color)]">
+                                                <div class="py-[1px] px-[8px] rounded-[4px] bg-[var(--bg-color)]">110.00</div>
+                                                EGP
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col">
+                                <div class="card card-course">
+                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                        <picture>
+                                            <source 
+                                                srcset="https://api.bassthalk.com/courses_images/k04uSOWblvdFUTf09XqySnUQKE8qzOxsIEyNwyUT.jpg" 
+                                                type="image/webp" 
+                                            />
+                                            
+                                            <img 
+                                                src="https://api.bassthalk.com/courses_images/k04uSOWblvdFUTf09XqySnUQKE8qzOxsIEyNwyUT.jpg" 
+                                                alt="teachers" 
+                                                loading="lazy"
+                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                            />
+                                        </picture>
+
+                                        <h3 class="absolute flex items-center justify-center text-center top-[40px] right-[-90px] bg-[var(--red-color)] h-[35px] rotate-[45deg] w-[300px] label-medium">Proven course</h3>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                            <div>
+                                                <h3 class="line-2 title-small">The third month of the second semester (Mohamed Salah - Arabic Language - 1st secondary)</h3>
+
+                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                <p class="text-[var(--second-color)] line-3 label-small">The month consists of 4 lectures - one lecture per week</p>
+                                            </div>
+
+                                            <div class="grid gap-[10px]">
+                                                <a href="#" class="btn btn-green rounded-full !px-[12px] !py-[4px]">Entry to the course</a>
+                                                <a href="#" class="btn btn-green-mix rounded-full !px-[12px] !py-[4px]">Subscribe now</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="border-t-[1px] border-[var(--border-color)] w-[100%] mt-[16px] pt-[16px] flex flex-wrap items-start justify-between gap-[16px]">
+                                            <div class="grid gap-[8px]">
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Sunday, May 18, 2025
+                                                </p>
+
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Saturday, April 19, 2025
+                                                </p>
+                                            </div>
+
+                                            <div class="px-[12px] py-[4px] rounded-[4px] flex items-start gap-[8px] bg-[var(--green-color)]">
+                                                <div class="py-[1px] px-[8px] rounded-[4px] bg-[var(--bg-color)]">110.00</div>
+                                                EGP
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-center w-[100%] mt-[52px] btn-animation">
+                            <button type="button" class="btn btn-red label-small">View more courses</button>
+                        </div>
+                    </div>
+                </section>
             </article>
         </main>
         
@@ -197,5 +536,6 @@
         ></script>
         <!-- custom js link -->
         <script src="./src/components.js"></script>
+        <script src="./src/home.js"></script>
     </body>
 </html>

@@ -9,3 +9,11 @@ html[dir="rtl"] .box-form .label {
     right: 0;
     left: auto;
 }
+
+html[dir="rtl"] .box-select .select-control { padding: 10px 10px 10px 36px; }
+
+html[dir="rtl"] .box-select .arrow {
+    border-radius: 4px 0 0 4px;
+    right: auto;
+    left: 0;
+}

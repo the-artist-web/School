@@ -189,7 +189,7 @@ body {
     font-family: var(--font-family) !important;
     background-color: var(--bg-color);
     font-size: var(--fs-base);
-    color: var();
+    color: var(--text-color);
     font-weight: normal;
     display: flex;
     flex-direction: column;
@@ -233,6 +233,15 @@ p {
 .img-holder {
     background-color: var(--second-bg-color) !important;
     overflow: hidden;
+}
+
+.title-section { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-block-end: 72px; 
 }
 
 .main { 
