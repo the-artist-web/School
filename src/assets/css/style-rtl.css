@@ -17,3 +17,30 @@ html[dir="rtl"] .box-select .arrow {
     right: auto;
     left: 0;
 }
+
+html[dir="rtl"] .box-file::before {
+    right: 0;
+    left: auto;
+}
+
+html[dir="rtl"] .box-file::before { content: "رفع"; }
+
+html[dir="rtl"] .box-file::after {
+    content: "ارفع شهادة ميلادك | بطاقتك";
+    right: auto;
+    left: 0;
+    width: calc(100% - 64.36px);
+}
+
+/**
+ * CARDS
+ */
+html[dir="rtl"] .card-materials .title-materials::before {
+    right: 0;
+    left: auto;
+}
+
+html[dir="rtl"] .card-how .card-body .title-how::before {
+    right: 0;
+    left: auto;
+}

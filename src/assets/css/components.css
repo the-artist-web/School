@@ -43,6 +43,7 @@
 .box-form:has(.form-control:focus-visible)::after { width: 100%; }
 
 .box-form .label {
+    text-transform: capitalize;
     color: var(--second-color);
     position: absolute;
     top: 50%;
@@ -78,10 +79,15 @@
     height: 16px !important;
 }
 
-.box-select { position: relative; }
+.box-select { 
+    background-color: var(--second-bg-color) !important;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    position: relative; 
+}
 
 .box-select .select-control {
-    background-color: var(--bg-color);
+    background-color: var(--second-bg-color);
     color: var(--second-color) !important;
     border-radius: 4px;
     min-height: 36px;
@@ -93,7 +99,7 @@
 .box-select .select-control:hover { color: var(--text-color) !important; }
 
 .box-select .arrow {
-    background-color: var(--bg-color);
+    background-color: var(--second-bg-color);
     position: absolute;
     border-radius: 0 4px 4px 0;
     color: var(--second-color) !important;
@@ -111,6 +117,61 @@
 }
 
 .box-select:hover .arrow { color: var(--text-color) !important; }
+
+.box-file {
+    border: 1px solid transparent;
+    background-color: var(--second-bg-color);
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 46px;
+    max-height: 46px;
+    position: relative;
+    transition: all 0.4s ease-out;
+}
+
+.box-file:hover {
+    border: 1px solid var(--border-color);
+    opacity: 0.8;
+}
+
+.box-file::before {
+    content: "Upload";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--blue-color);
+    font-size: var(--fs-label-medium) !important;
+    font-weight: var(--fw-label-medium) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    pointer-events: none;
+}
+
+.box-file::after {
+    content: "Upload your birth certificate | ID card";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--second-bg-color);
+    color: var(--second-color);
+    font-size: var(--fs-label-medium) !important;
+    font-weight: var(--fw-label-medium) !important;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: calc(100% - 97.4px);
+    padding-inline: 16px;
+    pointer-events: none;
+}
+
+.box-file input {
+    min-height: 46px;
+    max-height: 46px;
+}
 
 /**
  * LOGO
@@ -143,7 +204,6 @@
     text-transform: capitalize;
     text-wrap: nowrap;
     min-height: 40px;
-    max-height: 40px;
     transition: all 0.4s ease-out; 
 }
 
@@ -154,6 +214,7 @@
 .btn-border-yellow:hover { border: 1px solid var(--yellow-color); }
 
 .btn-primary {
+    color: #ffffff !important;
     border: 1px solid transparent;
     background-color: var(--blue-color);
 }
@@ -165,6 +226,7 @@
 }
 
 .btn-second-primary {
+    color: #ffffff !important;
     border: 1px solid transparent;
     background-color: var(--blue-dark-color);
 }
@@ -177,13 +239,14 @@
 
 .btn-red {
     border: 1px solid transparent;
+    color: #ffffff !important;
     background-color: var(--red-color);
 }
 
 .btn-red:hover {
     border: 1px solid var(--red-color);
     background-color: transparent;
-    color: var(--red-color);
+    color: var(--red-color) !important;
 }
 
 .btn-green {
@@ -193,9 +256,33 @@
 
 .btn-green:hover { background-color: var(--green-color); }
 
-.btn-green-mix { background: linear-gradient(to right, var(--green-color), var(--blue-color)); }
+.btn-green-mix { 
+    background: linear-gradient(to right, var(--green-color), var(--blue-color)); 
+    color: #ffffff !important;
+}
 
 .btn-green-mix:hover { opacity: 0.7; }
+
+.btn-yellow {
+    border-radius: 16px;
+    background-color: var(--yellow-color);
+    color: #000000 !important;
+    width: max-content;
+}
+
+.btn-yellow:hover { transform: scale(1.1); }
+
+.third-btn-yellow {
+    border: 1px solid transparent;
+    color: #ffffff !important;
+    background-color: var(--third-yellow-color);
+}
+
+.third-btn-yellow:hover {
+    border: 1px solid var(--third-yellow-color);
+    background-color: transparent;
+    color: var(--third-yellow-color) !important;
+}
 
 /**
  * DROPDOWN
@@ -231,13 +318,84 @@
     background-color: var(--second-bg-color);
     border-radius: 8px;
     padding: 24px 16px;
-    max-width: calc(100% - 32px);
     margin-inline: auto;
-    transform: translateY(-50px);
+    transform: translateY(-50px) scale(0.9);
     transition: all 0.4s ease-out;
 }
 
-.card-course:hover .card-body { transform: translateY(-50px) scale(1.1); }
+.card-course:hover .card-body { transform: translateY(-50px) scale(0.95); }
+
+.card-materials {
+    display: grid;
+    gap: 50px;
+}
+
+.card-materials .title-materials {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.card-materials .title-materials::before {
+    content: "";
+    background-color: var(--third-yellow-color);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: translateY(-50%);
+    width: 230px;
+    height: 100px;
+}
+
+.card-materials .card-body {
+    background-color: var(--third-blue-color);
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.card-materials .card-body .btn-card {
+    background-color: transparent;
+    color: #ffffff !important;
+    text-align: center;
+    border-radius: 16px;
+    width: max-content;
+    max-width: 300px;
+    padding: 16px 20px !important;
+}
+
+.card-materials .card-body .btn-card:hover { background-color: var(--bg-color); }
+
+.card-how {
+    background-color: var(--third-blue-color);
+    border-radius: 24px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-how svg { margin-inline: auto; }
+
+.card-how .card-body .title-how {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.card-how .card-body .title-how::before {
+    content: "";
+    background-color: var(--third-yellow-color);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transform: translateY(-50%);
+    width: 140px;
+    height: 50px;
+}
 
 /**
  * line 2

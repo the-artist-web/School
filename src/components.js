@@ -183,6 +183,40 @@ overflow.addEventListener("click", (e) => {
 });
 
 /**
+ * COLLAPSE
+ */
+const open_collapse = document.querySelectorAll("[data-collapse-open]");
+const close_collapse = document.querySelectorAll("[data-collapse-close]");
+
+open_collapse.forEach((open, index) => {
+    open.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        const getAttribute = open.getAttribute("data-collapse-target");
+        const collapse = document.querySelector(getAttribute);
+
+        collapse.classList.remove("hidden");
+        open.classList.add("hidden");
+
+        close_collapse[index].classList.remove("!hidden");
+    });
+});
+
+close_collapse.forEach((close, index) => {
+    close.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        const getAttribute = close.getAttribute("data-collapse-target");
+        const collapse = document.querySelector(getAttribute);
+
+        collapse.classList.add("hidden");
+        close.classList.add("!hidden");
+
+        open_collapse[index].classList.remove("hidden");
+    });
+});
+
+/**
  * TITLE SECTION GSAP
  */
 gsap.utils.toArray(".title-section").forEach(section => {
@@ -215,4 +249,63 @@ gsap.utils.toArray(".title-section").forEach(section => {
         duration: 0.4,
         y: 100,
     });
+});
+
+/**
+ * SECTION GSAP
+ */
+gsap.utils.toArray(".section").forEach(section => {
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: section,
+            start: "center center",
+            end: "bottom center",
+        }
+    });
+
+    tl.from(section.querySelectorAll(".col"), {
+        opacity: 0,
+        y: 100,
+        duration: 1,
+        stagger: 0.2
+    })
+    .from(section.querySelector(".btn-animation"), {
+        opacity: 0,
+        y: 100,
+        duration: 0.8,
+    });
+});
+
+/**
+ * FOOTER GSAP
+ */
+gsap.timeline({
+    scrollTrigger: {
+        trigger: ".footer",
+        start: "start center",
+        end: "center center"
+    }
+})
+.from(".footer .logo", {
+    rotate: 360,
+    scale: 0.0,
+    duration: 0.8,
+    ease: "back.out(2)",
+})
+.from(".footer .hotline", {
+    y: 100,
+    scale: 0.0,
+    duration: 0.8,
+    ease: "back.out(2)",
+})
+.from(".footer ul li", {
+    y: 100,
+    scale: 0.0,
+    duration: 0.8,
+    stagger: 0.04,
+    ease: "back.out(2)",
+})
+.from(".footer .copyright", {
+    opacity: 0,
+    duration: 0.8,
 });
