@@ -44,3 +44,11 @@ html[dir="rtl"] .card-how .card-body .title-how::before {
     right: 0;
     left: auto;
 }
+
+/**
+ * COLLAPSES
+ */
+html[dir="rtl"] .card-collapse .collapses-list .collapses-list-card .collapses-list-card-list {
+    padding-left: 16px;
+    padding-right: auto;
+}

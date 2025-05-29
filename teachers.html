@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- favicon -->
+        <link rel="icon" type="ico" href="https://bassthalk.com/favicon.ico" />
+        <!-- meta tags -->
+        <title>School | Teachers</title>
+        <meta name="title" content="School" />
+        <meta name="description" content="This is a School" />
+        <meta name="keywords" content="Html, Css, Tailwind Css, Js" />
+        <meta name="auther" content="The Artist Web" />
+        <!-- custom google font link -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" 
+        rel="stylesheet" />
+        <!-- custom css links -->
+        <link rel="stylesheet" href="./src/assets/css/style.css" />
+        <link rel="stylesheet" href="./src/assets/css/components.css" />
+        <link rel="stylesheet" href="./src/assets/css/responsive.css" />
+        <link rel="stylesheet" href="./src/assets/css/style-rtl.css" />
+        <!-- custom tailwind css link -->
+        <script src="https://cdn.tailwindcss.com/"></script>
+        <!-- custom theme js link -->
+        <script src="./src/theme.js"></script>
+    </head>
+    <body>
+        <div class="fixed top-0 left-0 right-0 bottom-0 z-40 bg-[var(--second-bg-color)] opacity-0 invisible transition-all duration-[0.4s] ease-out" data-overflow></div>
+
+        <!-- HEADER -->
+        <header class="flex items-center fixed top-0 left-0 right-0 z-30 w-[100%] h-[80px] bg-[var(--bg-color)] transition-all duration-[0.4s]" data-header>
+            <div class="container">
+                <div class="flex items-center justify-between gap-[16px]">
+                    <div class="flex items-center justify-between lg:justify-start gap-[32px] w-[100%] lg:w-[max-content]">
+                        <span class="flex items-center gap-[16px] lg:hidden" data-gsap-header>
+                            <button type="button" class="hidden invisible lg:hidden text-[var(--blue-color)] hover:opacity-[0.7] transition-all duration-[0.4s]" data-aside-close data-aside-target="#aside">
+                                <svg  xmlns="http://www.w3.org/2000/svg"  width="35"  height="35"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>    
+                            </button>
+
+                            <button type="button" class="lg:hidden text-[var(--blue-color)] hover:opacity-[0.7] transition-all duration-[0.4s]" data-aside-open data-aside-target="#aside">
+                                <svg  xmlns="http://www.w3.org/2000/svg"  width="35"  height="35"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
+                            </button>
+
+                            <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out label-large">AR</a>
+                            <!-- <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out label-large">EN</a> -->
+                        </span>
+
+                        <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] lg:translate-x-[0] lg:translate-y-[0] lg:static" data-gsap-logo>
+                            <a href="./index.html" class="logo">
+                                <img 
+                                    src="./src/assets/image/logo-dark.png"
+                                    alt="img logo" 
+                                    loading="lazy"
+                                    class="img-logo logo-dark img-cover" 
+                                />
+
+                                <img 
+                                    src="./src/assets/image/logo-light.png"
+                                    alt="img logo" 
+                                    loading="lazy"
+                                    class="img-logo logo-light img-cover" 
+                                />
+                            </a>
+                        </span>
+
+                        <div class="flex items-center gap-[10px]">
+                            <span data-gsap-header>
+                                <button type="button" class="min-w-[36px] min-h-[36px] max-w-[36px] max-h-[36px] rounded-[5px] hover:bg-[var(--third-bg-color)] flex lg:hidden items-center justify-center transition-all duration-[0.4s]" data-modal-open data-modal-target="#modal-search">
+                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+                                </button>
+                            </span>
+
+                            <span data-gsap-header>
+                                <button type="button" class="relative py-[6px] px-[8px] rounded-full bg-[var(--four-bg-color)] min-h-[36px] max-h-[36px] w-[78px] flex rtl:flex-row-reverse items-center justify-between" data-theme-toggle>
+                                    <span class="text-[var(--text-color)]">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z" /><path d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z" /><path d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" /></svg>
+                                    </span>
+
+                                    <span class="text-[var(--text-color)]">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 1.992a10 10 0 1 0 9.236 13.838c.341 -.82 -.476 -1.644 -1.298 -1.31a6.5 6.5 0 0 1 -6.864 -10.787l.077 -.08c.551 -.63 .113 -1.653 -.758 -1.653h-.266l-.068 -.006l-.06 -.002z" /></svg>
+                                    </span>
+
+                                    <div class="circle absolute top-[50%] bottm-0 right-[3px] translate-y-[-50%] min-w-[30px] min-h-[30px] max-w-[30px] max-h-[30px] rounded-full bg-[var(--five-bg-color)] flex items-center justify-center transition-all duration-[0.5s] ease-out">
+                                        <span class="hidden text-[#000] svg-1">
+                                            <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z" /><path d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z" /><path d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" /></svg>
+                                        </span>
+
+                                        <span class="text-[#000] svg-2">
+                                            <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 1.992a10 10 0 1 0 9.236 13.838c.341 -.82 -.476 -1.644 -1.298 -1.31a6.5 6.5 0 0 1 -6.864 -10.787l.077 -.08c.551 -.63 .113 -1.653 -.758 -1.653h-.266l-.068 -.006l-.06 -.002z" /></svg>
+                                        </span>
+                                    </div>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="hidden lg:flex items-center gap-[16px]">
+                        <span data-gsap-header>
+                            <button type="button" class="group flex items-center gap-[10px]" data-modal-open data-modal-target="#modal-search">
+                                <p class="overflow-hidden label-small">
+                                    <span class="translate-x-[100%] rtl:translate-x-[-100%] group-hover:translate-x-[0%] text-nowrap transition-all duration-[0.4s] ease-out">Search the site</span>
+                                </p>
+
+                                <div type="button" class="min-w-[36px] min-h-[36px] max-w-[36px] max-h-[36px] rounded-[5px] hover:bg-[var(--third-bg-color)] hidden lg:flex items-center justify-center transition-all duration-[0.4s]">
+                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+                                </div>
+                            </button>
+                        </span>
+
+                        <span data-gsap-header>
+                            <a href="#" class="btn btn-border-yellow label-small">
+                                <span class="text-[var(--yellow-color)]">
+                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-user"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" /><path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z" /></svg>
+                                </span>
+
+                                <span class="flex items-center gap-[6px]">
+                                    log
+                                    <span class="text-[var(--yellow-color)]">in</span>
+                                </span>
+                            </a>
+                        </span>
+
+                        <span data-gsap-header>
+                            <a href="#" class="btn btn-primary label-small">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--material-symbols" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M5 19V5zv-.025zm0 2q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v7q0 .425-.288.713T20 13t-.712-.288T19 12V5H5v14h7q.425 0 .713.288T13 20t-.288.713T12 21zm14.175-1H16q-.425 0-.712-.288T15 19t.288-.712T16 18h3.175l-.9-.9Q18 16.825 18 16.413t.3-.713q.275-.275.7-.275t.7.275l2.6 2.6q.3.3.3.7t-.3.7l-2.6 2.6q-.275.275-.687.288T18.3 22.3q-.275-.275-.275-.7t.275-.7zM11 13v3q0 .425.288.713T12 17t.713-.288T13 16v-3h3q.425 0 .713-.288T17 12t-.288-.712T16 11h-3V8q0-.425-.288-.712T12 7t-.712.288T11 8v3H8q-.425 0-.712.288T7 12t.288.713T8 13z"></path></svg>
+                                Create a new account
+                            </a>
+                        </span>
+
+                        <span data-gsap-header>
+                            <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out label-large">AR</a>
+                            <!-- <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out label-large">EN</a> -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="opacity-0 invisible absolute left-0 bottom-0 right-0 bg-[var(--second-blue-color)] w-[100%] h-[3px] transition-all duration-[0.4s] ease-out" data-propagation>
+                <div class="propagation-line bg-[var(--blue-color)] w-[0] h-[3px] transition-all duration-[0.4s] ease-out"></div>
+            </div>
+        </header>
+
+        <!-- ASIDE -->
+        <aside class="aside bg-[var(--blue-color)] fixed top-[50px] left-[16px] right-[16px] z-30 opacity-0 invisible w-[calc(100% - 32px)] p-[16px] rounded-[8px] transition-all duration-[0.4s] ease-out" id="aside">
+            <ul class="grid gap-[16px]">
+                <li>
+                    <a href="#" class="flex items-center gap-[10px] py-[8px] px-[16px] rounded-[10px] bg-[var(--second-blue-color)] hover:opacity-[0.7] transition-all duration-[0.4s] ease-out label-small">
+                        <span class="text-[var(--yellow-color)]">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-user"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" /><path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z" /></svg>
+                        </span>
+
+                        login
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="flex items-center gap-[10px] py-[8px] px-[16px] rounded-[10px] bg-[var(--second-blue-color)] hover:opacity-[0.7] transition-all duration-[0.4s] ease-out label-small">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--material-symbols" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M5 19V5zv-.025zm0 2q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v7q0 .425-.288.713T20 13t-.712-.288T19 12V5H5v14h7q.425 0 .713.288T13 20t-.288.713T12 21zm14.175-1H16q-.425 0-.712-.288T15 19t.288-.712T16 18h3.175l-.9-.9Q18 16.825 18 16.413t.3-.713q.275-.275.7-.275t.7.275l2.6 2.6q.3.3.3.7t-.3.7l-2.6 2.6q-.275.275-.687.288T18.3 22.3q-.275-.275-.275-.7t.275-.7zM11 13v3q0 .425.288.713T12 17t.713-.288T13 16v-3h3q.425 0 .713-.288T17 12t-.288-.712T16 11h-3V8q0-.425-.288-.712T12 7t-.712.288T11 8v3H8q-.425 0-.712.288T7 12t.288.713T8 13z"></path></svg>
+                        Create a new account
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- MODAL -->
+        <div class="fixed top-[40%] left-[50%] z-50 translate-y-[-50%] rotate-[90deg] opacity-[0] invisible translate-x-[-50%] p-[20px] rounded-[8px] bg-[--third-bg-color] w-[100%] max-w-[312px] max-h-500px overflow-hidden transition-all duration-[0.6s]" id="modal-search">
+            <h2 class="!mb-[20px] label-medium">Search the site's courses.</h2>
+            <form action="#" method="get" class="grid gap-[20px]">
+                <div class="box-form">
+                    <input 
+                        type="text" 
+                        name="search" 
+                        id="search" 
+                        class="form-control" 
+                    />
+
+                    <label for="search" class="label label-small">
+                        <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+                        Search
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-second-primary label-small">Search</button>
+            </form>
+        </div>
+
+        <main class="main">
+            <article>
+                <!-- BANNER -->
+                <div class="banner px-[16px] mt-[16px] mb-[30px]">
+                    <div class="relative overflow-hidden rounded-[8px] bg-[var(--blue-color)] text-[#ffffff] min-h-[480px] flex items-center pb-[14rem]">
+                        <div class="absolute top-0 left-0 right-0 bottom-0 opacity-[0.3] bg-[url(./src/assets/image/banner-bg.png)] bg-center bg-no-repeat bg-cover w-[100%] min-h-[480px]"></div>
+
+                        <div class="relative z-20 p-[16px] lg:p-[30px] max-w-[1200px]">
+                            <div class="flex flex-wrap items-center gap-x-[30px] gap-y-[10px] mb-[38px]">
+                                <div class="flex items-center bg-[#22d3ee] rounded-full h-[32px]max-w-[max-content]">
+                                    <p class="!px-[16px] text-[#000] label-small">Materials</p>
+
+                                    <p class="h-[32px] !px-[16px] bg-[var(--blue-dark-color)] flex items-center justify-center rounded-full label-small">Loading</p>
+                                </div>
+
+                                <div class="flex items-center bg-[#f43f5e] rounded-full h-[32px]max-w-[max-content]">
+                                    <p class="!px-[16px] text-[#000] label-small">Courses</p>
+
+                                    <p class="h-[32px] !px-[16px] bg-[var(--blue-dark-color)] flex items-center justify-center rounded-full label-small">Loading</p>
+                                </div>
+                            </div>
+
+                            <h3 class="!mb-[24px] line-2 title-large">Prof. Dr. Mahmoud Fathy</h3>
+                            <p class="!mb-[24px] label-large">Doctor of Biology</p>
+
+                            <div class="flex flex-col gap-[16px]">
+                                <div class="border-[1px] border-[var(--blue-dark-color)] rounded-full py-[8px] px-[20px] bg-[var(--blue-color)] label-medium">Biology - Third Secondary Grade</div>
+                                <div class="border-[1px] border-[var(--blue-dark-color)] rounded-full py-[8px] px-[20px] bg-[var(--blue-color)] label-medium">Biology - Third Secondary Grade</div>
+                            </div>
+                        </div>
+
+                        <div class="absolute top-0 left-0 right-0 bottom-0 w-[100%]" style="background: linear-gradient(90deg, #0000, var(--blue-color), var(--blue-color));"></div>
+                    </div>
+                </div>
+
+                <section>
+                    <div class="px-[16px] mx-auto w-[100%] max-w-[1400px] mb-[40px]">
+                        <div class="grid items-start grid-cols-1 lg:grid-cols-[470px_1fr] gap-[35px]">
+                            <div class="col lg:!w-[auto] mx-auto mt-[-13rem]" style="max-width: calc(100% - 32px);">
+                                <div class="relative z-[1] overflow-hidden p-[16px] rounded-[8px] bg-[var(--second-bg-color)]">
+                                    <div
+                                        class="absolute z-[-1] top-0 left-0 right-0 w-full h-[150px] bg-[#11d3ff] rounded-t-[8px]"
+                                        style="box-shadow: 0 0 10px 10px #11d3ff;"
+                                    ></div>
+
+                                    <img 
+                                        src="./src/assets/image/card-small.jpg" 
+                                        alt="name cuorse" 
+                                        loading="lazy"
+                                        class="rounded-[8px] max-h-[439px] mb-[32px] img-cover"
+                                    />
+
+                                    <div class="flex items-center justify-between label-small">
+                                        <div class="flex items-center gap-[5px]">
+                                            <span class="text-[var(--blue-color)]">
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-3"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 12h3.5" /><path d="M12 7v5" /></svg>
+                                            </span>
+
+                                            Number of subjects
+                                        </div>
+
+                                        <p class="text-[var(--second-color)]">0 teacher</p>
+                                    </div>
+
+                                    <div class="border-[1px] border-[var(--border-color)] my-[10px]"></div>
+
+                                    <div class="flex items-center justify-between label-small">
+                                        <div class="flex items-center gap-[5px]">
+                                            <span class="text-[var(--blue-color)]">
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-3"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 12h3.5" /><path d="M12 7v5" /></svg>
+                                            </span>
+
+                                            Number of courses
+                                        </div>
+
+                                        <p class="text-[var(--second-color)]">0 courses</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="our_suggested_courses section pt-[60px] pb-[0]">
+                    <div class="px-[16px] mx-auto w-[100%] !max-w-[1440px]">
+                        <h3 class="capitalize !mb-[1.25rem] flex flex-wrap gap-[12px] mb-[36px] headline-small"><span class="text-[var(--blue-color)]">Separate courses</span> for the teacher</h3>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px]">
+                            <div class="col">
+                                <div class="card card-course">
+                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                        <picture>
+                                            <source 
+                                                srcset="./src/assets/image/card-big.jpg" 
+                                                type="image/webp" 
+                                            />
+                                            
+                                            <img 
+                                                src="./src/assets/image/card-big.jpg" 
+                                                alt="teachers" 
+                                                loading="lazy"
+                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                            />
+                                        </picture>
+
+                                        <h3 class="absolute flex items-center justify-center text-center top-[40px] right-[-90px] bg-[var(--red-color)] h-[35px] rotate-[45deg] w-[300px] label-medium">Proven course</h3>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                            <div>
+                                                <h3 class="line-2 title-small">The third month of the second semester (Mohamed Salah - Arabic Language - 1st secondary)</h3>
+
+                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                <p class="text-[var(--second-color)] line-3 label-small">The month consists of 4 lectures - one lecture per week</p>
+                                            </div>
+
+                                            <div class="grid gap-[10px]">
+                                                <a href="#" class="btn btn-green rounded-full !px-[12px] !py-[4px]">Entry to the course</a>
+                                                <a href="#" class="btn btn-green-mix rounded-full !px-[12px] !py-[4px]">Subscribe now</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="border-t-[1px] border-[var(--border-color)] w-[100%] mt-[16px] pt-[16px] flex flex-wrap items-start justify-between gap-[16px]">
+                                            <div class="grid gap-[8px]">
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Sunday, May 18, 2025
+                                                </p>
+
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Saturday, April 19, 2025
+                                                </p>
+                                            </div>
+
+                                            <div class="px-[12px] py-[4px] rounded-[4px] flex items-start gap-[8px] bg-[var(--green-color)]">
+                                                <div class="py-[1px] px-[8px] rounded-[4px] bg-[var(--bg-color)]">110.00</div>
+                                                EGP
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card card-course">
+                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                        <picture>
+                                            <source 
+                                                srcset="./src/assets/image/card-big-2.jpg" 
+                                                type="image/webp" 
+                                            />
+                                            
+                                            <img 
+                                                src="./src/assets/image/card-big-2.jpg" 
+                                                alt="teachers" 
+                                                loading="lazy"
+                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                            />
+                                        </picture>
+
+                                        <h3 class="absolute flex items-center justify-center text-center top-[40px] right-[-90px] bg-[var(--red-color)] h-[35px] rotate-[45deg] w-[300px] label-medium">Proven course</h3>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                            <div>
+                                                <h3 class="line-2 title-small">The third month of the second semester (Mohamed Salah - Arabic Language - 1st secondary)</h3>
+
+                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                <p class="text-[var(--second-color)] line-3 label-small">The month consists of 4 lectures - one lecture per week</p>
+                                            </div>
+
+                                            <div class="grid gap-[10px]">
+                                                <a href="#" class="btn btn-green rounded-full !px-[12px] !py-[4px]">Entry to the course</a>
+                                                <a href="#" class="btn btn-green-mix rounded-full !px-[12px] !py-[4px]">Subscribe now</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="border-t-[1px] border-[var(--border-color)] w-[100%] mt-[16px] pt-[16px] flex flex-wrap items-start justify-between gap-[16px]">
+                                            <div class="grid gap-[8px]">
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Sunday, May 18, 2025
+                                                </p>
+
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Saturday, April 19, 2025
+                                                </p>
+                                            </div>
+
+                                            <div class="px-[12px] py-[4px] rounded-[4px] flex items-start gap-[8px] bg-[var(--green-color)]">
+                                                <div class="py-[1px] px-[8px] rounded-[4px] bg-[var(--bg-color)]">110.00</div>
+                                                EGP
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col">
+                                <div class="card card-course">
+                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                        <picture>
+                                            <source 
+                                                srcset="./src/assets/image/card-big-2.jpg" 
+                                                type="image/webp" 
+                                            />
+                                            
+                                            <img 
+                                                src="./src/assets/image/card-big-2.jpg" 
+                                                alt="teachers" 
+                                                loading="lazy"
+                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                            />
+                                        </picture>
+
+                                        <h3 class="absolute flex items-center justify-center text-center top-[40px] right-[-90px] bg-[var(--red-color)] h-[35px] rotate-[45deg] w-[300px] label-medium">Proven course</h3>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                            <div>
+                                                <h3 class="line-2 title-small">The third month of the second semester (Mohamed Salah - Arabic Language - 1st secondary)</h3>
+
+                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                <p class="text-[var(--second-color)] line-3 label-small">The month consists of 4 lectures - one lecture per week</p>
+                                            </div>
+
+                                            <div class="grid gap-[10px]">
+                                                <a href="#" class="btn btn-green rounded-full !px-[12px] !py-[4px]">Entry to the course</a>
+                                                <a href="#" class="btn btn-green-mix rounded-full !px-[12px] !py-[4px]">Subscribe now</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="border-t-[1px] border-[var(--border-color)] w-[100%] mt-[16px] pt-[16px] flex flex-wrap items-start justify-between gap-[16px]">
+                                            <div class="grid gap-[8px]">
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Sunday, May 18, 2025
+                                                </p>
+
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Saturday, April 19, 2025
+                                                </p>
+                                            </div>
+
+                                            <div class="px-[12px] py-[4px] rounded-[4px] flex items-start gap-[8px] bg-[var(--green-color)]">
+                                                <div class="py-[1px] px-[8px] rounded-[4px] bg-[var(--bg-color)]">110.00</div>
+                                                EGP
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="our_suggested_courses section pt-[0]">
+                    <div class="px-[16px] mx-auto w-[100%] !max-w-[1440px]">
+                        <h3 class="capitalize !mb-[1.25rem] flex flex-wrap gap-[12px] mb-[36px] headline-small"><span class="text-[var(--blue-color)]">Teacher's monthly</span> subscription</h3>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px]">
+                            <div class="col">
+                                <div class="card card-course">
+                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                        <picture>
+                                            <source 
+                                                srcset="./src/assets/image/card-big.jpg" 
+                                                type="image/webp" 
+                                            />
+                                            
+                                            <img 
+                                                src="./src/assets/image/card-big.jpg" 
+                                                alt="teachers" 
+                                                loading="lazy"
+                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                            />
+                                        </picture>
+
+                                        <h3 class="absolute flex items-center justify-center text-center top-[40px] right-[-90px] bg-[var(--red-color)] h-[35px] rotate-[45deg] w-[300px] label-medium">Proven course</h3>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                            <div>
+                                                <h3 class="line-2 title-small">The third month of the second semester (Mohamed Salah - Arabic Language - 1st secondary)</h3>
+
+                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                <p class="text-[var(--second-color)] line-3 label-small">The month consists of 4 lectures - one lecture per week</p>
+                                            </div>
+
+                                            <div class="grid gap-[10px]">
+                                                <a href="#" class="btn btn-green rounded-full !px-[12px] !py-[4px]">Entry to the course</a>
+                                                <a href="#" class="btn btn-green-mix rounded-full !px-[12px] !py-[4px]">Subscribe now</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="border-t-[1px] border-[var(--border-color)] w-[100%] mt-[16px] pt-[16px] flex flex-wrap items-start justify-between gap-[16px]">
+                                            <div class="grid gap-[8px]">
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Sunday, May 18, 2025
+                                                </p>
+
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Saturday, April 19, 2025
+                                                </p>
+                                            </div>
+
+                                            <div class="px-[12px] py-[4px] rounded-[4px] flex items-start gap-[8px] bg-[var(--green-color)]">
+                                                <div class="py-[1px] px-[8px] rounded-[4px] bg-[var(--bg-color)]">110.00</div>
+                                                EGP
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card card-course">
+                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                        <picture>
+                                            <source 
+                                                srcset="./src/assets/image/card-big-2.jpg" 
+                                                type="image/webp" 
+                                            />
+                                            
+                                            <img 
+                                                src="./src/assets/image/card-big-2.jpg" 
+                                                alt="teachers" 
+                                                loading="lazy"
+                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                            />
+                                        </picture>
+
+                                        <h3 class="absolute flex items-center justify-center text-center top-[40px] right-[-90px] bg-[var(--red-color)] h-[35px] rotate-[45deg] w-[300px] label-medium">Proven course</h3>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                            <div>
+                                                <h3 class="line-2 title-small">The third month of the second semester (Mohamed Salah - Arabic Language - 1st secondary)</h3>
+
+                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                <p class="text-[var(--second-color)] line-3 label-small">The month consists of 4 lectures - one lecture per week</p>
+                                            </div>
+
+                                            <div class="grid gap-[10px]">
+                                                <a href="#" class="btn btn-green rounded-full !px-[12px] !py-[4px]">Entry to the course</a>
+                                                <a href="#" class="btn btn-green-mix rounded-full !px-[12px] !py-[4px]">Subscribe now</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="border-t-[1px] border-[var(--border-color)] w-[100%] mt-[16px] pt-[16px] flex flex-wrap items-start justify-between gap-[16px]">
+                                            <div class="grid gap-[8px]">
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Sunday, May 18, 2025
+                                                </p>
+
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Saturday, April 19, 2025
+                                                </p>
+                                            </div>
+
+                                            <div class="px-[12px] py-[4px] rounded-[4px] flex items-start gap-[8px] bg-[var(--green-color)]">
+                                                <div class="py-[1px] px-[8px] rounded-[4px] bg-[var(--bg-color)]">110.00</div>
+                                                EGP
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col">
+                                <div class="card card-course">
+                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                        <picture>
+                                            <source 
+                                                srcset="./src/assets/image/card-big-2.jpg" 
+                                                type="image/webp" 
+                                            />
+                                            
+                                            <img 
+                                                src="./src/assets/image/card-big-2.jpg" 
+                                                alt="teachers" 
+                                                loading="lazy"
+                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                            />
+                                        </picture>
+
+                                        <h3 class="absolute flex items-center justify-center text-center top-[40px] right-[-90px] bg-[var(--red-color)] h-[35px] rotate-[45deg] w-[300px] label-medium">Proven course</h3>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                            <div>
+                                                <h3 class="line-2 title-small">The third month of the second semester (Mohamed Salah - Arabic Language - 1st secondary)</h3>
+
+                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                <p class="text-[var(--second-color)] line-3 label-small">The month consists of 4 lectures - one lecture per week</p>
+                                            </div>
+
+                                            <div class="grid gap-[10px]">
+                                                <a href="#" class="btn btn-green rounded-full !px-[12px] !py-[4px]">Entry to the course</a>
+                                                <a href="#" class="btn btn-green-mix rounded-full !px-[12px] !py-[4px]">Subscribe now</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="border-t-[1px] border-[var(--border-color)] w-[100%] mt-[16px] pt-[16px] flex flex-wrap items-start justify-between gap-[16px]">
+                                            <div class="grid gap-[8px]">
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Sunday, May 18, 2025
+                                                </p>
+
+                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
+                                                    Saturday, April 19, 2025
+                                                </p>
+                                            </div>
+
+                                            <div class="px-[12px] py-[4px] rounded-[4px] flex items-start gap-[8px] bg-[var(--green-color)]">
+                                                <div class="py-[1px] px-[8px] rounded-[4px] bg-[var(--bg-color)]">110.00</div>
+                                                EGP
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer bg-[var(--four-blue-color)] py-[80px]">
+            <div class="container">
+                <div class="flex flex-col items-center justify-center gap-[1.5rem]">
+                    <a href="./index.html" class="logo">
+                        <img 
+                            src="./src/assets/image/logo-dark.png"
+                            alt="img logo" 
+                            loading="lazy"
+                            class="!min-h-[240px] !max-h-[240px] logo-dark img-cover" 
+                        />
+
+                        <img 
+                            src="./src/assets/image/logo-light.png"
+                            alt="img logo" 
+                            loading="lazy"
+                            class="!min-h-[240px] !max-h-[240px] logo-light img-cover" 
+                        />
+                    </a>
+
+                    <div class="hotline flex items-center gap-[16px] bg-[#080c14] text-[#ffffff] rounded-[5px] py-[16px] px-[20px] mt-[20px]">
+                        <h3 class="title-small">Hotline:</h3>
+
+                        <a href="tel:" class="bg-[var(--second-green-color)] !text-[#ffffff] rounded-[8px] h-[48px] px-[16px] flex items-center justify-center gap-[10px] hover:scale-[1.1] transition-all duration-[0.4s] ease-out font-[700] title-medium">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--healthicons" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><g fill="currentColor"><path fill-rule="evenodd" d="M21.407 15.092a5.402 5.402 0 0 1 3.477 8.33L38.718 34.16a2.25 2.25 0 1 1-1.182 1.614l-14.07-10.922a5.4 5.4 0 1 1-4.058-9.76L19.406 6h2zm.799 5.308a1.8 1.8 0 1 1-3.6 0a1.8 1.8 0 0 1 3.6 0" clip-rule="evenodd"></path><path d="M27.63 20.384a7.2 7.2 0 0 0-4.223-6.558v-7.72c4.289.377 6.517 1.728 8.512 3.577q.151.141.296.273v.001c.85.78 1.526 1.401 1.875 2.331l4.234 11.272a2 2 0 0 1-1.873 2.701H34.82V28.6l-7.575-5.882a7.2 7.2 0 0 0 .386-2.333m-10.224-6.539V6.241c-8.99 1.353-11.403 8.06-11.403 11.734c0 5.767 3.683 10.24 5.41 12.033V42h17.112v-6.512h4.293c.302 0 .59-.068.846-.188L23.08 27.08a7.2 7.2 0 0 1-5.673-13.234"></path></g></svg>
+                            415452
+                        </a>
+                    </div>
+
+                    <ul class="flex flex-wrap items-center gap-[30px] !mt-[30px]">
+                        <li>
+                            <a href="#" class="hover:scale-[1.1] transition-all duration-[0.4s] ease-out">
+                                <picture>
+                                    <source 
+                                        srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiXN9xSEe8unzPBEQOeAKXd9Q55efGHGB9BA&s" 
+                                        type="image/webp" 
+                                    />
+                                    
+                                    <img 
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiXN9xSEe8unzPBEQOeAKXd9Q55efGHGB9BA&s" 
+                                        alt="teachers" 
+                                        loading="lazy"
+                                        class="min-w-[63px] min-h-[63px] max-w-[63px] max-h-[63px] rounded-full img-cover" 
+                                    />
+                                </picture>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:scale-[1.1] transition-all duration-[0.4s] ease-out">
+                                <picture>
+                                    <source 
+                                        srcset="data:image/png;base64,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" 
+                                        type="image/webp" 
+                                    />
+                                    
+                                    <img 
+                                        src="data:image/png;base64,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" 
+                                        alt="teachers" 
+                                        loading="lazy"
+                                        class="min-w-[63px] min-h-[63px] max-w-[63px] max-h-[63px] rounded-full img-cover" 
+                                    />
+                                </picture>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="hover:scale-[1.1] transition-all duration-[0.4s] ease-out">
+                                <picture>
+                                    <source 
+                                        srcset="data:image/jpeg;base64,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" 
+                                        type="image/webp" 
+                                    />
+                                    
+                                    <img 
+                                        src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxANDw8NDQ8QDQ0PDQ0NDw0ODw8NDw8NFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLjcBCgoKDQ0OFQ8PGC4fHyUuLSsuKzcrLS0tKzctLS0tLS0tLS0tNSsuLS0tLSstLTcrLS0rNy0uLS0tMSsrListK//AABEIAJ8BPgMBIgACEQEDEQH/xAAbAAEBAQACAwAAAAAAAAAAAAAAAQIEBgMFB//EADcQAQEAAQIDBQUFBgcAAAAAAAABAgMRITFRBBJBYXEFBoGRoROxwdHwIiMyUlNiFEKCosLS8f/EABoBAQEBAQEBAQAAAAAAAAAAAAABAwUEAgb/xAAgEQEBAAICAQUBAAAAAAAAAAAAAQIRAwQSITEyQVEU/9oADAMBAAIRAxEAPwD2wDvPzwAAAAAAAAAAAACwA3AEFARdwAsRYWAgAAADWpzvrYy1qc760VkAQAAAAABYixAAAAWTcCLt1+hb4T/1kF3nQ38ogC8DZAAVAAUAFBFFFQUBBQEJ0UgMo1YgiAANZ+F6z6zgy1jx4fGeorIAgAALIbecBBdvOFgIAAC934AjV4cPmYyFs6fUVkXh5mwiAAAAAoAKAoooKbAi7LsuyDOyN7IDJIpAZqNJYoyjSCIADV4+v3si8/zAkFvkmwpaioILKgDW+/P5pZsiy/EVd9uXPqiAjWPj6MtY/hWQAAXcQAAAWEi79PqBI1ML0TcFa7l6BK3MuvH1RWZFefs3Z/tc8NPDnnljjx8N7tu8ntHsGfZtS6epPPHLwzx6x8+U3r7Xxut/TiirJ043pFRkdv8AZfuvhMZl2nfLOzf7OW444+Vs42uV2r3Z7NnjthjdLLwyxyyy+cyrz3tccunqnU5LNui2JY9/re7/APh8ctXtOrjMZdscNPe56mXhjN+VvpXos8bLZZZZwss2srbDPHL4sM+PLD5PGjVRozRlovX5gwLsbeYiKcP1CwEAAAAAAAAABZSxFnHgCAAAALEWgCKCrEjQqxqMxqIrlezNeaWvpamX8OOpjcvLHfa35PoXbOyafaMO5qYzPG8ZfGXrL4PnfYM8MdXTurJlp9+d+XjO5eF/N9G7JoY6WEw09+5P4Zcrntj0lvHZ4O56XGz3dDp+uOUvs6r2/wB1dTHe6GU1cfDHKzHOfhfo43sn2Zq4dp0ftdLPHGZ73K4W4yyWzjOHOR3kZf1Z+Nla3qYeUs9AB5nqek95/aOXZsMPs5PtNTv4zUvG4Sbb2efF0fK78bxt423jbXZPfXW31NLT/kwyyv8Aqsn/ABdbdXq4yccv65Payt5LPxms1qs16HlRZw5+PgTr+t2aolRrJkQWoAu6CggAAAAAAAAALzNkXcEFQAABUUFjTKwVqNRmNRFV3H3S1tTPT7v2uOWGF7t08sb38J4bZb8vWeDp27mezNXWx1Jl2aZXPlthjct50s6MebDzwsbcHJ4Zyvo44ns7PWyw37Rjhhn/AC4W359PnXLcmzV07Eu5sZ1NSYY3LK7Y4y5W3lJOdXLKSW27STe28JJ1dO94/bn237nRv7qX9rP+pZ4T+372nFxXkuoz5eWceO69R7S7XdfWz1bw72XCdMZwk+TiqldeSSajjZW27rNZrVZqvky8Pmy1l+E+5lQy8PRlrL8IyIAAAAAAAAAAAAAAAAAAAAKAKqRYKsajKoPP2btGell39PLu5fCy+Vl4V2LsfvZcZJq6Uv8Adp3u/wC2/m6vKsrPPiwz+Ua4cueHxru2PvZoX/Jqzy7uH/Z4O0+9uE3mnpZZXlvnZjPpu6np855cUtZTq8e/Zte3y693P9o+19btPDUy2w/p4fs4/Hr8XAQb44zGajz5ZXK7tEpuza+nyVBFQySRS8Pj9wM2oAgAALsAgu4CCgIqAA1tvy+TIAAAAAAAACxAGvMTGreAKrKitG6NYzry8UG5dp68vRlMst03Fa3TdCgboIqCNbfD1TfblxA5fkl4+qVBAUkAkN+hUAAAAAAAAAXf4oAvAQBYEQAAAAFQXcEavKfJGvCetFZU4ea97p+YLJ43hPqXLf06M7gKIAq7sgNd79bRO9UQF3QQQAAXwRcgQAAAAAAAAAAAAAFiC3qCAAAAAANZeE8t/mYTf0nGpbvxFQARRAFEAUQBUAAAAABcudRcuYIAAAAAAAAAD//Z" 
+                                        alt="teachers" 
+                                        loading="lazy"
+                                        class="min-w-[63px] min-h-[63px] max-w-[63px] max-h-[63px] rounded-full img-cover" 
+                                    />
+                                </picture>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <p class="copyright text-[#ffffff] text-center !mt-[50px] font-[400] title-small">This platform was created with the aim of preparing the student for all aspects of high school and beyond.</p>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- custom gsap link -->
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" 
+            integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer"
+        ></script>
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" 
+            integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer"
+        ></script>
+        <!-- custom js link -->
+        <script src="./src/components.js"></script>
+        <script src="./src/filter.js"></script>
+    </body>
+</html>

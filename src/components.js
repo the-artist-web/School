@@ -183,36 +183,42 @@ overflow.addEventListener("click", (e) => {
 });
 
 /**
- * COLLAPSE
+ * COLLAPSES
  */
-const open_collapse = document.querySelectorAll("[data-collapse-open]");
-const close_collapse = document.querySelectorAll("[data-collapse-close]");
+const collapses = document.querySelectorAll(".card-collapse");
 
-open_collapse.forEach((open, index) => {
-    open.addEventListener("click", (e) => {
+collapses.forEach(card_collapse => {
+    const collapse_btn = card_collapse.querySelector(".collapse-btn");
+    const arrow_collapse_btn = collapse_btn.querySelector(".arrow");
+    const collapses_list = card_collapse.querySelector(".collapses-list");
+
+    const collapse_list_btn = card_collapse.querySelector(".collapse-list-btn");
+    const arrow_collapse_list_btn = collapse_list_btn.querySelector(".arrow");
+    const collapses_list_card_list = card_collapse.querySelector(".collapses-list-card-list");
+
+    const collapse_list_btn_list_btn = card_collapse.querySelector(".collapse-list-btn-list-btn");
+    const arrow_collapse_list_btn_list_btn = collapse_list_btn_list_btn.querySelector(".arrow");
+    const collapses_list_card_list_card_body = card_collapse.querySelector(".collapses-list-card-list-card-body");
+
+    collapse_btn.addEventListener("click", (e) => {
         e.stopPropagation();
 
-        const getAttribute = open.getAttribute("data-collapse-target");
-        const collapse = document.querySelector(getAttribute);
-
-        collapse.classList.remove("hidden");
-        open.classList.add("hidden");
-
-        close_collapse[index].classList.remove("!hidden");
+        arrow_collapse_btn.classList.toggle("rotate-[180deg]");
+        collapses_list.classList.toggle("active");
     });
-});
 
-close_collapse.forEach((close, index) => {
-    close.addEventListener("click", (e) => {
+    collapse_list_btn.addEventListener("click", (e) => {
         e.stopPropagation();
 
-        const getAttribute = close.getAttribute("data-collapse-target");
-        const collapse = document.querySelector(getAttribute);
+        arrow_collapse_list_btn.classList.toggle("rotate-[180deg]");
+        collapses_list_card_list.classList.toggle("active");
+    });
 
-        collapse.classList.add("hidden");
-        close.classList.add("!hidden");
+    collapse_list_btn_list_btn.addEventListener("click", (e) => {
+        e.stopPropagation();
 
-        open_collapse[index].classList.remove("hidden");
+        arrow_collapse_list_btn_list_btn.classList.toggle("rotate-[180deg]");
+        collapses_list_card_list_card_body.classList.toggle("active");
     });
 });
 
