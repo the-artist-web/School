@@ -10,15 +10,15 @@
     /* PRIMARY */
     --blue-color: #0ea5e9;
     --blue-dark-color: #2563eb;
-    --second-blue-color: rgba(12, 74, 110, 0.375);
+    --second-blue-color: rgba(30, 90, 130, 0.45);
     --third-blue-color: #0c94c0;
     --four-blue-color: #064a60;
     --yellow-color: #facc15;
-    --second-yellow-color: rgba(204, 173, 0, 0.5);
+    --second-yellow-color: rgba(190, 160, 20, 0.5);
     --third-yellow-color: #ccad00;
     --red-color: #f43f5e;
     --green-color: #14b8a6;
-    --second-green-color: rgba(13, 148, 136, 0.5);
+    --second-green-color: rgba(30, 150, 130, 0.45);
     --purple-color: #623cea;
 
     /* DARK */
@@ -50,7 +50,7 @@
     --fs-display-large: 3rem;
     --fs-display-medium: 2.8rem;
     --fs-display-small: 2.5rem;
-    --fs-headline-small: 2.3rem;
+    --fs-headline-small: 2rem;
     --fs-title-large: 2.2rem;
     --fs-title-medium: 1.6rem;
     --fs-title-small: 1.4rem;
