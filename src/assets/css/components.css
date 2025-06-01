@@ -284,7 +284,7 @@
 /**
  * BUTTONS
  */
-.btn { 
+.btn {
     border-radius: 8px;
     padding: 0 16px;
     display: flex;
@@ -294,6 +294,7 @@
     text-transform: capitalize;
     text-wrap: nowrap;
     min-height: 45px;
+    max-width: 100%;
     transition: all 0.4s ease-out; 
 }
 
@@ -404,7 +405,7 @@
 .card-teachers {
     background-color: var(--second-blue-color);
     border-radius: 16px 0 16px 0;
-    padding: 20px;
+    padding: 16px 40px;
 }
 
 .card-teachers:hover { transform: translateY(-10px); }
@@ -463,12 +464,12 @@
     color: #ffffff !important;
     text-align: center;
     border-radius: 16px;
-    width: max-content;
-    max-width: 300px;
+    text-wrap: wrap;
+    height: max-content;
     padding: 16px 20px !important;
 }
 
-.card-materials .card-body .btn-card:hover { background-color: var(--bg-color); }
+.card-materials .card-body .btn-card:hover { background-color: #080c14; }
 
 .card-how {
     background-color: var(--third-blue-color);
@@ -488,6 +489,7 @@
 .card-how .card-body .title-how::before {
     content: "";
     background-color: var(--third-yellow-color);
+    opacity: 0.7;
     border-radius: 100%;
     position: absolute;
     top: 50%;

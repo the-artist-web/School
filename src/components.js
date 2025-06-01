@@ -1,5 +1,3 @@
-gsap.registerPlugin(ScrollTrigger);
-
 /**
  * OVERFLOW
  */
@@ -39,22 +37,6 @@ window.addEventListener("scroll", () => {
 
     lastScrollTop = currentScrollTop;
 });
-
-// GSAP
-gsap.timeline()
-    .from("[data-gsap-logo]", {
-        rotate: 360,
-        scale: 0.0,
-        duration: 1,
-        ease: "back.out(2)",
-    })
-    .from("[data-gsap-header]", {
-        y: 100,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.05,
-        ease: "power1.out",
-    });
 
 /**
  * THEME
@@ -159,8 +141,8 @@ open_modal.forEach(open => {
         const getAttribute = open.getAttribute("data-modal-target");
         const modal = document.querySelector(getAttribute);
 
-        modal.classList.remove("top-[40%]", "rotate-[30deg]", "opacity-[0]", "invisible");
-        modal.classList.add("top-[50%]", "rotate-[0deg]");
+        modal.classList.remove("opacity-[0]", "invisible");
+        modal.classList.add("top-[50%]");
 
         overflow.classList.remove("opacity-0", "invisible");
         overflow.classList.add("opacity-[0.7]");
@@ -174,8 +156,8 @@ overflow.addEventListener("click", (e) => {
         const getAttribute = open.getAttribute("data-modal-target");
         const modal = document.querySelector(getAttribute);
 
-        modal.classList.add("top-[40%]", "rotate-[30deg]", "opacity-[0]", "invisible");
-        modal.classList.remove("top-[50%]", "rotate-[0deg]");
+        modal.classList.add("opacity-[0]", "invisible");
+        modal.classList.remove("top-[50%]");
     });
 
     overflow.classList.add("opacity-0", "invisible");
@@ -203,6 +185,7 @@ collapses.forEach(card_collapse => {
     collapse_btn.addEventListener("click", (e) => {
         e.stopPropagation();
 
+        collapse_btn.classList.toggle("active");
         arrow_collapse_btn.classList.toggle("rotate-[180deg]");
         collapses_list.classList.toggle("active");
     });
@@ -220,98 +203,4 @@ collapses.forEach(card_collapse => {
         arrow_collapse_list_btn_list_btn.classList.toggle("rotate-[180deg]");
         collapses_list_card_list_card_body.classList.toggle("active");
     });
-});
-
-/**
- * TITLE SECTION GSAP
- */
-gsap.utils.toArray(".title-section").forEach(section => {
-    let tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: section,
-            start: "top center",
-            end: "bottom center",
-            scrub: false,
-        }
-    })
-
-    tl.from(section.querySelector("h3"), {
-        opacity: 0,
-        duration: 0.4,
-        y: 100,
-    })
-    .from(section.querySelector("svg"), {
-        opacity: 0,
-        duration: 0.4,
-        y: 100,
-    })
-    .from(section.querySelector("p"), {
-        opacity: 0,
-        duration: 0.4,
-        y: 100,
-    })
-    .from(section.querySelector("div"), {
-        opacity: 0,
-        duration: 0.4,
-        y: 100,
-    });
-});
-
-/**
- * SECTION GSAP
- */
-gsap.utils.toArray(".section").forEach(section => {
-    let tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: section,
-            start: "center center",
-            end: "bottom center",
-        }
-    });
-
-    tl.from(section.querySelectorAll(".col"), {
-        opacity: 0,
-        y: 100,
-        duration: 1,
-        stagger: 0.2
-    })
-    .from(section.querySelector(".btn-animation"), {
-        opacity: 0,
-        y: 100,
-        duration: 0.8,
-    });
-});
-
-/**
- * FOOTER GSAP
- */
-gsap.timeline({
-    scrollTrigger: {
-        trigger: ".footer",
-        start: "start center",
-        end: "center center"
-    }
-})
-.from(".footer .logo", {
-    rotate: 360,
-    scale: 0.0,
-    duration: 0.8,
-    ease: "back.out(2)",
-})
-.from(".footer .hotline", {
-    y: 100,
-    scale: 0.0,
-    duration: 0.8,
-    ease: "back.out(2)",
-})
-.from(".footer ul li", {
-    y: 100,
-    scale: 0.0,
-    duration: 0.8,
-    stagger: 0.04,
-    ease: "back.out(2)",
-})
-.from(".footer .copyright", {
-    opacity: 0,
-    duration: 0.8,
 });

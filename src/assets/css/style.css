@@ -7,21 +7,19 @@
      * Colors
      */
     
-    /* PRIMARY */
-    --blue-color: #0ea5e9;
-    --blue-dark-color: #2563eb;
-    --second-blue-color: rgba(30, 90, 130, 0.45);
-    --third-blue-color: #0c94c0;
-    --four-blue-color: #064a60;
-    --yellow-color: #facc15;
-    --second-yellow-color: rgba(190, 160, 20, 0.5);
-    --third-yellow-color: #ccad00;
-    --red-color: #f43f5e;
-    --green-color: #14b8a6;
-    --second-green-color: rgba(30, 150, 130, 0.45);
-    --purple-color: #623cea;
-
     /* DARK */
+    --dark-blue-color: #0ea5e9;
+    --dark-blue-dark-color: #2563eb;
+    --dark-second-blue-color: rgba(30, 90, 130, 0.45);
+    --dark-third-blue-color: #0c94c0;
+    --dark-four-blue-color: #064a60;
+    --dark-yellow-color: #facc15;
+    --dark-second-yellow-color: #064a60;
+    --dark-third-yellow-color: #ccad00;
+    --dark-red-color: #f43f5e;
+    --dark-green-color: #14b8a6;
+    --dark-second-green-color: rgba(30, 150, 130, 0.45);
+    --dark-purple-color: #623cea;
     --dark-bg-color: #080c14;
     --dark-second-bg-color: #111827;
     --dark-third-bg-color: #1f2937;
@@ -32,6 +30,18 @@
     --dark-border-color: #1e293b;
 
     /* LIGHT */
+    --light-blue-color: #0ea5e9;
+    --light-blue-dark-color: #2563eb;
+    --light-second-blue-color: #e7f8fd;
+    --light-third-blue-color: #3fc7f3;
+    --light-four-blue-color: #064a60;
+    --light-yellow-color: #facc15;
+    --light-second-yellow-color: #fff7cc;
+    --light-third-yellow-color: #ffe033;
+    --light-red-color: #f43f5e;
+    --light-green-color: #14b8a6;
+    --light-second-green-color: rgba(30, 150, 130, 0.45);
+    --light-purple-color: #623cea;
     --light-bg-color: #ffffff;
     --light-text-color: #111827;
     --light-second-bg-color: #f3f4f6;
@@ -39,7 +49,7 @@
     --light-second-color: #6b7280;
     --light-four-bg-color: #38bdf8;
     --light-five-bg-color: #e7f8fd;
-    --light-third-bg-color: #cbd5e1;
+    --light-third-bg-color: #d1d5db;
 
     /**
      * TYPOGRAPHY
@@ -57,9 +67,9 @@
     --fs-body-large: 1.6rem;
     --fs-body-medium: 1.4rem;
     --fs-body-small: 1.2rem;
-    --fs-label-large: 1.2rem;
-    --fs-label-medium: 1.1rem;
-    --fs-label-small: 1rem;
+    --fs-label-large: 1.3rem;
+    --fs-label-medium: 1.2rem;
+    --fs-label-small: 1.1rem;
 
     /* Line height */
     --lh-display-large: 3.6rem;
@@ -90,6 +100,18 @@
 [data-theme="dark"] {
     color-scheme: dark;
 
+    --blue-color: var(--dark-blue-color);
+    --blue-dark-color: var(--dark-blue-dark-color);
+    --second-blue-color: var(--dark-second-blue-color);
+    --third-blue-color: var(--dark-third-blue-color);
+    --four-blue-color: var(--dark-four-blue-color);
+    --yellow-color: var(--dark-yellow-color);
+    --second-yellow-color: var(--dark-second-yellow-color);
+    --third-yellow-color: var(--dark-third-yellow-color);
+    --red-color: var(--dark-red-color);
+    --green-color: var(--dark-green-color);
+    --second-green-color: var(--dark-second-green-color);
+    --purple-color: var(--dark-purple-color);
     --bg-color: var(--dark-bg-color);
     --second-bg-color: var(--dark-second-bg-color);
     --third-bg-color: var(--dark-third-bg-color);
@@ -103,6 +125,18 @@
 [data-theme="light"] {
     color-scheme: light;
 
+    --blue-color: var(--light-blue-color);
+    --blue-dark-color: var(--light-blue-dark-color);
+    --second-blue-color: var(--light-second-blue-color);
+    --third-blue-color: var(--light-third-blue-color);
+    --four-blue-color: var(--light-four-blue-color);
+    --yellow-color: var(--light-yellow-color);
+    --second-yellow-color: var(--light-second-yellow-color);
+    --third-yellow-color: var(--light-third-yellow-color);
+    --red-color: var(--light-red-color);
+    --green-color: var(--light-green-color);
+    --second-green-color: var(--light-second-green-color);
+    --purple-color: var(--light-purple-color);
     --bg-color: var(--light-bg-color);
     --second-bg-color: var(--light-second-bg-color);
     --third-bg-color: var(--light-third-bg-color);
@@ -112,14 +146,6 @@
     --second-color: var(--light-second-color);
     --border-color: var(--light-border-color);
 }
-
-[data-theme="dark"] .logo-dark { display: none; }
-
-[data-theme="light"] .logo-dark { display: block; }
-
-[data-theme="light"] .logo-light { display: none; }
-
-[data-theme="dark"] .logo-light { display: block; }
 
 /*-----------------------------------*\
   #RESET
@@ -255,6 +281,8 @@ p {
     margin-block-end: 72px; 
     width: 100%;
 }
+
+.title-section h3 { justify-content: center; }
 
 .main { 
     padding-block-start: 80px;
