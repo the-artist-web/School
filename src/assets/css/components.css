@@ -476,8 +476,9 @@
 .card-how {
     background-color: var(--third-blue-color);
     border-radius: 24px;
-    padding: 20px;
+    padding: 30px 20px;
     text-align: center;
+    height: 100%;
 }
 
 .card-how svg { margin-inline: auto; }
