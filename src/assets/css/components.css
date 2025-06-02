@@ -80,14 +80,14 @@
 }
 
 .box-select { 
-    background-color: var(--second-bg-color) !important;
-    border: 2px solid var(--border-color);
+    background-color: var(--bg-color) !important;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     position: relative; 
 }
 
 .box-select .select-control {
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
     color: var(--second-color) !important;
     border-radius: 4px;
     min-height: 38px;
@@ -99,7 +99,7 @@
 .box-select .select-control:hover { color: var(--text-color) !important; }
 
 .box-select .arrow {
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
     position: absolute;
     border-radius: 0 4px 4px 0;
     color: var(--second-color) !important;
@@ -112,8 +112,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-left: 1px solid var(--border-color);
     transition: all 0.4s ease-out;
+}
+
+.box-select .arrow::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 2px;
+    height: 19px;
+    border-radius: 1000px;
+    background-color: var(--text-color);
+    transform: translateY(-50%);
+    opacity: 0.5;
 }
 
 .box-select:hover .arrow { color: var(--text-color) !important; }
@@ -212,7 +224,10 @@
     transition: all 0.4s ease-out;
 }
 
-.card-collapse .collapse-btn.active { background-color: #881337; }
+.card-collapse .collapse-btn.active { 
+    background-color: #ffe4e6; 
+    color: #000000;
+}
 
 .card-collapse .collapses-list {
     background-color: var(--second-bg-color);
@@ -231,7 +246,7 @@
 .card-collapse .collapses-list .collapses-list-card { width: 100%; }
 
 .card-collapse .collapses-list .collapses-list-card .collapse-list-btn {
-    background-color: rgba(41, 28, 22, 0.8);
+    background-color: #fefce8;
     border-radius: 8px;
     padding: 16px;
     display: flex;
@@ -347,7 +362,10 @@
     background-color: transparent;
 }
 
-.btn-green:hover { background-color: var(--green-color); }
+.btn-green:hover { 
+    color: #fff !important;
+    background-color: var(--green-color); 
+}
 
 .btn-green-mix { 
     background: linear-gradient(to right, var(--green-color), var(--blue-color)); 
@@ -388,6 +406,13 @@
     background-color: transparent;
     color: var(--four-bg-color) !important;
 }
+
+.btn-red-mix {
+    background: linear-gradient(to right, var(--red-color), var(--purple-color)); 
+    color: #ffffff !important;
+}
+
+.btn-red-mix:hover { opacity: 0.7; }
 
 /**
  * DROPDOWN
@@ -471,7 +496,7 @@
     padding: 16px 20px !important;
 }
 
-.card-materials .card-body .btn-card:hover { background-color: #080c14; }
+.card-materials .card-body .btn-card:hover { background-color: #102542; }
 
 .card-how {
     background-color: var(--third-blue-color);

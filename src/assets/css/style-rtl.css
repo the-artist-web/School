@@ -32,6 +32,11 @@ html[dir="rtl"] .box-file::after {
     width: calc(100% - 64.36px);
 }
 
+html[dir="rtl"] .box-select .arrow::before {
+    right: 0;
+    left: auto;
+}
+
 /**
  * CARDS
  */
