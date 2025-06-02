@@ -178,9 +178,8 @@ collapses.forEach(card_collapse => {
     const arrow_collapse_list_btn = collapse_list_btn.querySelector(".arrow");
     const collapses_list_card_list = card_collapse.querySelector(".collapses-list-card-list");
 
-    const collapse_list_btn_list_btn = card_collapse.querySelector(".collapse-list-btn-list-btn");
-    const arrow_collapse_list_btn_list_btn = collapse_list_btn_list_btn.querySelector(".arrow");
-    const collapses_list_card_list_card_body = card_collapse.querySelector(".collapses-list-card-list-card-body");
+    const collapse_list_btn_list_btn = card_collapse.querySelectorAll(".collapse-list-btn-list-btn");
+    const collapses_list_card_list_card_body = card_collapse.querySelectorAll(".collapses-list-card-list-card-body");
 
     collapse_btn.addEventListener("click", (e) => {
         e.stopPropagation();
@@ -197,10 +196,15 @@ collapses.forEach(card_collapse => {
         collapses_list_card_list.classList.toggle("active");
     });
 
-    collapse_list_btn_list_btn.addEventListener("click", (e) => {
-        e.stopPropagation();
+    collapse_list_btn_list_btn.forEach((btn, index) => {
+        const arrow = btn.querySelector(".arrow");
+        const body = collapses_list_card_list_card_body[index];
 
-        arrow_collapse_list_btn_list_btn.classList.toggle("rotate-[180deg]");
-        collapses_list_card_list_card_body.classList.toggle("active");
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+
+            arrow.classList.toggle("rotate-[180deg]");
+            body.classList.toggle("active");
+        });
     });
 });

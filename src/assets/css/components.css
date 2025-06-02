@@ -90,8 +90,8 @@
     background-color: var(--second-bg-color);
     color: var(--second-color) !important;
     border-radius: 4px;
-    min-height: 36px;
-    max-height: 36px;
+    min-height: 38px;
+    max-height: 38px;
     padding: 10px 36px 10px 10px;
     transition: all 0.4s ease-out;
 }
@@ -106,8 +106,8 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     pointer-events: none;
     display: flex;
     align-items: center;
@@ -267,6 +267,8 @@
     width: 100%;
     transition: all 0.4s ease-out;
 }
+
+.card-collapse .collapses-list .collapses-list-card .collapses-list-card-list .collapses-list-card-list-card .collapse-list-btn-list-btn h2 { text-align: start; }
 
 .card-collapse .collapses-list .collapses-list-card .collapses-list-card-list .collapses-list-card-list-card .collapses-list-card-list-card-body {
     display: grid;

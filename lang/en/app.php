@@ -54,8 +54,6 @@ return [
     "from_here" => "From here",
     "forgot_your_password_click_here" => "Forgot your password? Click here",
     "dont_have_an_account_create_one_now" => "Don't have an account? Create one now!",
-
-    // CODE
     "enter_the_code" => "Enter The Code",
     "re_enter_the_code" => "Re-Enter The Code",
 

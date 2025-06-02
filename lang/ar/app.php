@@ -54,8 +54,6 @@ return [
     "from_here" => "من هنا",
     "forgot_your_password_click_here" => "هل نسيت كلمة المرور؟ اضغط هنا",
     "dont_have_an_account_create_one_now" => "ليس لديك حساب؟ أنشئ حساباً الآن!",
-
-    // CODE
     "enter_the_code" => "أدخل الكود",
     "re_enter_the_code" => "أعد إدخال الكود",
 
