@@ -13,6 +13,7 @@
     --dark-second-blue-color: rgba(30, 90, 130, 0.45);
     --dark-third-blue-color: #0c94c0;
     --dark-four-blue-color: #064a60;
+    --dark-five-blue-color: #096f90;
     --dark-yellow-color: #facc15;
     --dark-second-yellow-color: #064a60;
     --dark-third-yellow-color: #ccad00;
@@ -35,6 +36,7 @@
     --light-second-blue-color: #e7f8fd;
     --light-third-blue-color: #3fc7f3;
     --light-four-blue-color: #064a60;
+    --light-five-blue-color: #9fe3f9;
     --light-yellow-color: #facc15;
     --light-second-yellow-color: #fff7cc;
     --light-third-yellow-color: #ffe033;
@@ -105,6 +107,7 @@
     --second-blue-color: var(--dark-second-blue-color);
     --third-blue-color: var(--dark-third-blue-color);
     --four-blue-color: var(--dark-four-blue-color);
+    --five-blue-color: var(--dark-five-blue-color);
     --yellow-color: var(--dark-yellow-color);
     --second-yellow-color: var(--dark-second-yellow-color);
     --third-yellow-color: var(--dark-third-yellow-color);
@@ -130,6 +133,7 @@
     --second-blue-color: var(--light-second-blue-color);
     --third-blue-color: var(--light-third-blue-color);
     --four-blue-color: var(--light-four-blue-color);
+    --five-blue-color: var(--light-five-blue-color);
     --yellow-color: var(--light-yellow-color);
     --second-yellow-color: var(--light-second-yellow-color);
     --third-yellow-color: var(--light-third-yellow-color);

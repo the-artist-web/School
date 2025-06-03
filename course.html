@@ -43,8 +43,8 @@
                                 <svg  xmlns="http://www.w3.org/2000/svg"  width="35"  height="35"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
                             </button>
 
-                            <!-- <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out label-large">AR</a> -->
-                            <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out label-large">EN</a>
+                            <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out hidden label-large" data-ar>AR</a>
+                            <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out label-large" data-en>EN</a>
                         </span>
 
                         <span class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] lg:translate-x-[0] lg:translate-y-[0] lg:static" data-gsap-logo>
@@ -66,7 +66,7 @@
                             </span>
 
                             <span data-gsap-header>
-                                <button type="button" class="relative py-[6px] px-[8px] rounded-full bg-[var(--four-bg-color)] min-h-[36px] max-h-[36px] w-[78px] flex rtl:flex-row-reverse items-center justify-between" data-theme-toggle>
+                                <button type="button" class="relative py-[6px] px-[8px] rounded-full bg-[var(--four-bg-color)] min-h-[36px] max-h-[36px] w-[78px] hidden lg:flex rtl:flex-row-reverse items-center justify-between" data-theme-toggle>
                                     <span class="text-[var(--text-color)]">
                                         <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z" /><path d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z" /><path d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" /></svg>
                                     </span>
@@ -75,6 +75,18 @@
                                         <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 1.992a10 10 0 1 0 9.236 13.838c.341 -.82 -.476 -1.644 -1.298 -1.31a6.5 6.5 0 0 1 -6.864 -10.787l.077 -.08c.551 -.63 .113 -1.653 -.758 -1.653h-.266l-.068 -.006l-.06 -.002z" /></svg>
                                     </span>
 
+                                    <div class="circle absolute top-[50%] bottm-0 right-[3px] translate-y-[-50%] min-w-[30px] min-h-[30px] max-w-[30px] max-h-[30px] rounded-full bg-[var(--five-bg-color)] flex items-center justify-center transition-all duration-[0.5s] ease-out">
+                                        <span class="hidden text-[#000] svg-1">
+                                            <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z" /><path d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z" /><path d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" /></svg>
+                                        </span>
+
+                                        <span class="text-[#000] svg-2">
+                                            <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 1.992a10 10 0 1 0 9.236 13.838c.341 -.82 -.476 -1.644 -1.298 -1.31a6.5 6.5 0 0 1 -6.864 -10.787l.077 -.08c.551 -.63 .113 -1.653 -.758 -1.653h-.266l-.068 -.006l-.06 -.002z" /></svg>
+                                        </span>
+                                    </div>
+                                </button>
+
+                                <button type="button" class="relative py-[6px] px-[8px] rounded-full bg-[var(--four-bg-color)] min-h-[36px] max-h-[36px] w-[36px] flex lg:hidden rtl:flex-row-reverse items-center justify-between" data-theme-toggle>
                                     <div class="circle absolute top-[50%] bottm-0 right-[3px] translate-y-[-50%] min-w-[30px] min-h-[30px] max-w-[30px] max-h-[30px] rounded-full bg-[var(--five-bg-color)] flex items-center justify-center transition-all duration-[0.5s] ease-out">
                                         <span class="hidden text-[#000] svg-1">
                                             <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z" /><path d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z" /><path d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" /></svg>
@@ -123,8 +135,8 @@
                         </span>
 
                         <span data-gsap-header>
-                            <!-- <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out label-large">AR</a> -->
-                            <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out label-large">EN</a>
+                            <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out hidden label-large" data-ar>AR</a>
+                            <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out label-large" data-en>EN</a>
                         </span>
                     </div>
                 </div>
@@ -203,7 +215,7 @@
                             </div>
                         </div>
 
-                        <div class="absolute top-0 left-0 right-0 bottom-0 w-[100%]" style="background: linear-gradient(90deg, #0000, var(--blue-color), var(--blue-color));"></div>
+                        <div class="absolute top-0 left-0 right-0 bottom-0 w-[100%]" style="background: linear-gradient(90deg, #0000, #38bdf8, #38bdf8);"></div>
                     </div>
                 </div>
 
@@ -260,7 +272,7 @@
                 <section class="collapses mb-[40px]">
                     <div class="px-[16px] lg:px-[40px]">
                         <div class="bg-[var(--second-bg-color)] rounded-[12px] p-[16px] md:p-[20px] lg:p-[40px]">
-                            <h3 class="capitalize !mb-[30px] flex flex-wrap gap-[12px] font-[700] headline-small"><span class="text-[var(--blue-color)]">محتوي </span> الكورس</h3>
+                            <h3 class="capitalize !mb-[3rem] flex flex-wrap gap-[12px] font-[700] headline-small"><span class="text-[var(--blue-color)]">محتوي </span> الكورس</h3>
 
                             <div class="grid gap-[16px]">
                                 <div class="card-collapse">
@@ -1690,119 +1702,11 @@
                                                 <div class="collapses-list-card-list-card">
                                                     <button type="button" class="collapse-list-btn-list-btn">
                                                         <div class="flex items-center gap-[12px]">
-                                                            <span class="text-[var(--yellow-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify w-[25px] h-[25px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
-                                                            </span>
-    
-                                                            <h2 class="label-medium">المحاضرة الرابعة - الفصل الثاني</h2>
-                                                        </div>
-    
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
-                                                        </div>
-                                                    </button>
-    
-                                                    <div class="collapses-list-card-list-card-body">
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--red-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372"></path><path fill="currentColor" fill-opacity=".15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m32 588c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8zm-32-344a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96"></path><path fill="currentColor" d="M464 336a48 48 0 1 0 96 0a48 48 0 1 0-96 0m72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                وصف:
-                                                                <span class="text-[var(--second-color)]">الكشف عن الشقوق القاعدية</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--icon-park-twotone" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact69"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M24 44c9.389 0 17-7.611 17-17s-7.611-17-17-17S7 17.611 7 27s7.611 17 17 17Z"></path><path stroke-linecap="round" d="M18 4h12m-6 15v8m8 0h-8m0-23v4"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact69)"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                مدة الفيديو:
-                                                                <span class="text-[var(--second-color)]">115 دقيقة</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ic" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><circle cx="9" cy="8" r="2" fill="currentColor" opacity=".3"></circle><path fill="currentColor" d="M9 15c-2.7 0-5.8 1.29-6 2.01V18h12v-1c-.2-.71-3.3-2-6-2" opacity=".3"></path><path fill="currentColor" d="M16.67 13.13C18.04 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.57-3.47-6.33-3.87M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4c-.47 0-.91.1-1.33.24a5.98 5.98 0 0 1 0 7.52c.42.14.86.24 1.33.24m-6 0c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4m6 5H3v-.99C3.2 16.29 6.3 15 9 15s5.8 1.29 6 2z"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                عدد المشاهدات:
-                                                                <span class="text-[var(--second-color)]">0 مشاهدات</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--fluent" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M10.5 2.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm-5 7.5a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0M10 8.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 .5.5H11a.5.5 0 0 0 0-1h-1zm0 7.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5M2.5 9.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zM16 10a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5M4.146 15.146a.5.5 0 0 0 .708.708l1-1a.5.5 0 0 0-.708-.708zm10-10l1-1a.5.5 0 0 1 .708.708l-1 1a.5.5 0 0 1-.708-.708m-9.292-1a.5.5 0 1 0-.708.708l1 1a.5.5 0 1 0 .708-.708zm10 10l1 1a.5.5 0 0 1-.708.708l-1-1a.5.5 0 0 1 .708-.708"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                إجمالي وقت المشاهدة:
-                                                                <span class="text-[var(--second-color)]">0 دقيقة</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
-                                                        <div class="flex items-center gap-[12px]">
-                                                            <span class="text-[var(--blue-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact27"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact27)"></path></svg>
-                                                            </span>
-    
-                                                            <h2 class="label-medium">المحاضرة الرابعة - الفصل الثاني</h2>
-                                                        </div>
-    
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
-                                                        </div>
-                                                    </button>
-    
-                                                    <div class="collapses-list-card-list-card-body">
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--red-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372"></path><path fill="currentColor" fill-opacity=".15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m32 588c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8zm-32-344a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96"></path><path fill="currentColor" d="M464 336a48 48 0 1 0 96 0a48 48 0 1 0-96 0m72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                وصف:
-                                                                <span class="text-[var(--second-color)]">الكشف عن الشقوق القاعدية</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--icon-park-twotone" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact69"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M24 44c9.389 0 17-7.611 17-17s-7.611-17-17-17S7 17.611 7 27s7.611 17 17 17Z"></path><path stroke-linecap="round" d="M18 4h12m-6 15v8m8 0h-8m0-23v4"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact69)"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                مدة الفيديو:
-                                                                <span class="text-[var(--second-color)]">115 دقيقة</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ic" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><circle cx="9" cy="8" r="2" fill="currentColor" opacity=".3"></circle><path fill="currentColor" d="M9 15c-2.7 0-5.8 1.29-6 2.01V18h12v-1c-.2-.71-3.3-2-6-2" opacity=".3"></path><path fill="currentColor" d="M16.67 13.13C18.04 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.57-3.47-6.33-3.87M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4c-.47 0-.91.1-1.33.24a5.98 5.98 0 0 1 0 7.52c.42.14.86.24 1.33.24m-6 0c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4m6 5H3v-.99C3.2 16.29 6.3 15 9 15s5.8 1.29 6 2z"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                عدد المشاهدات:
-                                                                <span class="text-[var(--second-color)]">0 مشاهدات</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--fluent" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M10.5 2.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm-5 7.5a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0M10 8.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 .5.5H11a.5.5 0 0 0 0-1h-1zm0 7.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5M2.5 9.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zM16 10a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5M4.146 15.146a.5.5 0 0 0 .708.708l1-1a.5.5 0 0 0-.708-.708zm10-10l1-1a.5.5 0 0 1 .708.708l-1 1a.5.5 0 0 1-.708-.708m-9.292-1a.5.5 0 1 0-.708.708l1 1a.5.5 0 1 0 .708-.708zm10 10l1 1a.5.5 0 0 1-.708.708l-1-1a.5.5 0 0 1 .708-.708"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                إجمالي وقت المشاهدة:
-                                                                <span class="text-[var(--second-color)]">0 دقيقة</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
-                                                        <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--green-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M8 4v12h12V4zm6.74 10.69a.96.96 0 0 1-.73.31c-.29 0-.54-.1-.74-.31a1 1 0 0 1-.31-.74c0-.29.1-.54.31-.74s.45-.3.74-.3s.54.1.74.3s.3.45.3.74s-.11.54-.31.74m1.77-5.86c-.23.34-.54.69-.92 1.06c-.3.27-.51.52-.64.75q-.18.345-.18.78v.4h-1.52v-.56c0-.42.09-.78.26-1.09c.18-.32.49-.67.95-1.07c.32-.29.55-.54.69-.74q.21-.3.21-.72q0-.54-.36-.87c-.24-.23-.57-.34-.99-.34c-.4 0-.72.12-.97.36s-.42.53-.53.87l-1.37-.57c.18-.55.52-1.03 1-1.45c.49-.43 1.11-.64 1.85-.64c.56 0 1.05.11 1.49.33q.66.33 1.02.93c.36.6.36.84.36 1.33s-.11.9-.35 1.24" opacity=".3"></path><path fill="currentColor" d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H8V4h12zm-6.49-5.84c.41-.73 1.18-1.16 1.63-1.8c.48-.68.21-1.94-1.14-1.94c-.88 0-1.32.67-1.5 1.23l-1.37-.57C11.51 5.96 12.52 5 13.99 5c1.23 0 2.08.56 2.51 1.26c.37.6.58 1.73.01 2.57c-.63.93-1.23 1.21-1.56 1.81c-.13.24-.18.4-.18 1.18h-1.52c.01-.41-.06-1.08.26-1.66m-.56 3.79c0-.59.47-1.04 1.05-1.04c.59 0 1.04.45 1.04 1.04c0 .58-.44 1.05-1.04 1.05c-.58 0-1.05-.47-1.05-1.05"></path></svg>
                                                             </span>
     
-                                                            <h2 class="label-medium">الواجب الرابع للمحاضرة - الفصل الثاني - عام</h2>
+                                                            <h2 class="label-medium">اختبار على الباب الاول والثاني</h2>
                                                         </div>
     
                                                         <div class="arrow">
@@ -1816,7 +1720,7 @@
     
                                                             <p class="flex flex-wrap items-center gap-[12px] label-small">
                                                                 وصف:
-                                                                <span class="text-[var(--second-color)]">الكشف عن الشقوق القاعدية</span>
+                                                                <span class="text-[var(--second-color)]">العناصر الانتقالية والتحليل الكيميائي</span>
                                                             </p>
                                                         </div>
     
@@ -1834,7 +1738,7 @@
     
                                                             <p class="flex flex-wrap items-center gap-[12px] label-small">
                                                                 عدد المشاهدات:
-                                                                <span class="text-[var(--second-color)]">0 مشاهدات</span>
+                                                                <span class="text-[var(--second-color)]">100 مشاهدات</span>
                                                             </p>
                                                         </div>
     
@@ -1843,169 +1747,7 @@
     
                                                             <p class="flex flex-wrap items-center gap-[12px] label-small">
                                                                 إجمالي وقت المشاهدة:
-                                                                <span class="text-[var(--second-color)]">0 دقيقة</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
-                                                        <div class="flex items-center gap-[12px]">
-                                                            <span class="text-[var(--yellow-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify w-[25px] h-[25px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
-                                                            </span>
-    
-                                                            <h2 class="label-medium">حل واجب المحاضرة الرابعة - الفصل الثاني - عام</h2>
-                                                        </div>
-    
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
-                                                        </div>
-                                                    </button>
-    
-                                                    <div class="collapses-list-card-list-card-body">
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--red-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372"></path><path fill="currentColor" fill-opacity=".15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m32 588c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8zm-32-344a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96"></path><path fill="currentColor" d="M464 336a48 48 0 1 0 96 0a48 48 0 1 0-96 0m72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                وصف:
-                                                                <span class="text-[var(--second-color)]">الكشف عن الشقوق القاعدية</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--icon-park-twotone" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact69"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M24 44c9.389 0 17-7.611 17-17s-7.611-17-17-17S7 17.611 7 27s7.611 17 17 17Z"></path><path stroke-linecap="round" d="M18 4h12m-6 15v8m8 0h-8m0-23v4"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact69)"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                مدة الفيديو:
-                                                                <span class="text-[var(--second-color)]">115 دقيقة</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ic" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><circle cx="9" cy="8" r="2" fill="currentColor" opacity=".3"></circle><path fill="currentColor" d="M9 15c-2.7 0-5.8 1.29-6 2.01V18h12v-1c-.2-.71-3.3-2-6-2" opacity=".3"></path><path fill="currentColor" d="M16.67 13.13C18.04 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.57-3.47-6.33-3.87M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4c-.47 0-.91.1-1.33.24a5.98 5.98 0 0 1 0 7.52c.42.14.86.24 1.33.24m-6 0c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4m6 5H3v-.99C3.2 16.29 6.3 15 9 15s5.8 1.29 6 2z"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                عدد المشاهدات:
-                                                                <span class="text-[var(--second-color)]">0 مشاهدات</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--fluent" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M10.5 2.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm-5 7.5a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0M10 8.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 .5.5H11a.5.5 0 0 0 0-1h-1zm0 7.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5M2.5 9.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zM16 10a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5M4.146 15.146a.5.5 0 0 0 .708.708l1-1a.5.5 0 0 0-.708-.708zm10-10l1-1a.5.5 0 0 1 .708.708l-1 1a.5.5 0 0 1-.708-.708m-9.292-1a.5.5 0 1 0-.708.708l1 1a.5.5 0 1 0 .708-.708zm10 10l1 1a.5.5 0 0 1-.708.708l-1-1a.5.5 0 0 1 .708-.708"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                إجمالي وقت المشاهدة:
-                                                                <span class="text-[var(--second-color)]">0 دقيقة</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
-                                                        <div class="flex items-center gap-[12px]">
-                                                            <span class="text-[var(--blue-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact28"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact28)"></path></svg>
-                                                            </span>
-    
-                                                            <h2 class="label-medium">حل واجب المحاضرة الرابعة - الفصل الثاني - عام</h2>
-                                                        </div>
-    
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
-                                                        </div>
-                                                    </button>
-    
-                                                    <div class="collapses-list-card-list-card-body">
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--red-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372"></path><path fill="currentColor" fill-opacity=".15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m32 588c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8zm-32-344a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96"></path><path fill="currentColor" d="M464 336a48 48 0 1 0 96 0a48 48 0 1 0-96 0m72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                وصف:
-                                                                <span class="text-[var(--second-color)]">الكشف عن الشقوق القاعدية</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--icon-park-twotone" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact69"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M24 44c9.389 0 17-7.611 17-17s-7.611-17-17-17S7 17.611 7 27s7.611 17 17 17Z"></path><path stroke-linecap="round" d="M18 4h12m-6 15v8m8 0h-8m0-23v4"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact69)"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                مدة الفيديو:
-                                                                <span class="text-[var(--second-color)]">115 دقيقة</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ic" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><circle cx="9" cy="8" r="2" fill="currentColor" opacity=".3"></circle><path fill="currentColor" d="M9 15c-2.7 0-5.8 1.29-6 2.01V18h12v-1c-.2-.71-3.3-2-6-2" opacity=".3"></path><path fill="currentColor" d="M16.67 13.13C18.04 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.57-3.47-6.33-3.87M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4c-.47 0-.91.1-1.33.24a5.98 5.98 0 0 1 0 7.52c.42.14.86.24 1.33.24m-6 0c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4m6 5H3v-.99C3.2 16.29 6.3 15 9 15s5.8 1.29 6 2z"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                عدد المشاهدات:
-                                                                <span class="text-[var(--second-color)]">0 مشاهدات</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--fluent" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M10.5 2.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm-5 7.5a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0M10 8.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 .5.5H11a.5.5 0 0 0 0-1h-1zm0 7.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5M2.5 9.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zM16 10a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5M4.146 15.146a.5.5 0 0 0 .708.708l1-1a.5.5 0 0 0-.708-.708zm10-10l1-1a.5.5 0 0 1 .708.708l-1 1a.5.5 0 0 1-.708-.708m-9.292-1a.5.5 0 1 0-.708.708l1 1a.5.5 0 1 0 .708-.708zm10 10l1 1a.5.5 0 0 1-.708.708l-1-1a.5.5 0 0 1 .708-.708"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                إجمالي وقت المشاهدة:
-                                                                <span class="text-[var(--second-color)]">0 دقيقة</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
-                                                        <div class="flex items-center gap-[12px]">
-                                                            <span class="text-[var(--red-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ph" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><g fill="currentColor"><path d="M224 56v160l-32-16l-32 16l-32-16l-32 16l-32-16l-32 16V56a8 8 0 0 1 8-8h176a8 8 0 0 1 8 8" opacity=".2"></path><path d="M216 40H40a16 16 0 0 0-16 16v160a8 8 0 0 0 11.58 7.16L64 208.94l28.42 14.22a8 8 0 0 0 7.16 0L128 208.94l28.42 14.22a8 8 0 0 0 7.16 0L192 208.94l28.42 14.22A8 8 0 0 0 232 216V56a16 16 0 0 0-16-16m0 163.06l-20.42-10.22a8 8 0 0 0-7.16 0L160 207.06l-28.42-14.22a8 8 0 0 0-7.16 0L96 207.06l-28.42-14.22a8 8 0 0 0-7.16 0L40 203.06V56h176Zm-155.58-35.9a8 8 0 0 0 10.74-3.58L76.94 152h38.12l5.78 11.58a8 8 0 1 0 14.32-7.16l-32-64a8 8 0 0 0-14.32 0l-32 64a8 8 0 0 0 3.58 10.74M96 113.89L107.06 136H84.94ZM136 128a8 8 0 0 1 8-8h16v-16a8 8 0 0 1 16 0v16h16a8 8 0 0 1 0 16h-16v16a8 8 0 0 1-16 0v-16h-16a8 8 0 0 1-8-8"></path></g></svg>
-                                                            </span>
-    
-                                                            <h2 class="label-medium">اختبار على المحاضرة الرابعة - الفصل الثاني - عام</h2>
-                                                        </div>
-    
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
-                                                        </div>
-                                                    </button>
-    
-                                                    <div class="collapses-list-card-list-card-body">
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--red-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372"></path><path fill="currentColor" fill-opacity=".15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m32 588c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8zm-32-344a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96"></path><path fill="currentColor" d="M464 336a48 48 0 1 0 96 0a48 48 0 1 0-96 0m72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                وصف:
-                                                                <span class="text-[var(--second-color)]">الكشف عن الشقوق القاعدية</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--icon-park-twotone" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact69"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M24 44c9.389 0 17-7.611 17-17s-7.611-17-17-17S7 17.611 7 27s7.611 17 17 17Z"></path><path stroke-linecap="round" d="M18 4h12m-6 15v8m8 0h-8m0-23v4"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact69)"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                مدة الفيديو:
-                                                                <span class="text-[var(--second-color)]">115 دقيقة</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ic" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><circle cx="9" cy="8" r="2" fill="currentColor" opacity=".3"></circle><path fill="currentColor" d="M9 15c-2.7 0-5.8 1.29-6 2.01V18h12v-1c-.2-.71-3.3-2-6-2" opacity=".3"></path><path fill="currentColor" d="M16.67 13.13C18.04 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.57-3.47-6.33-3.87M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4c-.47 0-.91.1-1.33.24a5.98 5.98 0 0 1 0 7.52c.42.14.86.24 1.33.24m-6 0c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4m6 5H3v-.99C3.2 16.29 6.3 15 9 15s5.8 1.29 6 2z"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                عدد المشاهدات:
-                                                                <span class="text-[var(--second-color)]">0 مشاهدات</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--fluent" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M10.5 2.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm-5 7.5a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0M10 8.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 .5.5H11a.5.5 0 0 0 0-1h-1zm0 7.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5M2.5 9.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zM16 10a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5M4.146 15.146a.5.5 0 0 0 .708.708l1-1a.5.5 0 0 0-.708-.708zm10-10l1-1a.5.5 0 0 1 .708.708l-1 1a.5.5 0 0 1-.708-.708m-9.292-1a.5.5 0 1 0-.708.708l1 1a.5.5 0 1 0 .708-.708zm10 10l1 1a.5.5 0 0 1-.708.708l-1-1a.5.5 0 0 1 .708-.708"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                إجمالي وقت المشاهدة:
-                                                                <span class="text-[var(--second-color)]">0 دقيقة</span>
+                                                                <span class="text-[var(--second-color)]">500 دقيقة</span>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -2018,7 +1760,7 @@
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ant-design" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
                                                             </span>
     
-                                                            <h2 class="label-medium">حل اختبار المحاضرة الرابعة - الفصل الثاني - عام</h2>
+                                                            <h2 class="label-medium">حل اختبار على الباب الاول والثانى</h2>
                                                         </div>
     
                                                         <div class="arrow">
@@ -2069,10 +1811,10 @@
                                                     <button type="button" class="collapse-list-btn-list-btn">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--blue-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact29"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact29)"></path></svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact39"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact39)"></path></svg>
                                                             </span>
     
-                                                            <h2 class="label-medium">حل اختبار المحاضرة الرابعة - الفصل الثاني - عام</h2>
+                                                            <h2 class="label-medium">حل اختبار على الباب الاول والثانى</h2>
                                                         </div>
     
                                                         <div class="arrow">
@@ -2620,173 +2362,11 @@
                                                 <div class="collapses-list-card-list-card">
                                                     <button type="button" class="collapse-list-btn-list-btn">
                                                         <div class="flex items-center gap-[12px]">
-                                                            <span class="text-[var(--yellow-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify w-[25px] h-[25px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
-                                                            </span>
-    
-                                                            <h2 class="label-medium">المحاضرة الرابعة - الفصل الثاني</h2>
-                                                        </div>
-    
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
-                                                        </div>
-                                                    </button>
-    
-                                                    <div class="collapses-list-card-list-card-body">
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--red-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372"></path><path fill="currentColor" fill-opacity=".15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m32 588c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8zm-32-344a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96"></path><path fill="currentColor" d="M464 336a48 48 0 1 0 96 0a48 48 0 1 0-96 0m72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                وصف:
-                                                                <span class="text-[var(--second-color)]">الكشف عن الشقوق القاعدية</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--icon-park-twotone" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact69"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M24 44c9.389 0 17-7.611 17-17s-7.611-17-17-17S7 17.611 7 27s7.611 17 17 17Z"></path><path stroke-linecap="round" d="M18 4h12m-6 15v8m8 0h-8m0-23v4"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact69)"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                مدة الفيديو:
-                                                                <span class="text-[var(--second-color)]">115 دقيقة</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ic" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><circle cx="9" cy="8" r="2" fill="currentColor" opacity=".3"></circle><path fill="currentColor" d="M9 15c-2.7 0-5.8 1.29-6 2.01V18h12v-1c-.2-.71-3.3-2-6-2" opacity=".3"></path><path fill="currentColor" d="M16.67 13.13C18.04 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.57-3.47-6.33-3.87M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4c-.47 0-.91.1-1.33.24a5.98 5.98 0 0 1 0 7.52c.42.14.86.24 1.33.24m-6 0c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4m6 5H3v-.99C3.2 16.29 6.3 15 9 15s5.8 1.29 6 2z"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                عدد المشاهدات:
-                                                                <span class="text-[var(--second-color)]">0 مشاهدات</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--fluent" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M10.5 2.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm-5 7.5a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0M10 8.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 .5.5H11a.5.5 0 0 0 0-1h-1zm0 7.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5M2.5 9.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zM16 10a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5M4.146 15.146a.5.5 0 0 0 .708.708l1-1a.5.5 0 0 0-.708-.708zm10-10l1-1a.5.5 0 0 1 .708.708l-1 1a.5.5 0 0 1-.708-.708m-9.292-1a.5.5 0 1 0-.708.708l1 1a.5.5 0 1 0 .708-.708zm10 10l1 1a.5.5 0 0 1-.708.708l-1-1a.5.5 0 0 1 .708-.708"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                إجمالي وقت المشاهدة:
-                                                                <span class="text-[var(--second-color)]">0 دقيقة</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
-                                                        <div class="flex items-center gap-[12px]">
-                                                            <span class="text-[var(--blue-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact27"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact27)"></path></svg>
-                                                            </span>
-    
-                                                            <h2 class="label-medium">المحاضرة الرابعة - الفصل الثاني</h2>
-                                                        </div>
-    
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
-                                                        </div>
-                                                    </button>
-    
-                                                    <div class="collapses-list-card-list-card-body">
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--red-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372"></path><path fill="currentColor" fill-opacity=".15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m32 588c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8zm-32-344a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96"></path><path fill="currentColor" d="M464 336a48 48 0 1 0 96 0a48 48 0 1 0-96 0m72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                وصف:
-                                                                <span class="text-[var(--second-color)]">الكشف عن الشقوق القاعدية</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--icon-park-twotone" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact69"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M24 44c9.389 0 17-7.611 17-17s-7.611-17-17-17S7 17.611 7 27s7.611 17 17 17Z"></path><path stroke-linecap="round" d="M18 4h12m-6 15v8m8 0h-8m0-23v4"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact69)"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                مدة الفيديو:
-                                                                <span class="text-[var(--second-color)]">115 دقيقة</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ic" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><circle cx="9" cy="8" r="2" fill="currentColor" opacity=".3"></circle><path fill="currentColor" d="M9 15c-2.7 0-5.8 1.29-6 2.01V18h12v-1c-.2-.71-3.3-2-6-2" opacity=".3"></path><path fill="currentColor" d="M16.67 13.13C18.04 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.57-3.47-6.33-3.87M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4c-.47 0-.91.1-1.33.24a5.98 5.98 0 0 1 0 7.52c.42.14.86.24 1.33.24m-6 0c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4m6 5H3v-.99C3.2 16.29 6.3 15 9 15s5.8 1.29 6 2z"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                عدد المشاهدات:
-                                                                <span class="text-[var(--second-color)]">0 مشاهدات</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--fluent" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M10.5 2.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm-5 7.5a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0M10 8.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 .5.5H11a.5.5 0 0 0 0-1h-1zm0 7.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5M2.5 9.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zM16 10a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5M4.146 15.146a.5.5 0 0 0 .708.708l1-1a.5.5 0 0 0-.708-.708zm10-10l1-1a.5.5 0 0 1 .708.708l-1 1a.5.5 0 0 1-.708-.708m-9.292-1a.5.5 0 1 0-.708.708l1 1a.5.5 0 1 0 .708-.708zm10 10l1 1a.5.5 0 0 1-.708.708l-1-1a.5.5 0 0 1 .708-.708"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                إجمالي وقت المشاهدة:
-                                                                <span class="text-[var(--second-color)]">0 دقيقة</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
-                                                        <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--green-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M8 4v12h12V4zm6.74 10.69a.96.96 0 0 1-.73.31c-.29 0-.54-.1-.74-.31a1 1 0 0 1-.31-.74c0-.29.1-.54.31-.74s.45-.3.74-.3s.54.1.74.3s.3.45.3.74s-.11.54-.31.74m1.77-5.86c-.23.34-.54.69-.92 1.06c-.3.27-.51.52-.64.75q-.18.345-.18.78v.4h-1.52v-.56c0-.42.09-.78.26-1.09c.18-.32.49-.67.95-1.07c.32-.29.55-.54.69-.74q.21-.3.21-.72q0-.54-.36-.87c-.24-.23-.57-.34-.99-.34c-.4 0-.72.12-.97.36s-.42.53-.53.87l-1.37-.57c.18-.55.52-1.03 1-1.45c.49-.43 1.11-.64 1.85-.64c.56 0 1.05.11 1.49.33q.66.33 1.02.93c.36.6.36.84.36 1.33s-.11.9-.35 1.24" opacity=".3"></path><path fill="currentColor" d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H8V4h12zm-6.49-5.84c.41-.73 1.18-1.16 1.63-1.8c.48-.68.21-1.94-1.14-1.94c-.88 0-1.32.67-1.5 1.23l-1.37-.57C11.51 5.96 12.52 5 13.99 5c1.23 0 2.08.56 2.51 1.26c.37.6.58 1.73.01 2.57c-.63.93-1.23 1.21-1.56 1.81c-.13.24-.18.4-.18 1.18h-1.52c.01-.41-.06-1.08.26-1.66m-.56 3.79c0-.59.47-1.04 1.05-1.04c.59 0 1.04.45 1.04 1.04c0 .58-.44 1.05-1.04 1.05c-.58 0-1.05-.47-1.05-1.05"></path></svg>
                                                             </span>
     
-                                                            <h2 class="label-medium">الواجب الرابع للمحاضرة - الفصل الثاني - عام</h2>
-                                                        </div>
-    
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
-                                                        </div>
-                                                    </button>
-    
-                                                    <div class="collapses-list-card-list-card-body">
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--red-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372"></path><path fill="currentColor" fill-opacity=".15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m32 588c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8zm-32-344a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96"></path><path fill="currentColor" d="M464 336a48 48 0 1 0 96 0a48 48 0 1 0-96 0m72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                وصف:
-                                                                <span class="text-[var(--second-color)]">الكشف عن الشقوق القاعدية</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--icon-park-twotone" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact69"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M24 44c9.389 0 17-7.611 17-17s-7.611-17-17-17S7 17.611 7 27s7.611 17 17 17Z"></path><path stroke-linecap="round" d="M18 4h12m-6 15v8m8 0h-8m0-23v4"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact69)"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                مدة الفيديو:
-                                                                <span class="text-[var(--second-color)]">115 دقيقة</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ic" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><circle cx="9" cy="8" r="2" fill="currentColor" opacity=".3"></circle><path fill="currentColor" d="M9 15c-2.7 0-5.8 1.29-6 2.01V18h12v-1c-.2-.71-3.3-2-6-2" opacity=".3"></path><path fill="currentColor" d="M16.67 13.13C18.04 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.57-3.47-6.33-3.87M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4c-.47 0-.91.1-1.33.24a5.98 5.98 0 0 1 0 7.52c.42.14.86.24 1.33.24m-6 0c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4m6 5H3v-.99C3.2 16.29 6.3 15 9 15s5.8 1.29 6 2z"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                عدد المشاهدات:
-                                                                <span class="text-[var(--second-color)]">0 مشاهدات</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--fluent" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M10.5 2.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm-5 7.5a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0M10 8.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 .5.5H11a.5.5 0 0 0 0-1h-1zm0 7.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5M2.5 9.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zM16 10a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5M4.146 15.146a.5.5 0 0 0 .708.708l1-1a.5.5 0 0 0-.708-.708zm10-10l1-1a.5.5 0 0 1 .708.708l-1 1a.5.5 0 0 1-.708-.708m-9.292-1a.5.5 0 1 0-.708.708l1 1a.5.5 0 1 0 .708-.708zm10 10l1 1a.5.5 0 0 1-.708.708l-1-1a.5.5 0 0 1 .708-.708"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                إجمالي وقت المشاهدة:
-                                                                <span class="text-[var(--second-color)]">0 دقيقة</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
-                                                        <div class="flex items-center gap-[12px]">
-                                                            <span class="text-[var(--yellow-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify w-[25px] h-[25px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
-                                                            </span>
-    
-                                                            <h2 class="label-medium">حل واجب المحاضرة الرابعة - الفصل الثاني - عام</h2>
+                                                            <h2 class="label-medium">امتحان تصفيه على الباب الاول والثاني</h2>
                                                         </div>
     
                                                         <div class="arrow">
@@ -2837,172 +2417,10 @@
                                                     <button type="button" class="collapse-list-btn-list-btn">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--blue-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact28"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact28)"></path></svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact48"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact48)"></path></svg>
                                                             </span>
     
-                                                            <h2 class="label-medium">حل واجب المحاضرة الرابعة - الفصل الثاني - عام</h2>
-                                                        </div>
-    
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
-                                                        </div>
-                                                    </button>
-    
-                                                    <div class="collapses-list-card-list-card-body">
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--red-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372"></path><path fill="currentColor" fill-opacity=".15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m32 588c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8zm-32-344a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96"></path><path fill="currentColor" d="M464 336a48 48 0 1 0 96 0a48 48 0 1 0-96 0m72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                وصف:
-                                                                <span class="text-[var(--second-color)]">الكشف عن الشقوق القاعدية</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--icon-park-twotone" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact69"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M24 44c9.389 0 17-7.611 17-17s-7.611-17-17-17S7 17.611 7 27s7.611 17 17 17Z"></path><path stroke-linecap="round" d="M18 4h12m-6 15v8m8 0h-8m0-23v4"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact69)"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                مدة الفيديو:
-                                                                <span class="text-[var(--second-color)]">115 دقيقة</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ic" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><circle cx="9" cy="8" r="2" fill="currentColor" opacity=".3"></circle><path fill="currentColor" d="M9 15c-2.7 0-5.8 1.29-6 2.01V18h12v-1c-.2-.71-3.3-2-6-2" opacity=".3"></path><path fill="currentColor" d="M16.67 13.13C18.04 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.57-3.47-6.33-3.87M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4c-.47 0-.91.1-1.33.24a5.98 5.98 0 0 1 0 7.52c.42.14.86.24 1.33.24m-6 0c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4m6 5H3v-.99C3.2 16.29 6.3 15 9 15s5.8 1.29 6 2z"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                عدد المشاهدات:
-                                                                <span class="text-[var(--second-color)]">0 مشاهدات</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--fluent" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M10.5 2.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm-5 7.5a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0M10 8.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 .5.5H11a.5.5 0 0 0 0-1h-1zm0 7.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5M2.5 9.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zM16 10a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5M4.146 15.146a.5.5 0 0 0 .708.708l1-1a.5.5 0 0 0-.708-.708zm10-10l1-1a.5.5 0 0 1 .708.708l-1 1a.5.5 0 0 1-.708-.708m-9.292-1a.5.5 0 1 0-.708.708l1 1a.5.5 0 1 0 .708-.708zm10 10l1 1a.5.5 0 0 1-.708.708l-1-1a.5.5 0 0 1 .708-.708"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                إجمالي وقت المشاهدة:
-                                                                <span class="text-[var(--second-color)]">0 دقيقة</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
-                                                        <div class="flex items-center gap-[12px]">
-                                                            <span class="text-[var(--red-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ph" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><g fill="currentColor"><path d="M224 56v160l-32-16l-32 16l-32-16l-32 16l-32-16l-32 16V56a8 8 0 0 1 8-8h176a8 8 0 0 1 8 8" opacity=".2"></path><path d="M216 40H40a16 16 0 0 0-16 16v160a8 8 0 0 0 11.58 7.16L64 208.94l28.42 14.22a8 8 0 0 0 7.16 0L128 208.94l28.42 14.22a8 8 0 0 0 7.16 0L192 208.94l28.42 14.22A8 8 0 0 0 232 216V56a16 16 0 0 0-16-16m0 163.06l-20.42-10.22a8 8 0 0 0-7.16 0L160 207.06l-28.42-14.22a8 8 0 0 0-7.16 0L96 207.06l-28.42-14.22a8 8 0 0 0-7.16 0L40 203.06V56h176Zm-155.58-35.9a8 8 0 0 0 10.74-3.58L76.94 152h38.12l5.78 11.58a8 8 0 1 0 14.32-7.16l-32-64a8 8 0 0 0-14.32 0l-32 64a8 8 0 0 0 3.58 10.74M96 113.89L107.06 136H84.94ZM136 128a8 8 0 0 1 8-8h16v-16a8 8 0 0 1 16 0v16h16a8 8 0 0 1 0 16h-16v16a8 8 0 0 1-16 0v-16h-16a8 8 0 0 1-8-8"></path></g></svg>
-                                                            </span>
-    
-                                                            <h2 class="label-medium">اختبار على المحاضرة الرابعة - الفصل الثاني - عام</h2>
-                                                        </div>
-    
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
-                                                        </div>
-                                                    </button>
-    
-                                                    <div class="collapses-list-card-list-card-body">
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--red-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372"></path><path fill="currentColor" fill-opacity=".15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m32 588c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8zm-32-344a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96"></path><path fill="currentColor" d="M464 336a48 48 0 1 0 96 0a48 48 0 1 0-96 0m72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                وصف:
-                                                                <span class="text-[var(--second-color)]">الكشف عن الشقوق القاعدية</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--icon-park-twotone" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact69"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M24 44c9.389 0 17-7.611 17-17s-7.611-17-17-17S7 17.611 7 27s7.611 17 17 17Z"></path><path stroke-linecap="round" d="M18 4h12m-6 15v8m8 0h-8m0-23v4"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact69)"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                مدة الفيديو:
-                                                                <span class="text-[var(--second-color)]">115 دقيقة</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ic" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><circle cx="9" cy="8" r="2" fill="currentColor" opacity=".3"></circle><path fill="currentColor" d="M9 15c-2.7 0-5.8 1.29-6 2.01V18h12v-1c-.2-.71-3.3-2-6-2" opacity=".3"></path><path fill="currentColor" d="M16.67 13.13C18.04 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.57-3.47-6.33-3.87M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4c-.47 0-.91.1-1.33.24a5.98 5.98 0 0 1 0 7.52c.42.14.86.24 1.33.24m-6 0c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4m6 5H3v-.99C3.2 16.29 6.3 15 9 15s5.8 1.29 6 2z"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                عدد المشاهدات:
-                                                                <span class="text-[var(--second-color)]">0 مشاهدات</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--fluent" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M10.5 2.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm-5 7.5a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0M10 8.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 .5.5H11a.5.5 0 0 0 0-1h-1zm0 7.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5M2.5 9.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zM16 10a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5M4.146 15.146a.5.5 0 0 0 .708.708l1-1a.5.5 0 0 0-.708-.708zm10-10l1-1a.5.5 0 0 1 .708.708l-1 1a.5.5 0 0 1-.708-.708m-9.292-1a.5.5 0 1 0-.708.708l1 1a.5.5 0 1 0 .708-.708zm10 10l1 1a.5.5 0 0 1-.708.708l-1-1a.5.5 0 0 1 .708-.708"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                إجمالي وقت المشاهدة:
-                                                                <span class="text-[var(--second-color)]">0 دقيقة</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
-                                                        <div class="flex items-center gap-[12px]">
-                                                            <span class="text-[var(--yellow-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ant-design" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
-                                                            </span>
-    
-                                                            <h2 class="label-medium">حل اختبار المحاضرة الرابعة - الفصل الثاني - عام</h2>
-                                                        </div>
-    
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
-                                                        </div>
-                                                    </button>
-    
-                                                    <div class="collapses-list-card-list-card-body">
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--red-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372s372 166.6 372 372s-166.6 372-372 372"></path><path fill="currentColor" fill-opacity=".15" d="M512 140c-205.4 0-372 166.6-372 372s166.6 372 372 372s372-166.6 372-372s-166.6-372-372-372m32 588c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8zm-32-344a48.01 48.01 0 0 1 0-96a48.01 48.01 0 0 1 0 96"></path><path fill="currentColor" d="M464 336a48 48 0 1 0 96 0a48 48 0 1 0-96 0m72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                وصف:
-                                                                <span class="text-[var(--second-color)]">الكشف عن الشقوق القاعدية</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--icon-park-twotone" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact69"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M24 44c9.389 0 17-7.611 17-17s-7.611-17-17-17S7 17.611 7 27s7.611 17 17 17Z"></path><path stroke-linecap="round" d="M18 4h12m-6 15v8m8 0h-8m0-23v4"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact69)"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                مدة الفيديو:
-                                                                <span class="text-[var(--second-color)]">115 دقيقة</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--ic" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><circle cx="9" cy="8" r="2" fill="currentColor" opacity=".3"></circle><path fill="currentColor" d="M9 15c-2.7 0-5.8 1.29-6 2.01V18h12v-1c-.2-.71-3.3-2-6-2" opacity=".3"></path><path fill="currentColor" d="M16.67 13.13C18.04 14.06 19 15.32 19 17v3h4v-3c0-2.18-3.57-3.47-6.33-3.87M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4c-.47 0-.91.1-1.33.24a5.98 5.98 0 0 1 0 7.52c.42.14.86.24 1.33.24m-6 0c2.21 0 4-1.79 4-4s-1.79-4-4-4s-4 1.79-4 4s1.79 4 4 4m0-6c1.1 0 2 .9 2 2s-.9 2-2 2s-2-.9-2-2s.9-2 2-2m0 7c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4m6 5H3v-.99C3.2 16.29 6.3 15 9 15s5.8 1.29 6 2z"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                عدد المشاهدات:
-                                                                <span class="text-[var(--second-color)]">0 مشاهدات</span>
-                                                            </p>
-                                                        </div>
-    
-                                                        <div class="flex items-start gap-[6px]">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify text-[var(--yellow-color)] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] iconify--fluent" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M10.5 2.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm-5 7.5a4.5 4.5 0 1 1 9 0a4.5 4.5 0 0 1-9 0M10 8.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 .5.5H11a.5.5 0 0 0 0-1h-1zm0 7.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5M2.5 9.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zM16 10a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5M4.146 15.146a.5.5 0 0 0 .708.708l1-1a.5.5 0 0 0-.708-.708zm10-10l1-1a.5.5 0 0 1 .708.708l-1 1a.5.5 0 0 1-.708-.708m-9.292-1a.5.5 0 1 0-.708.708l1 1a.5.5 0 1 0 .708-.708zm10 10l1 1a.5.5 0 0 1-.708.708l-1-1a.5.5 0 0 1 .708-.708"></path></svg>
-    
-                                                            <p class="flex flex-wrap items-center gap-[12px] label-small">
-                                                                إجمالي وقت المشاهدة:
-                                                                <span class="text-[var(--second-color)]">0 دقيقة</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
-                                                        <div class="flex items-center gap-[12px]">
-                                                            <span class="text-[var(--blue-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact29"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact29)"></path></svg>
-                                                            </span>
-    
-                                                            <h2 class="label-medium">حل اختبار المحاضرة الرابعة - الفصل الثاني - عام</h2>
+                                                            <h2 class="label-medium">حل امتحان تصفيه على الباب الاول والثاني</h2>
                                                         </div>
     
                                                         <div class="arrow">
@@ -3141,6 +2559,17 @@
                 </div>
             </div>
         </footer>
+
+        <!-- SOCIAL MEDIA -->
+        <div class="fixed bottom-[25px] ltr:left-[25px] rtl:right-[25px] z-30 flex flex-col items-center gap-[20px]">
+            <a href="#" class="flex items-center justify-center rounded-full !text-[#fff] !min-w-[56px] !max-w-[56px] !min-h-[56px] !max-h-[56px] lg:!min-w-[64px] lg:!max-w-[64px] lg:!min-h-[64px] lg:!max-h-[64px] bg-[#2bb742] hover:scale-[1.1] transition-all duration-[0.4s] ease-out">
+                <svg  xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"  fill="currentColor"  class="iconify iconify--mingcute !w-[24px] !h-[24px] lg:!w-[32px] lg:!h-[32px]"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.497 4.409a10 10 0 0 1 -10.36 16.828l-.223 -.098l-4.759 .849l-.11 .011a1 1 0 0 1 -.11 0l-.102 -.013l-.108 -.024l-.105 -.037l-.099 -.047l-.093 -.058l-.014 -.011l-.012 -.007l-.086 -.073l-.077 -.08l-.067 -.088l-.056 -.094l-.034 -.07l-.04 -.108l-.028 -.128l-.012 -.102a1 1 0 0 1 0 -.125l.012 -.1l.024 -.11l.045 -.122l1.433 -3.304l-.009 -.014a10 10 0 0 1 1.549 -12.454l.215 -.203a10 10 0 0 1 13.226 -.217m-8.997 3.09a1.5 1.5 0 0 0 -1.5 1.5v1a6 6 0 0 0 6 6h1a1.5 1.5 0 0 0 0 -3h-1l-.144 .007a1.5 1.5 0 0 0 -1.128 .697l-.042 .074l-.022 -.007a4.01 4.01 0 0 1 -2.435 -2.435l-.008 -.023l.075 -.041a1.5 1.5 0 0 0 .704 -1.272v-1a1.5 1.5 0 0 0 -1.5 -1.5" /></svg>
+            </a>
+            
+            <a href="#" class="flex items-center justify-center rounded-full !text-[#fff] !min-w-[56px] !max-w-[56px] !min-h-[56px] !max-h-[56px] lg:!min-w-[64px] lg:!max-w-[64px] lg:!min-h-[64px] lg:!max-h-[64px] bg-[#2f8fef] hover:scale-[1.1] transition-all duration-[0.4s] ease-out">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mingcute !w-[24px] !h-[24px] lg:!w-[32px] lg:!h-[32px]" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"></path><path fill="currentColor" d="M19.777 4.43a1.5 1.5 0 0 1 2.062 1.626l-2.268 13.757c-.22 1.327-1.676 2.088-2.893 1.427c-1.018-.553-2.53-1.405-3.89-2.294c-.68-.445-2.763-1.87-2.507-2.884c.22-.867 3.72-4.125 5.72-6.062c.785-.761.427-1.2-.5-.5c-2.302 1.738-5.998 4.381-7.22 5.125c-1.078.656-1.64.768-2.312.656c-1.226-.204-2.363-.52-3.291-.905c-1.254-.52-1.193-2.244-.001-2.746z"></path></g></svg>
+            </a>
+        </div>
         
         <!-- custom js link -->
         <script src="./src/components.js"></script>

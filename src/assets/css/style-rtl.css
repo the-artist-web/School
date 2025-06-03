@@ -57,3 +57,5 @@ html[dir="rtl"] .card-collapse .collapses-list .collapses-list-card .collapses-l
     padding-left: 16px;
     padding-right: auto;
 }
+
+html[dir="rtl"] .img-end-section { transform: rotateY(180deg); }

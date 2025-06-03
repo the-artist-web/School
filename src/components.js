@@ -208,3 +208,50 @@ collapses.forEach(card_collapse => {
         });
     });
 });
+
+/**
+ * Change language
+ */
+const direction_toggle = document.documentElement;
+const ar = document.querySelectorAll("[data-ar]");
+const en = document.querySelectorAll("[data-en]");
+
+if (localStorage.getItem("dir")) {
+    direction_toggle.dir = localStorage.getItem("dir");
+
+    if (localStorage.getItem("dir") === "ltr") {
+        ar.forEach(ar_ele => ar_ele.classList.remove("hidden"));
+        en.forEach(en_ele => en_ele.classList.add("hidden"));
+    } else {
+        ar.forEach(ar_ele => ar_ele.classList.add("hidden"));
+        en.forEach(en_ele => en_ele.classList.remove("hidden"));
+    };
+};
+
+en.forEach(en_ele => {
+    en_ele.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        direction_toggle.dir = "ltr";
+
+        en_ele.classList.toggle("hidden");
+
+        ar.forEach(ar_ele => ar_ele.classList.toggle("hidden"));
+
+        localStorage.setItem("dir", "ltr");
+    });
+});
+
+ar.forEach(ar_ele => {
+    ar_ele.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        direction_toggle.dir = "rtl";
+
+        ar_ele.classList.toggle("hidden");
+
+        en.forEach(en_ele => en_ele.classList.toggle("hidden"));
+
+        localStorage.setItem("dir", "rtl");
+    });
+});

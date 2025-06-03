@@ -439,6 +439,8 @@
 
 .card-teachers img { border-radius: 16px 0 16px 0; }
 
+.card-course { position: relative; }
+
 .card-course img { transition: all 0.4s ease-out; }
 
 .card-course:hover img { transform: scale(1.1); }
@@ -463,7 +465,7 @@
 .card-materials .title-materials {
     position: relative;
     text-align: center;
-    width: 100%;
+    max-width: max-content;
 }
 
 .card-materials .title-materials::before {
@@ -499,7 +501,7 @@
 .card-materials .card-body .btn-card:hover { background-color: #102542; }
 
 .card-how {
-    background-color: var(--third-blue-color);
+    background-color: var(--five-blue-color);
     border-radius: 24px;
     padding: 30px 20px;
     text-align: center;
@@ -512,12 +514,13 @@
     position: relative;
     text-align: center;
     z-index: 1;
+    width: max-content;
 }
 
 .card-how .card-body .title-how::before {
     content: "";
     background-color: var(--third-yellow-color);
-    opacity: 0.7;
+    opacity: 0.5;
     border-radius: 100%;
     position: absolute;
     top: 50%;
@@ -525,8 +528,8 @@
     bottom: 0;
     z-index: -1;
     transform: translateY(-50%);
-    width: 140px;
-    height: 50px;
+    width: 95px;
+    height: 43px;
 }
 
 /**
