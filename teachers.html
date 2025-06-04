@@ -35,13 +35,125 @@
                 <div class="flex items-center justify-between gap-[16px]">
                     <div class="flex items-center justify-between lg:justify-start gap-[32px] w-[100%] lg:w-[max-content]">
                         <span class="flex items-center gap-[16px] lg:hidden" data-gsap-header>
-                            <button type="button" class="hidden invisible lg:hidden text-[var(--blue-color)] hover:opacity-[0.7] transition-all duration-[0.4s]" data-aside-close data-aside-target="#aside">
+                            <!-- الازرار دي تنضاف في حاله ان ال user مش مسجل دخول -->
+                            <!-- <button type="button" class="hidden invisible lg:hidden text-[var(--blue-color)] hover:opacity-[0.7] transition-all duration-[0.4s]" data-aside-close data-aside-target="#aside">
                                 <svg  xmlns="http://www.w3.org/2000/svg"  width="35"  height="35"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>    
                             </button>
 
                             <button type="button" class="lg:hidden text-[var(--blue-color)] hover:opacity-[0.7] transition-all duration-[0.4s]" data-aside-open data-aside-target="#aside">
                                 <svg  xmlns="http://www.w3.org/2000/svg"  width="35"  height="35"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
-                            </button>
+                            </button> -->
+
+                            <!-- هيتشالو بعد التسجيل -->
+                            <div class="flex items-center gap-[10px]">
+                                <div class="dropdown">
+                                    <button type="button" class="btn-avatar overflow-hidden relative min-w-[40px] max-w-[40px] min-h-[40px] max-h-[40px] rounded-full border-[1px] border-[var(--border-color)]">
+                                        <img 
+                                            src="https://khaled-sakr.com/static/media/userIcon.117b8ea4f0faadadcb46.png"
+                                            alt="img username" 
+                                            loading="lazy"
+                                            class="min-w-[40px] max-w-[40px] min-h-[40px] max-h-[40px] rounded-full img-cover" 
+                                        />
+                                    </button>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="flex items-center gap-[25px] rtl:pl-[16px] ltr:pr-[16px] rounded-full bg-[var(--bg-color)] h-[45px] border-[1px] border-[var(--border-color)] text-nowrap label-small">
+                                                <div class="flex items-center justify-center bg-[#3b4b62] !text-[#9ca3af] min-w-[45px] max-w-[45px] min-h-[45px] max-h-[45px] rounded-full">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="25"  height="25"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-wallet"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" /><path d="M20 12v4h-4a2 2 0 0 1 0 -4h4" /></svg>
+                                                </div>
+
+                                                0 جنية
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <p class="label-small">أهلا محمد</p>
+                                        </li>
+
+                                        <li>
+                                            <a href="./index.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                                <span class="text-[var(--green-color)]">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
+                                                </span>
+                                                الصفحه الرئيسية
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                                <span class="text-[var(--green-color)]">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" /></svg>
+                                                </span>
+                                                حسابي
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                                <span class="text-[var(--green-color)]">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-users"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
+                                                </span>
+                                                منتدي الطلبة
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                                <span class="text-[var(--green-color)]">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-wallet"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" /><path d="M20 12v4h-4a2 2 0 0 1 0 -4h4" /></svg>
+                                                </span>
+                                                محفظتي
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                                <span class="text-[var(--green-color)]">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z" /></svg>
+                                                </span>
+                                                محاضراتي
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                                <span class="text-[var(--green-color)]">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+                                                </span>
+                                                التسوق
+                                            </a>
+                                        </li>
+
+                                        <li class="border-[2px] border-[var(--border-color)] w-[100%]"></li>
+
+                                        <li>
+                                            <form action="#" method="POST">
+                                                <button type="submit" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                                    <span class="text-[var(--green-color)]">
+                                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-logout-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" /><path d="M15 12h-12l3 -3" /><path d="M6 15l-3 -3" /></svg>
+                                                    </span>
+                                                    تسجيل الخروج
+                                                </button>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown">
+                                    <button type="button">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="25"  height="25"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-bell"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14.235 19c.865 0 1.322 1.024 .745 1.668a3.992 3.992 0 0 1 -2.98 1.332a3.992 3.992 0 0 1 -2.98 -1.332c-.552 -.616 -.158 -1.579 .634 -1.661l.11 -.006h4.471z" /><path d="M12 2c1.358 0 2.506 .903 2.875 2.141l.046 .171l.008 .043a8.013 8.013 0 0 1 4.024 6.069l.028 .287l.019 .289v2.931l.021 .136a3 3 0 0 0 1.143 1.847l.167 .117l.162 .099c.86 .487 .56 1.766 -.377 1.864l-.116 .006h-16c-1.028 0 -1.387 -1.364 -.493 -1.87a3 3 0 0 0 1.472 -2.063l.021 -.143l.001 -2.97a8 8 0 0 1 3.821 -6.454l.248 -.146l.01 -.043a3.003 3.003 0 0 1 2.562 -2.29l.182 -.017l.176 -.004z" /></svg>
+                                    </button>
+
+                                    <div class="dropdown-menu !w-[280px]">
+                                        <p class="text-[var(--second-color)] label-small">اهلا بك يا محمد في اكاديمية MPS</p>
+
+                                        <div class="border-[1px] border-[var(--border-color)] w-full"></div>
+
+                                        <p class="text-[var(--second-color)] label-small">تم تسجيل الدخول بنجاح</p>
+                                    </div>
+                                </div>
+                            </div>
 
                             <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out hidden label-large" data-ar>AR</a>
                             <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out label-large" data-en>EN</a>
@@ -58,6 +170,115 @@
                             </a>
                         </span>
 
+                        <!-- هيتشالو بعد التسجيل -->
+                        <div class="hidden lg:flex items-center gap-[30px]">
+                            <div class="dropdown">
+                                <button type="button" class="btn-avatar overflow-hidden relative min-w-[40px] max-w-[40px] min-h-[40px] max-h-[40px] rounded-full border-[1px] border-[var(--border-color)]">
+                                    <img 
+                                        src="https://khaled-sakr.com/static/media/userIcon.117b8ea4f0faadadcb46.png"
+                                        alt="img username" 
+                                        loading="lazy"
+                                        class="min-w-[40px] max-w-[40px] min-h-[40px] max-h-[40px] rounded-full img-cover" 
+                                    />
+                                </button>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <p class="label-small">أهلا محمد</p>
+                                    </li>
+
+                                    <li>
+                                        <a href="./index.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                            <span class="text-[var(--green-color)]">
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
+                                            </span>
+                                            الصفحه الرئيسية
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                            <span class="text-[var(--green-color)]">
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" /></svg>
+                                            </span>
+                                            حسابي
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                            <span class="text-[var(--green-color)]">
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-users"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
+                                            </span>
+                                            منتدي الطلبة
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                            <span class="text-[var(--green-color)]">
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-wallet"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" /><path d="M20 12v4h-4a2 2 0 0 1 0 -4h4" /></svg>
+                                            </span>
+                                            محفظتي
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                            <span class="text-[var(--green-color)]">
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z" /></svg>
+                                            </span>
+                                            محاضراتي
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                            <span class="text-[var(--green-color)]">
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+                                            </span>
+                                            التسوق
+                                        </a>
+                                    </li>
+
+                                    <li class="border-[2px] border-[var(--border-color)] w-[100%]"></li>
+
+                                    <li>
+                                        <form action="#" method="POST">
+                                            <button type="submit" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                                <span class="text-[var(--green-color)]">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-logout-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" /><path d="M15 12h-12l3 -3" /><path d="M6 15l-3 -3" /></svg>
+                                                </span>
+                                                تسجيل الخروج
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="dropdown">
+                                <button type="button">
+                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="25"  height="25"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-bell"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14.235 19c.865 0 1.322 1.024 .745 1.668a3.992 3.992 0 0 1 -2.98 1.332a3.992 3.992 0 0 1 -2.98 -1.332c-.552 -.616 -.158 -1.579 .634 -1.661l.11 -.006h4.471z" /><path d="M12 2c1.358 0 2.506 .903 2.875 2.141l.046 .171l.008 .043a8.013 8.013 0 0 1 4.024 6.069l.028 .287l.019 .289v2.931l.021 .136a3 3 0 0 0 1.143 1.847l.167 .117l.162 .099c.86 .487 .56 1.766 -.377 1.864l-.116 .006h-16c-1.028 0 -1.387 -1.364 -.493 -1.87a3 3 0 0 0 1.472 -2.063l.021 -.143l.001 -2.97a8 8 0 0 1 3.821 -6.454l.248 -.146l.01 -.043a3.003 3.003 0 0 1 2.562 -2.29l.182 -.017l.176 -.004z" /></svg>
+                                </button>
+
+                                <div class="dropdown-menu !w-[280px]">
+                                    <p class="text-[var(--second-color)] label-small">اهلا بك يا محمد في اكاديمية MPS</p>
+
+                                    <div class="border-[1px] border-[var(--border-color)] w-full"></div>
+
+                                    <p class="text-[var(--second-color)] label-small">تم تسجيل الدخول بنجاح</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-[10px] rtl:pl-[16px] ltr:pr-[16px] rounded-full bg-[var(--bg-color)] h-[45px] border-[1px] border-[var(--border-color)] text-nowrap label-small">
+                                <div class="flex items-center justify-center bg-[#3b4b62] !text-[#9ca3af] min-w-[45px] max-w-[45px] min-h-[45px] max-h-[45px] rounded-full">
+                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="25"  height="25"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-wallet"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" /><path d="M20 12v4h-4a2 2 0 0 1 0 -4h4" /></svg>
+                                </div>
+
+                                0 جنية
+                            </div>
+                        </div>
+
                         <div class="flex items-center gap-[10px]">
                             <span data-gsap-header>
                                 <button type="button" class="min-w-[36px] min-h-[36px] max-w-[36px] max-h-[36px] rounded-[5px] hover:bg-[var(--third-bg-color)] flex lg:hidden items-center justify-center transition-all duration-[0.4s]" data-modal-open data-modal-target="#modal-search">
@@ -66,7 +287,7 @@
                             </span>
 
                             <span data-gsap-header>
-                                <button type="button" class="relative py-[6px] px-[8px] rounded-full bg-[var(--four-bg-color)] min-h-[36px] max-h-[36px] w-[78px] hidden lg:flex rtl:flex-row-reverse items-center justify-between" data-theme-toggle>
+                                <button type="button" class="relative py-[6px] px-[8px] rounded-full bg-[var(--four-bg-color)] min-h-[36px] max-h-[36px] w-[78px] hidden sm:flex rtl:flex-row-reverse items-center justify-between" data-theme-toggle>
                                     <span class="text-[var(--text-color)]">
                                         <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z" /><path d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z" /><path d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" /></svg>
                                     </span>
@@ -86,7 +307,7 @@
                                     </div>
                                 </button>
 
-                                <button type="button" class="relative py-[6px] px-[8px] rounded-full bg-[var(--four-bg-color)] min-h-[36px] max-h-[36px] w-[36px] flex lg:hidden rtl:flex-row-reverse items-center justify-between" data-theme-toggle>
+                                <button type="button" class="relative py-[6px] px-[8px] rounded-full bg-[var(--four-bg-color)] min-h-[36px] max-h-[36px] w-[36px] flex sm:hidden rtl:flex-row-reverse items-center justify-between" data-theme-toggle>
                                     <div class="circle absolute top-[50%] bottm-0 right-[3px] translate-y-[-50%] min-w-[30px] min-h-[30px] max-w-[30px] max-h-[30px] rounded-full bg-[var(--five-bg-color)] flex items-center justify-center transition-all duration-[0.5s] ease-out">
                                         <span class="hidden text-[#000] svg-1">
                                             <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z" /><path d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z" /><path d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" /></svg>
@@ -114,7 +335,8 @@
                             </button>
                         </span>
 
-                        <span data-gsap-header>
+                        <!-- الازرار دي تنضاف في حاله ان ال user مش مسجل دخول -->
+                        <!-- <span data-gsap-header>
                             <a href="./login.html" class="btn btn-border-yellow label-small">
                                 <span class="text-[var(--yellow-color)]">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 6c-2.61.7-5.67 1-8.5 1s-5.89-.3-8.5-1L3 8c1.86.5 4 .83 6 1v13h2v-6h2v6h2V9c2-.17 4.14-.5 6-1zM12 6c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2s.9 2 2 2"></path></svg>
@@ -132,7 +354,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--material-symbols" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M5 19V5zv-.025zm0 2q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v7q0 .425-.288.713T20 13t-.712-.288T19 12V5H5v14h7q.425 0 .713.288T13 20t-.288.713T12 21zm14.175-1H16q-.425 0-.712-.288T15 19t.288-.712T16 18h3.175l-.9-.9Q18 16.825 18 16.413t.3-.713q.275-.275.7-.275t.7.275l2.6 2.6q.3.3.3.7t-.3.7l-2.6 2.6q-.275.275-.687.288T18.3 22.3q-.275-.275-.275-.7t.275-.7zM11 13v3q0 .425.288.713T12 17t.713-.288T13 16v-3h3q.425 0 .713-.288T17 12t-.288-.712T16 11h-3V8q0-.425-.288-.712T12 7t-.712.288T11 8v3H8q-.425 0-.712.288T7 12t.288.713T8 13z"></path></svg>
                                 إنشاء حساب جديد
                             </a>
-                        </span>
+                        </span> -->
 
                         <span data-gsap-header>
                             <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out hidden label-large" data-ar>AR</a>
@@ -770,6 +992,5 @@
         
         <!-- custom js link -->
         <script src="./src/components.js"></script>
-        <script src="./src/filter.js"></script>
     </body>
 </html>

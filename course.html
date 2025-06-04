@@ -35,13 +35,125 @@
                 <div class="flex items-center justify-between gap-[16px]">
                     <div class="flex items-center justify-between lg:justify-start gap-[32px] w-[100%] lg:w-[max-content]">
                         <span class="flex items-center gap-[16px] lg:hidden" data-gsap-header>
-                            <button type="button" class="hidden invisible lg:hidden text-[var(--blue-color)] hover:opacity-[0.7] transition-all duration-[0.4s]" data-aside-close data-aside-target="#aside">
+                            <!-- الازرار دي تنضاف في حاله ان ال user مش مسجل دخول -->
+                            <!-- <button type="button" class="hidden invisible lg:hidden text-[var(--blue-color)] hover:opacity-[0.7] transition-all duration-[0.4s]" data-aside-close data-aside-target="#aside">
                                 <svg  xmlns="http://www.w3.org/2000/svg"  width="35"  height="35"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>    
                             </button>
 
                             <button type="button" class="lg:hidden text-[var(--blue-color)] hover:opacity-[0.7] transition-all duration-[0.4s]" data-aside-open data-aside-target="#aside">
                                 <svg  xmlns="http://www.w3.org/2000/svg"  width="35"  height="35"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
-                            </button>
+                            </button> -->
+
+                            <!-- هيتشالو بعد التسجيل -->
+                            <div class="flex items-center gap-[10px]">
+                                <div class="dropdown">
+                                    <button type="button" class="btn-avatar overflow-hidden relative min-w-[40px] max-w-[40px] min-h-[40px] max-h-[40px] rounded-full border-[1px] border-[var(--border-color)]">
+                                        <img 
+                                            src="https://khaled-sakr.com/static/media/userIcon.117b8ea4f0faadadcb46.png"
+                                            alt="img username" 
+                                            loading="lazy"
+                                            class="min-w-[40px] max-w-[40px] min-h-[40px] max-h-[40px] rounded-full img-cover" 
+                                        />
+                                    </button>
+
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="flex items-center gap-[25px] rtl:pl-[16px] ltr:pr-[16px] rounded-full bg-[var(--bg-color)] h-[45px] border-[1px] border-[var(--border-color)] text-nowrap label-small">
+                                                <div class="flex items-center justify-center bg-[#3b4b62] !text-[#9ca3af] min-w-[45px] max-w-[45px] min-h-[45px] max-h-[45px] rounded-full">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="25"  height="25"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-wallet"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" /><path d="M20 12v4h-4a2 2 0 0 1 0 -4h4" /></svg>
+                                                </div>
+
+                                                0 جنية
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <p class="label-small">أهلا محمد</p>
+                                        </li>
+
+                                        <li>
+                                            <a href="./index.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                                <span class="text-[var(--green-color)]">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
+                                                </span>
+                                                الصفحه الرئيسية
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                                <span class="text-[var(--green-color)]">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" /></svg>
+                                                </span>
+                                                حسابي
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                                <span class="text-[var(--green-color)]">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-users"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
+                                                </span>
+                                                منتدي الطلبة
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                                <span class="text-[var(--green-color)]">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-wallet"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" /><path d="M20 12v4h-4a2 2 0 0 1 0 -4h4" /></svg>
+                                                </span>
+                                                محفظتي
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                                <span class="text-[var(--green-color)]">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z" /></svg>
+                                                </span>
+                                                محاضراتي
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                                <span class="text-[var(--green-color)]">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+                                                </span>
+                                                التسوق
+                                            </a>
+                                        </li>
+
+                                        <li class="border-[2px] border-[var(--border-color)] w-[100%]"></li>
+
+                                        <li>
+                                            <form action="#" method="POST">
+                                                <button type="submit" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                                    <span class="text-[var(--green-color)]">
+                                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-logout-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" /><path d="M15 12h-12l3 -3" /><path d="M6 15l-3 -3" /></svg>
+                                                    </span>
+                                                    تسجيل الخروج
+                                                </button>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown">
+                                    <button type="button">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="25"  height="25"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-bell"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14.235 19c.865 0 1.322 1.024 .745 1.668a3.992 3.992 0 0 1 -2.98 1.332a3.992 3.992 0 0 1 -2.98 -1.332c-.552 -.616 -.158 -1.579 .634 -1.661l.11 -.006h4.471z" /><path d="M12 2c1.358 0 2.506 .903 2.875 2.141l.046 .171l.008 .043a8.013 8.013 0 0 1 4.024 6.069l.028 .287l.019 .289v2.931l.021 .136a3 3 0 0 0 1.143 1.847l.167 .117l.162 .099c.86 .487 .56 1.766 -.377 1.864l-.116 .006h-16c-1.028 0 -1.387 -1.364 -.493 -1.87a3 3 0 0 0 1.472 -2.063l.021 -.143l.001 -2.97a8 8 0 0 1 3.821 -6.454l.248 -.146l.01 -.043a3.003 3.003 0 0 1 2.562 -2.29l.182 -.017l.176 -.004z" /></svg>
+                                    </button>
+
+                                    <div class="dropdown-menu !w-[280px]">
+                                        <p class="text-[var(--second-color)] label-small">اهلا بك يا محمد في اكاديمية MPS</p>
+
+                                        <div class="border-[1px] border-[var(--border-color)] w-full"></div>
+
+                                        <p class="text-[var(--second-color)] label-small">تم تسجيل الدخول بنجاح</p>
+                                    </div>
+                                </div>
+                            </div>
 
                             <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out hidden label-large" data-ar>AR</a>
                             <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out label-large" data-en>EN</a>
@@ -58,6 +170,115 @@
                             </a>
                         </span>
 
+                        <!-- هيتشالو بعد التسجيل -->
+                        <div class="hidden lg:flex items-center gap-[30px]">
+                            <div class="dropdown">
+                                <button type="button" class="btn-avatar overflow-hidden relative min-w-[40px] max-w-[40px] min-h-[40px] max-h-[40px] rounded-full border-[1px] border-[var(--border-color)]">
+                                    <img 
+                                        src="https://khaled-sakr.com/static/media/userIcon.117b8ea4f0faadadcb46.png"
+                                        alt="img username" 
+                                        loading="lazy"
+                                        class="min-w-[40px] max-w-[40px] min-h-[40px] max-h-[40px] rounded-full img-cover" 
+                                    />
+                                </button>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <p class="label-small">أهلا محمد</p>
+                                    </li>
+
+                                    <li>
+                                        <a href="./index.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                            <span class="text-[var(--green-color)]">
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-home"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
+                                            </span>
+                                            الصفحه الرئيسية
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                            <span class="text-[var(--green-color)]">
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" /></svg>
+                                            </span>
+                                            حسابي
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                            <span class="text-[var(--green-color)]">
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-users"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
+                                            </span>
+                                            منتدي الطلبة
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                            <span class="text-[var(--green-color)]">
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-wallet"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" /><path d="M20 12v4h-4a2 2 0 0 1 0 -4h4" /></svg>
+                                            </span>
+                                            محفظتي
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                            <span class="text-[var(--green-color)]">
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-player-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z" /></svg>
+                                            </span>
+                                            محاضراتي
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="./profile.html" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                            <span class="text-[var(--green-color)]">
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+                                            </span>
+                                            التسوق
+                                        </a>
+                                    </li>
+
+                                    <li class="border-[2px] border-[var(--border-color)] w-[100%]"></li>
+
+                                    <li>
+                                        <form action="#" method="POST">
+                                            <button type="submit" class="flex items-center gap-[8px] !text-[var(--second-color)] hover:!text-[var(--text-color)] transition-all duration-[0.4s] ease-out label-small">
+                                                <span class="text-[var(--green-color)]">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-logout-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" /><path d="M15 12h-12l3 -3" /><path d="M6 15l-3 -3" /></svg>
+                                                </span>
+                                                تسجيل الخروج
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="dropdown">
+                                <button type="button">
+                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="25"  height="25"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-bell"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14.235 19c.865 0 1.322 1.024 .745 1.668a3.992 3.992 0 0 1 -2.98 1.332a3.992 3.992 0 0 1 -2.98 -1.332c-.552 -.616 -.158 -1.579 .634 -1.661l.11 -.006h4.471z" /><path d="M12 2c1.358 0 2.506 .903 2.875 2.141l.046 .171l.008 .043a8.013 8.013 0 0 1 4.024 6.069l.028 .287l.019 .289v2.931l.021 .136a3 3 0 0 0 1.143 1.847l.167 .117l.162 .099c.86 .487 .56 1.766 -.377 1.864l-.116 .006h-16c-1.028 0 -1.387 -1.364 -.493 -1.87a3 3 0 0 0 1.472 -2.063l.021 -.143l.001 -2.97a8 8 0 0 1 3.821 -6.454l.248 -.146l.01 -.043a3.003 3.003 0 0 1 2.562 -2.29l.182 -.017l.176 -.004z" /></svg>
+                                </button>
+
+                                <div class="dropdown-menu !w-[280px]">
+                                    <p class="text-[var(--second-color)] label-small">اهلا بك يا محمد في اكاديمية MPS</p>
+
+                                    <div class="border-[1px] border-[var(--border-color)] w-full"></div>
+
+                                    <p class="text-[var(--second-color)] label-small">تم تسجيل الدخول بنجاح</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-[10px] rtl:pl-[16px] ltr:pr-[16px] rounded-full bg-[var(--bg-color)] h-[45px] border-[1px] border-[var(--border-color)] text-nowrap label-small">
+                                <div class="flex items-center justify-center bg-[#3b4b62] !text-[#9ca3af] min-w-[45px] max-w-[45px] min-h-[45px] max-h-[45px] rounded-full">
+                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="25"  height="25"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-wallet"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" /><path d="M20 12v4h-4a2 2 0 0 1 0 -4h4" /></svg>
+                                </div>
+
+                                0 جنية
+                            </div>
+                        </div>
+
                         <div class="flex items-center gap-[10px]">
                             <span data-gsap-header>
                                 <button type="button" class="min-w-[36px] min-h-[36px] max-w-[36px] max-h-[36px] rounded-[5px] hover:bg-[var(--third-bg-color)] flex lg:hidden items-center justify-center transition-all duration-[0.4s]" data-modal-open data-modal-target="#modal-search">
@@ -66,7 +287,7 @@
                             </span>
 
                             <span data-gsap-header>
-                                <button type="button" class="relative py-[6px] px-[8px] rounded-full bg-[var(--four-bg-color)] min-h-[36px] max-h-[36px] w-[78px] hidden lg:flex rtl:flex-row-reverse items-center justify-between" data-theme-toggle>
+                                <button type="button" class="relative py-[6px] px-[8px] rounded-full bg-[var(--four-bg-color)] min-h-[36px] max-h-[36px] w-[78px] hidden sm:flex rtl:flex-row-reverse items-center justify-between" data-theme-toggle>
                                     <span class="text-[var(--text-color)]">
                                         <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z" /><path d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z" /><path d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" /></svg>
                                     </span>
@@ -86,7 +307,7 @@
                                     </div>
                                 </button>
 
-                                <button type="button" class="relative py-[6px] px-[8px] rounded-full bg-[var(--four-bg-color)] min-h-[36px] max-h-[36px] w-[36px] flex lg:hidden rtl:flex-row-reverse items-center justify-between" data-theme-toggle>
+                                <button type="button" class="relative py-[6px] px-[8px] rounded-full bg-[var(--four-bg-color)] min-h-[36px] max-h-[36px] w-[36px] flex sm:hidden rtl:flex-row-reverse items-center justify-between" data-theme-toggle>
                                     <div class="circle absolute top-[50%] bottm-0 right-[3px] translate-y-[-50%] min-w-[30px] min-h-[30px] max-w-[30px] max-h-[30px] rounded-full bg-[var(--five-bg-color)] flex items-center justify-center transition-all duration-[0.5s] ease-out">
                                         <span class="hidden text-[#000] svg-1">
                                             <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z" /><path d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" /><path d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z" /><path d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" /><path d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" /><path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" /></svg>
@@ -114,7 +335,8 @@
                             </button>
                         </span>
 
-                        <span data-gsap-header>
+                        <!-- الازرار دي تنضاف في حاله ان ال user مش مسجل دخول -->
+                        <!-- <span data-gsap-header>
                             <a href="./login.html" class="btn btn-border-yellow label-small">
                                 <span class="text-[var(--yellow-color)]">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 6c-2.61.7-5.67 1-8.5 1s-5.89-.3-8.5-1L3 8c1.86.5 4 .83 6 1v13h2v-6h2v6h2V9c2-.17 4.14-.5 6-1zM12 6c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2s.9 2 2 2"></path></svg>
@@ -132,7 +354,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--material-symbols" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M5 19V5zv-.025zm0 2q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v7q0 .425-.288.713T20 13t-.712-.288T19 12V5H5v14h7q.425 0 .713.288T13 20t-.288.713T12 21zm14.175-1H16q-.425 0-.712-.288T15 19t.288-.712T16 18h3.175l-.9-.9Q18 16.825 18 16.413t.3-.713q.275-.275.7-.275t.7.275l2.6 2.6q.3.3.3.7t-.3.7l-2.6 2.6q-.275.275-.687.288T18.3 22.3q-.275-.275-.275-.7t.275-.7zM11 13v3q0 .425.288.713T12 17t.713-.288T13 16v-3h3q.425 0 .713-.288T17 12t-.288-.712T16 11h-3V8q0-.425-.288-.712T12 7t-.712.288T11 8v3H8q-.425 0-.712.288T7 12t.288.713T8 13z"></path></svg>
                                 إنشاء حساب جديد
                             </a>
-                        </span>
+                        </span> -->
 
                         <span data-gsap-header>
                             <a href="#" class="uppercase hover:opacity-[0.7] transition-all duration-[0.4s] ease-out hidden label-large" data-ar>AR</a>
@@ -191,6 +413,77 @@
             </form>
         </div>
 
+        <!-- MODAL EXAM -->
+        <div class="fixed top-[40%] left-[50%] z-50 translate-y-[-50%] opacity-[0] invisible translate-x-[-50%] p-[20px] rounded-[8px] bg-[--bg-color] w-[100%] max-w-[550px] max-h-500px overflow-hidden transition-all duration-[0.6s]" id="modal-exam">
+            <span class="!text-[var(--second-color)] flex items-center justify-center mb-[30px]">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="100"  height="100"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-exclamation-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 9v4" /><path d="M12 16v.01" /></svg>
+            </span>    
+
+            <h3 class="text-center !mb-[25px] title-medium">انتا متأكد انك عاوز تبدا الامتحان الاول</h3>
+
+            <p class="text-[var(--second-color)] !mb-[30px] text-center label-small">انت تقدر تكمل الاجابات الي انتا حليتها قبل كدا وتكمل الامتحان من السؤال الي انتا وصلتلة</p>
+
+            <div class="flex flex-wrap items-center gap-[10px]">
+                <button type="button" class="btn btn-primary label-small" data-modal-open data-modal-target="#modal-exam-two">بدأ الامتحان من الأول</button>
+
+                <button type="button" class="btn !bg-[#ddd] !text-[#505050] hover:opacity-[0.7] label-small" data-modal-close data-modal-target="#modal-exam">الرجوع ثم اضغط علي استكمال</button>
+            </div>
+        </div>
+
+        <!-- MODAL EXAM TWO -->
+        <div class="fixed top-[40%] left-[50%] z-50 translate-y-[-50%] opacity-[0] invisible translate-x-[-50%] p-[20px] rounded-[8px] bg-[--bg-color] w-[100%] max-w-[550px] max-h-500px overflow-hidden transition-all duration-[0.6s]" id="modal-exam-two">
+            <h3 class="text-center !mb-[20px] title-medium">تأكيد بدأ الاختبار</h3>
+
+            <p class="text-[var(--second-color)] !mb-[25px] text-center label-small">تنبيه هام جدا جدا جدا</p>
+
+            <p class="text-[var(--second-color)] !mb-[25px] text-center label-small">1- محاولة تسليم الامتحان مرة واحد فقط ولو دوست تسليم من غير ما تحل الامتحان للأسف باقي المحاضرة مش هتظهر لك ولازم تتواصل ساعتها مع الدعم علشان يحل المشكلة .</p>
+
+            <p class="text-[var(--second-color)] !mb-[25px] text-center label-small">2- الدرجة اللي هتجبها في الامتحان هتفضل موجودة في ملفك دائما فلازم تركز وأنت بتحل الامتحان .</p>
+            
+            <p class="text-[var(--second-color)] !mb-[25px] text-center label-small">3- متنساش تشوف فيديو تحليل الامتحان علشان تتعلم من أخطائك</p>
+            
+            <p class="text-[var(--second-color)] !mb-[30px] text-center label-small">- بالتوفيق يا صديقي</p>
+
+            <div class="flex flex-wrap items-center gap-[10px]">
+                <button type="button" class="btn btn-primary label-small" data-open-section-exam data-modal-close data-modal-target="#modal-exam-two">بدأ الاختبار</button>
+
+                <button type="button" class="btn !bg-[#ddd] !text-[#505050] hover:opacity-[0.7] label-small" data-modal-close data-modal-target="#modal-exam-two">رجوع</button>
+            </div>
+        </div>
+
+        <div class="fixed top-[40%] left-[50%] z-50 translate-y-[-50%] opacity-[0] invisible translate-x-[-50%] p-[20px] rounded-[8px] bg-[--bg-color] w-[100%] max-w-[550px] max-h-500px overflow-hidden transition-all duration-[0.6s]" id="table-exam-end">
+            <span class="!text-[var(--second-color)] flex items-center justify-center mb-[30px]">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="100"  height="100"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-exclamation-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 9v4" /><path d="M12 16v.01" /></svg>
+            </span>    
+
+            <h3 class="text-center !mb-[20px] title-medium">تأكيد انهاء الاختبار</h3>
+
+            <p class="text-[var(--second-color)] !mb-[30px] text-center label-small">لو دوست علي تسليم الامتحان ... الامتحان هيتصحح ومش مسموحلك انك تعيده مرة تانية وهتظهر نيجتك ودرجتك ...</p>
+
+            <div class="flex flex-wrap items-center gap-[10px]">
+                <button type="button" class="btn btn-primary label-small" data-open-row-two-in-table data-modal-close data-modal-target="#table-exam-end">تأكيد انهاء الاختبار</button>
+
+                <button type="button" class="btn !bg-[#ddd] !text-[#505050] hover:opacity-[0.7] label-small" data-modal-close data-modal-target="#table-exam-end">رجوع</button>
+            </div>
+        </div>
+
+        <!-- MODAL confirm completion later -->
+        <div class="fixed top-[40%] left-[50%] z-50 translate-y-[-50%] opacity-[0] invisible translate-x-[-50%] p-[20px] rounded-[8px] bg-[--bg-color] w-[100%] max-w-[550px] max-h-500px overflow-hidden transition-all duration-[0.6s]" id="confirm-completion-later">
+            <span class="!text-[var(--second-color)] flex items-center justify-center mb-[30px]">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="100"  height="100"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-exclamation-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 9v4" /><path d="M12 16v.01" /></svg>
+            </span>    
+
+            <h3 class="text-center !mb-[25px] title-medium">تأكيد استكمال الاختبار لاحقا</h3>
+
+            <p class="text-[var(--second-color)] !mb-[30px] text-center label-small">انتا متاكد من استكمال الامتحان؟ لو دوست علي تاكيد الاسكمال ده الامتحان هيتم حسابة وهتاخد درجتك بناءا علي الأسئلة الي حليتها و الوقت هيفضل يعد عليك واي سؤال لم يتم حلة لن يتم حساب درجتة</p>
+
+            <div class="flex flex-wrap items-center gap-[10px]">
+                <button type="button" class="btn btn-primary label-small" data-open-row-one-in-table data-modal-close data-modal-target="#confirm-completion-later">تأكيد اسكمال الاختبار لاحقا</button>
+
+                <button type="button" class="btn !bg-[#ddd] !text-[#505050] hover:opacity-[0.7] label-small" data-modal-close data-modal-target="#confirm-completion-later">الرجوع</button>
+            </div>
+        </div>
+
         <main class="main">
             <article>
                 <!-- BANNER -->
@@ -219,7 +512,7 @@
                     </div>
                 </div>
 
-                <section>
+                <section data-section-primary>
                     <div class="px-[16px] lg:px-[40px] mb-[40px]">
                         <div class="grid items-start grid-cols-1 lg:grid-cols-[470px_1fr] gap-[35px]">
                             <div class="col lg:w-[auto] mx-auto mt-[-13rem]" style="max-width: calc(100% - 32px);">
@@ -241,7 +534,7 @@
                                     <div class="flex items-center bg-[var(--third-yellow-color)] rounded-full h-[32px] mx-auto max-w-[max-content] mb-[32px]">
                                         <p class="!px-[16px] label-small">جنية</p>
 
-                                        <p class="h-[32px] !px-[16px] bg-[var(--blue-dark-color)] flex items-center justify-center rounded-full label-small">110.00</p>
+                                        <p class="h-[32px] !text-[#fff] !px-[16px] bg-[var(--blue-dark-color)] flex items-center justify-center rounded-full label-small">110.00</p>
                                     </div>
 
                                     <a href="#" class="btn btn-second-primary label-small">اشترك الآن</a>
@@ -268,8 +561,428 @@
                     </div>
                 </section>
 
+                <section class="hidden mt-[-13rem] relative z-[20]" data-section-file>
+                    <div class="px-[16px] mb-[40px] mx-auto w-fll max-w-[900px]">
+                        <div class="bg-[var(--second-bg-color)] rounded-[12px] p-[16px] md:p-[20px] lg:p-[40px] shadow-lg">
+                            <div class="p-[3px] rtl:pl-[25px] ltr:pr-[25px] rounded-full bg-[var(--blue-color)] flex items-center gap-[25px] text-[#fff] mx-auto max-w-[max-content] h-[50px] mb-[45px] label-large">
+                                <div class="bg-[#fff] rounded-full flex items-center justify-center !text-[var(--blue-color)] min-w-[44px] max-w-[44px] min-h-[44px] max-h-[44px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact27"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact27)"></path></svg>
+                                </div>
+
+                                النموذج الاول ملف الاسئلة
+                            </div>
+
+                            <h2 class="flex items-center gap-[12px] !mb-[30px] title-medium">
+                                اضغط
+                                <a href="#" class="!text-[var(--green-color)] underline hover:opacity-[0.7] transtiion-all duration-[0.4s] ease-out">هنا</a>
+                                لفتح الملف!
+                            </h2>
+
+                            <a href="#" class="btn btn-second-green w-full label-small">فتح الملف</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="hidden mt-[-13rem] relative z-[20]" data-section-table-exam>
+                    <div class="px-[16px] lg:px-[40px] mb-[30px]">
+                        <div class="bg-[var(--second-bg-color)] rounded-[12px] p-[16px] md:p-[20px] lg:p-[40px] shadow-lg">
+                            <div class="p-[3px] rtl:pl-[25px] ltr:pr-[25px] rounded-full bg-[var(--red-color)] flex items-center gap-[25px] text-[#fff] mx-auto max-w-[max-content] h-[50px] mb-[45px] label-large">
+                                <div class="bg-[#fff] rounded-full flex items-center justify-center !text-[var(--red-color)] min-w-[44px] max-w-[44px] min-h-[44px] max-h-[44px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ph" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><g fill="currentColor"><path d="M224 56v160l-32-16l-32 16l-32-16l-32 16l-32-16l-32 16V56a8 8 0 0 1 8-8h176a8 8 0 0 1 8 8" opacity=".2"></path><path d="M216 40H40a16 16 0 0 0-16 16v160a8 8 0 0 0 11.58 7.16L64 208.94l28.42 14.22a8 8 0 0 0 7.16 0L128 208.94l28.42 14.22a8 8 0 0 0 7.16 0L192 208.94l28.42 14.22A8 8 0 0 0 232 216V56a16 16 0 0 0-16-16m0 163.06l-20.42-10.22a8 8 0 0 0-7.16 0L160 207.06l-28.42-14.22a8 8 0 0 0-7.16 0L96 207.06l-28.42-14.22a8 8 0 0 0-7.16 0L40 203.06V56h176Zm-155.58-35.9a8 8 0 0 0 10.74-3.58L76.94 152h38.12l5.78 11.58a8 8 0 1 0 14.32-7.16l-32-64a8 8 0 0 0-14.32 0l-32 64a8 8 0 0 0 3.58 10.74M96 113.89L107.06 136H84.94ZM136 128a8 8 0 0 1 8-8h16v-16a8 8 0 0 1 16 0v16h16a8 8 0 0 1 0 16h-16v16a8 8 0 0 1-16 0v-16h-16a8 8 0 0 1-8-8"></path></g></svg>
+                                </div>
+
+                                اختبار على الباب الاول والثاني
+                            </div>
+
+                            <div class="flex flex-col items-center justify-center gap-[25px] hidden" data-table>
+                                <div class="w-[100%] overflow-scroll scrollbar-none">
+                                    <table class="border-collapse border border-gray-400 w-[100%]">
+                                        <thead>
+                                            <tr>
+                                                <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">السريال</th>
+
+                                                <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">تاريخ الدخول</th>
+
+                                                <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">اجمالي الوقت</th>
+
+                                                <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">عدد مرات فتح الامتحان</th>
+
+                                                <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">الوقت المستهلك</th>
+
+                                                <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">اجمالي عدد الاسئلة</th>
+
+                                                <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">عدد الأسئلة المحلولة</th>
+
+                                                <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">النتيجه</th>
+
+                                                <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small"></th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr data-row-one-in-table>
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">13303483</td>
+
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">السبت 5 أبريل 2025</td>
+
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">120 دقيقة</td>
+
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">مرة واحده</td>
+
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">دقيقة واحدة</td>
+
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">16</td>
+
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">1</td>
+
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">
+                                                    <button type="button" class="btn btn-second-green w-full label-small" data-modal-open data-modal-target="#table-exam-end">انهاء الاختبار واظهار النتيجة</button>
+                                                </td>
+
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">
+                                                    <button type="button" class="btn btn-second-primary w-full label-small" data-modal-open data-modal-target="#modal-exam-two">استكمال</button>
+                                                </td>
+                                            </tr>
+
+                                            <tr class="hidden" data-row-two-in-table>
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">13303483</td>
+
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">السبت 5 أبريل 2025</td>
+
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">120 دقيقة</td>
+
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">مرة واحده</td>
+
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">دقيقة واحدة</td>
+
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">16</td>
+
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">16</td>
+
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">1</td>
+
+                                                <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">
+                                                    <a href="./profile.html" class="btn btn-red w-full label-small">عرض النتيجة</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="flex flex-wrap items-center justify-center gap-[15px]">
+                                    <button type="button" class="btn !bg-[#ddd] !text-[#505050] hover:opacity-[0.7] label-small">السابق</button>
+
+                                    <div class="btn bg-[var(--blue-color)] text-[#fff] label-small">1 / 1</div>
+
+                                    <button type="button" class="btn !bg-[#ddd] !text-[#505050] hover:opacity-[0.7] label-small">التالي</button>
+                                </div>
+                            </div>
+
+                            <div class="py-[5px] px-[16px] max-w-[max-content] mx-auto border-[1px] border-[var(--red-color)] rounded-full label-medium" data-no-results>لا يوجد لديك نتائج سابقة...</div>
+
+                            <div class="flex items-center justify-center mt-[45px]">
+                                <button type="button" class="btn btn-second-green px-[30px] label-small" data-btn-start-row-two-in-table data-modal-open data-modal-target="#modal-exam-two">افتح الاختبار الأن!</button>
+
+                                <button type="button" class="btn btn-second-green hidden px-[30px] label-small" data-btn-start-row-one-in-table data-modal-open data-modal-target="#modal-exam">افتح الاختبار الأن!</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="hidden mt-[-13rem] relative z-[20]" data-section-exam>
+                    <div class="px-[16px] lg:px-[40px] mb-[40px] shadow-lg">
+                        <div class="bg-[var(--second-bg-color)] rounded-[12px] p-[16px] md:p-[20px] lg:p-[40px]">
+                            <div class="p-[3px] rtl:pl-[25px] ltr:pr-[25px] rounded-full bg-[var(--red-color)] flex items-center gap-[25px] text-[#fff] mx-auto max-w-[max-content] h-[50px] mb-[45px] label-large">
+                                <div class="bg-[#fff] rounded-full flex items-center justify-center !text-[var(--red-color)] min-w-[44px] max-w-[44px] min-h-[44px] max-h-[44px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ph" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><g fill="currentColor"><path d="M224 56v160l-32-16l-32 16l-32-16l-32 16l-32-16l-32 16V56a8 8 0 0 1 8-8h176a8 8 0 0 1 8 8" opacity=".2"></path><path d="M216 40H40a16 16 0 0 0-16 16v160a8 8 0 0 0 11.58 7.16L64 208.94l28.42 14.22a8 8 0 0 0 7.16 0L128 208.94l28.42 14.22a8 8 0 0 0 7.16 0L192 208.94l28.42 14.22A8 8 0 0 0 232 216V56a16 16 0 0 0-16-16m0 163.06l-20.42-10.22a8 8 0 0 0-7.16 0L160 207.06l-28.42-14.22a8 8 0 0 0-7.16 0L96 207.06l-28.42-14.22a8 8 0 0 0-7.16 0L40 203.06V56h176Zm-155.58-35.9a8 8 0 0 0 10.74-3.58L76.94 152h38.12l5.78 11.58a8 8 0 1 0 14.32-7.16l-32-64a8 8 0 0 0-14.32 0l-32 64a8 8 0 0 0 3.58 10.74M96 113.89L107.06 136H84.94ZM136 128a8 8 0 0 1 8-8h16v-16a8 8 0 0 1 16 0v16h16a8 8 0 0 1 0 16h-16v16a8 8 0 0 1-16 0v-16h-16a8 8 0 0 1-8-8"></path></g></svg>
+                                </div>
+
+                                اختبار على الباب الاول والثاني
+                            </div>
+
+                            <div class="border-[1px] border-[var(--second-color)] bg-[var(--third-bg-color)] p-[16px] rounded-[8px] mb-[50px] mx-auto w-full max-w-[900px] flex flex-col items-center">
+                                <div class="w-full max-w-[500px] flex flex-col items-center gap-[30px] mb-[30px]">
+                                    <div class="pt-[10px] px-[20px] pb-[25px] rounded-[8px] bg-[var(--red-color)] text-[#fff]">
+                                        <div class="py-[5px] px-[10px] bg-[#fff] text-[#000] text-nowrap mb-[10px] rounded-[8px] label-small">باقي من الزمن</div>
+
+                                        <h2 dir="ltr" class="text-center title-medium" data-time="01:00"></h2>
+                                    </div>
+
+                                    <button type="button" class="btn btn-primary w-full label-small" data-modal-open data-modal-target="#table-exam-end">انهاء الاختبار</button>
+
+                                    <button type="button" class="btn btn-yellow-border rounded-[8px] w-full label-small" data-modal-open data-modal-target="#confirm-completion-later">استكمال الاختبار لاحقا</button>
+
+                                    <div class="grid gap-[16px] w-full">
+                                        <div class="flex flex-wrab items-center justify-between gap-[10px]">
+                                            <p class="label-medium">اجمالي درجات الامتحان:</p>
+
+                                            <p class="!py-[10px] !px-[10px] rounded-[8px] label-medium">16</p>
+                                        </div>
+                                        
+                                        <div class="flex flex-wrab items-center justify-between gap-[10px]">
+                                            <p class="label-medium">عدد الأسئلة:</p>
+
+                                            <p class="!py-[10px] !px-[10px] rounded-[8px] label-medium">16</p>
+                                        </div>
+                                        
+                                        <div class="flex flex-wrab items-center justify-between gap-[10px]">
+                                            <p class="label-medium">عدد الأسئلة التي تم فتحها:</p>
+
+                                            <p class="!py-[10px] !px-[10px] bg-[var(--yellow-color)] rounded-[8px] label-medium">0</p>
+                                        </div>
+                                        
+                                        <div class="flex flex-wrab items-center justify-between gap-[10px]">
+                                            <p class="label-medium">عدد الأسئلة الغير محلولة:</p>
+
+                                            <p class="!py-[10px] !px-[10px] bg-[var(--red-color)] rounded-[8px] label-medium">0</p>
+                                        </div>
+                                        
+                                        <div class="flex flex-wrab items-center justify-between gap-[10px]">
+                                            <p class="label-medium">عدد الاسئلة المحلولة</p>
+
+                                            <p class="!py-[10px] !px-[10px] bg-[var(--blue-color)] rounded-[8px] label-medium">0</p>
+                                        </div>
+
+                                        <div class="border-[1px] border-[var(--second-color)] w-full"></div>
+                                        
+                                        <div class="flex flex-wrab items-center justify-between gap-[10px]">
+                                            <p class="label-medium">السؤال الحالي</p>
+
+                                            <p class="!py-[10px] !px-[10px] rounded-[8px] border-[1px] border-[var(--red-color)] label-medium" data-number-question-p>1</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-wrap items-center justify-center gap-[6px]">
+                                    <button type="button" class="btn btn-tag active label-small" data-number-question>1</button>
+
+                                    <button type="button" class="btn btn-tag label-small" data-number-question>2</button>
+
+                                    <button type="button" class="btn btn-tag label-small" data-number-question>3</button>
+
+                                    <button type="button" class="btn btn-tag label-small" data-number-question>4</button>
+
+                                    <button type="button" class="btn btn-tag label-small" data-number-question>5</button>
+                                </div>
+
+                                <div class="border-[1px] border-[var(--second-color)] my-[25px] mx-auto w-full max-w-[500px]"></div>
+
+                                <div class="flex items-center justify-center gap-[16px]">
+                                    <button type="button" class="btn btn-second-green px-[30px] label-small" data-question-prev>السابق</button>
+
+                                    <button type="button" class="btn btn-second-green px-[30px] label-small" data-question-next>التالي</button>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-center mb-[30px]">
+                                <div class="py-[5px] px-[16px] rounded-full bg-[var(--third-yellow-color)] text-[#000] label-small">درجة واحدة</div>
+                            </div>
+
+                            <!-- سؤال 1: فيزياء -->
+                            <div class="px-[16px]" data-question>
+                                <h2 class="flex items-center gap-[10px] !mb-[30px] title-medium">
+                                    <span class="!text-[var(--blue-color)]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-help-octagon">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M12.802 2.165l5.575 2.389c.48 .206 .863 .589 1.07 1.07l2.388 5.574c.22 .512 .22 1.092 0 1.604l-2.389 5.575c-.206 .48 -.589 .863 -1.07 1.07l-5.574 2.388c-.512 .22 -1.092 .22 -1.604 0l-5.575 -2.389a2.036 2.036 0 0 1 -1.07 -1.07l-2.388 -5.574a2.036 2.036 0 0 1 0 -1.604l2.389 -5.575c.206 -.48 .589 -.863 1.07 -1.07l5.574 -2.388a2.036 2.036 0 0 1 1.604 0z" />
+                                            <path d="M12 16v.01" />
+                                            <path d="M12 13a2 2 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" />
+                                        </svg>
+                                    </span>
+                                    ما وحدة قياس القوة في النظام الدولي؟
+                                </h2>
+                                <form action="#" method="POST" class="grid gap-[16px]">
+                                    <label class="flex items-center gap-[10px] label-small">
+                                        <input type="radio" name="q1" class="w-[max-content]" />
+                                        أ - كجم/متر
+                                    </label>
+                                    <label class="flex items-center gap-[10px] label-small">
+                                        <input type="radio" name="q1" class="w-[max-content]" />
+                                        ب - نيوتن
+                                    </label>
+                                    <label class="flex items-center gap-[10px] label-small">
+                                        <input type="radio" name="q1" class="w-[max-content]" />
+                                        ج - جول
+                                    </label>
+                                    <label class="flex items-center gap-[10px] label-small">
+                                        <input type="radio" name="q1" class="w-[max-content]" />
+                                        د - واط
+                                    </label>
+                                </form>
+                            </div>
+
+                            <!-- سؤال 2: فيزياء -->
+                            <div class="px-[16px]" data-question>
+                                <h2 class="flex items-center gap-[10px] !mb-[30px] title-medium">
+                                    <span class="!text-[var(--blue-color)]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-help-octagon">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M12.802 2.165l5.575 2.389c.48 .206 .863 .589 1.07 1.07l2.388 5.574c.22 .512 .22 1.092 0 1.604l-2.389 5.575c-.206 .48 -.589 .863 -1.07 1.07l-5.574 2.388c-.512 .22 -1.092 .22 -1.604 0l-5.575 -2.389a2.036 2.036 0 0 1 -1.07 -1.07l-2.388 -5.574a2.036 2.036 0 0 1 0 -1.604l2.389 -5.575c.206 -.48 .589 -.863 1.07 -1.07l5.574 -2.388a2.036 2.036 0 0 1 1.604 0z" />
+                                            <path d="M12 16v.01" />
+                                            <path d="M12 13a2 2 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" />
+                                        </svg>
+                                    </span>
+                                    أي من الآتي يعبر عن قانون نيوتن الثاني؟
+                                </h2>
+                                <form action="#" method="POST" class="grid gap-[16px]">
+                                    <label class="flex items-center gap-[10px] label-small">
+                                        <input type="radio" name="q2" class="w-[max-content]" />
+                                        أ - F = m / a
+                                    </label>
+                                    <label class="flex items-center gap-[10px] label-small">
+                                        <input type="radio" name="q2" class="w-[max-content]" />
+                                        ب - F = m × a
+                                    </label>
+                                    <label class="flex items-center gap-[10px] label-small">
+                                        <input type="radio" name="q2" class="w-[max-content]" />
+                                        ج - V = d / t
+                                    </label>
+                                    <label class="flex items-center gap-[10px] label-small">
+                                        <input type="radio" name="q2" class="w-[max-content]" />
+                                        د - a = v / t
+                                    </label>
+                                </form>
+                            </div>
+
+                            <!-- سؤال 3: فيزياء -->
+                            <div class="px-[16px]" data-question>
+                                <h2 class="flex items-center gap-[10px] !mb-[30px] title-medium">
+                                    <span class="!text-[var(--blue-color)]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-help-octagon">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M12.802 2.165l5.575 2.389c.48 .206 .863 .589 1.07 1.07l2.388 5.574c.22 .512 .22 1.092 0 1.604l-2.389 5.575c-.206 .48 -.589 .863 -1.07 1.07l-5.574 2.388c-.512 .22 -1.092 .22 -1.604 0l-5.575 -2.389a2.036 2.036 0 0 1 -1.07 -1.07l-2.388 -5.574a2.036 2.036 0 0 1 0 -1.604l2.389 -5.575c.206 -.48 .589 -.863 1.07 -1.07l5.574 -2.388a2.036 2.036 0 0 1 1.604 0z" />
+                                            <path d="M12 16v.01" />
+                                            <path d="M12 13a2 2 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" />
+                                        </svg>
+                                    </span>
+                                    عند مضاعفة الكتلة مع ثبات القوة، ماذا يحدث للعجلة؟
+                                </h2>
+                                <form action="#" method="POST" class="grid gap-[16px]">
+                                    <label class="flex items-center gap-[10px] label-small">
+                                        <input type="radio" name="q3" class="w-[max-content]" />
+                                        أ - تزداد
+                                    </label>
+                                    <label class="flex items-center gap-[10px] label-small">
+                                        <input type="radio" name="q3" class="w-[max-content]" />
+                                        ب - تقل للنصف
+                                    </label>
+                                    <label class="flex items-center gap-[10px] label-small">
+                                        <input type="radio" name="q3" class="w-[max-content]" />
+                                        ج - تثبت
+                                    </label>
+                                    <label class="flex items-center gap-[10px] label-small">
+                                        <input type="radio" name="q3" class="w-[max-content]" />
+                                        د - تختفي
+                                    </label>
+                                </form>
+                            </div>
+
+                            <!-- سؤال 4: بصورة -->
+                            <div class="px-[16px]" data-question>
+                                <h2 class="flex items-center gap-[10px] !mb-[30px] title-medium">
+                                    <span class="!text-[var(--blue-color)]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-help-octagon">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M12.802 2.165l5.575 2.389c.48 .206 .863 .589 1.07 1.07l2.388 5.574c.22 .512 .22 1.092 0 1.604l-2.389 5.575c-.206 .48 -.589 .863 -1.07 1.07l-5.574 2.388c-.512 .22 -1.092 .22 -1.604 0l-5.575 -2.389a2.036 2.036 0 0 1 -1.07 -1.07l-2.388 -5.574a2.036 2.036 0 0 1 0 -1.604l2.389 -5.575c.206 -.48 .589 -.863 1.07 -1.07l5.574 -2.388a2.036 2.036 0 0 1 1.604 0z" />
+                                            <path d="M12 16v.01" />
+                                            <path d="M12 13a2 2 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" />
+                                        </svg>
+                                    </span>
+                                    ما الذي توضح الصورة التالية؟
+                                </h2>
+                                
+                                <div class="flex flex-col lg:flex-row items-center justify-between gap-[16px]">
+                                    <form action="#" method="POST" class="grid gap-[16px]">
+                                        <label class="flex items-center gap-[10px] label-small">
+                                            <input type="radio" name="q4" class="w-[max-content]" />
+                                            أ - حركة منتظمة
+                                        </label>
+                                        <label class="flex items-center gap-[10px] label-small">
+                                            <input type="radio" name="q4" class="w-[max-content]" />
+                                            ب - تسارع منتظم
+                                        </label>
+                                        <label class="flex items-center gap-[10px] label-small">
+                                            <input type="radio" name="q4" class="w-[max-content]" />
+                                            ج - سقوط حر
+                                        </label>
+                                        <label class="flex items-center gap-[10px] label-small">
+                                            <input type="radio" name="q4" class="w-[max-content]" />
+                                            د - سرعة لحظية
+                                        </label>
+                                    </form>
+
+                                    <img 
+                                        src="data:image/png;base64,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" 
+                                        alt="img" 
+                                        loading="lazy"
+                                        class="rounded-[8px] w-full max-w-[400px] img-cover"
+                                    />
+                                </div>
+                            </div>
+
+                            <!-- سؤال 5: بصورة -->
+                            <div class="px-[16px]" data-question>
+                                <h2 class="flex items-center gap-[10px] !mb-[30px] title-medium">
+                                    <span class="!text-[var(--blue-color)]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="icon icon-tabler icons-tabler-outline icon-tabler-help-octagon">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                            <path
+                                                d="M12.802 2.165l5.575 2.389c.48 .206 .863 .589 1.07 1.07l2.388 5.574c.22 .512 .22 1.092 0 1.604l-2.389 5.575c-.206 .48 -.589 .863 -1.07 1.07l-5.574 2.388c-.512 .22 -1.092 .22 -1.604 0l-5.575 -2.389a2.036 2.036 0 0 1 -1.07 -1.07l-2.388 -5.574a2.036 2.036 0 0 1 0 -1.604l2.389 -5.575c.206 -.48 .589 -.863 1.07 -1.07l5.574 -2.388a2.036 2.036 0 0 1 1.604 0z" />
+                                            <path d="M12 16v.01" />
+                                            <path d="M12 13a2 2 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" />
+                                        </svg>
+                                    </span>
+                                    استنتج من الصورة العلاقة بين القوة والتسارع.
+                                </h2>
+                                
+                                <div class="flex flex-col lg:flex-row items-center justify-between gap-[16px]">
+                                    <form action="#" method="POST" class="grid gap-[16px]">
+                                        <label class="flex items-center gap-[10px] label-small">
+                                            <input type="radio" name="q5" class="w-[max-content]" />
+                                            أ - العلاقة عكسية
+                                        </label>
+                                        <label class="flex items-center gap-[10px] label-small">
+                                            <input type="radio" name="q5" class="w-[max-content]" />
+                                            ب - العلاقة طردية
+                                        </label>
+                                        <label class="flex items-center gap-[10px] label-small">
+                                            <input type="radio" name="q5" class="w-[max-content]" />
+                                            ج - لا توجد علاقة
+                                        </label>
+                                        <label class="flex items-center gap-[10px] label-small">
+                                            <input type="radio" name="q5" class="w-[max-content]" />
+                                            د - القوة ثابتة دائمًا
+                                        </label>
+                                    </form>
+
+                                    <img 
+                                        src="data:image/jpeg;base64,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" 
+                                        alt="img" 
+                                        loading="lazy"
+                                        class="rounded-[8px] w-full max-w-[400px] img-cover"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <!-- Collapses -->
-                <section class="collapses mb-[40px]">
+                <section class="collapses mb-[40px] relative z-[20]">
                     <div class="px-[16px] lg:px-[40px]">
                         <div class="bg-[var(--second-bg-color)] rounded-[12px] p-[16px] md:p-[20px] lg:p-[40px]">
                             <h3 class="capitalize !mb-[3rem] flex flex-wrap gap-[12px] font-[700] headline-small"><span class="text-[var(--blue-color)]">محتوي </span> الكورس</h3>
@@ -305,7 +1018,7 @@
     
                                             <div class="collapses-list-card-list">
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--yellow-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify w-[25px] h-[25px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
@@ -359,17 +1072,23 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--blue-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact27"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact27)"></path></svg>
                                                             </span>
     
-                                                            <h2 class="label-medium">المحاضرة الرابعة - الفصل الثاني</h2>
+                                                            <h2 class="label-medium">النموذج الاول ملف الاسئلة</h2>
                                                         </div>
     
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                        <div class="flex items-center gap-[10px]">
+                                                            <div class="btn btn-primary cursor-pointer label-small" data-open-div-open-file>
+                                                                فتح الملف
+                                                            </div>
+
+                                                            <div class="arrow">
+                                                                <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                            </div>
                                                         </div>
                                                     </button>
     
@@ -413,7 +1132,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--green-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M8 4v12h12V4zm6.74 10.69a.96.96 0 0 1-.73.31c-.29 0-.54-.1-.74-.31a1 1 0 0 1-.31-.74c0-.29.1-.54.31-.74s.45-.3.74-.3s.54.1.74.3s.3.45.3.74s-.11.54-.31.74m1.77-5.86c-.23.34-.54.69-.92 1.06c-.3.27-.51.52-.64.75q-.18.345-.18.78v.4h-1.52v-.56c0-.42.09-.78.26-1.09c.18-.32.49-.67.95-1.07c.32-.29.55-.54.69-.74q.21-.3.21-.72q0-.54-.36-.87c-.24-.23-.57-.34-.99-.34c-.4 0-.72.12-.97.36s-.42.53-.53.87l-1.37-.57c.18-.55.52-1.03 1-1.45c.49-.43 1.11-.64 1.85-.64c.56 0 1.05.11 1.49.33q.66.33 1.02.93c.36.6.36.84.36 1.33s-.11.9-.35 1.24" opacity=".3"></path><path fill="currentColor" d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H8V4h12zm-6.49-5.84c.41-.73 1.18-1.16 1.63-1.8c.48-.68.21-1.94-1.14-1.94c-.88 0-1.32.67-1.5 1.23l-1.37-.57C11.51 5.96 12.52 5 13.99 5c1.23 0 2.08.56 2.51 1.26c.37.6.58 1.73.01 2.57c-.63.93-1.23 1.21-1.56 1.81c-.13.24-.18.4-.18 1.18h-1.52c.01-.41-.06-1.08.26-1.66m-.56 3.79c0-.59.47-1.04 1.05-1.04c.59 0 1.04.45 1.04 1.04c0 .58-.44 1.05-1.04 1.05c-.58 0-1.05-.47-1.05-1.05"></path></svg>
@@ -467,7 +1186,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--yellow-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify w-[25px] h-[25px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
@@ -521,17 +1240,23 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--blue-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact28"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact28)"></path></svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact27"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact27)"></path></svg>
                                                             </span>
     
-                                                            <h2 class="label-medium">حل واجب المحاضرة الرابعة - الفصل الثاني - عام</h2>
+                                                            <h2 class="label-medium">النموذج الاول ملف الاسئلة</h2>
                                                         </div>
     
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                        <div class="flex items-center gap-[10px]">
+                                                            <div class="btn btn-primary cursor-pointer label-small" data-open-div-open-file>
+                                                                فتح الملف
+                                                            </div>
+
+                                                            <div class="arrow">
+                                                                <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                            </div>
                                                         </div>
                                                     </button>
     
@@ -575,7 +1300,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--red-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ph" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><g fill="currentColor"><path d="M224 56v160l-32-16l-32 16l-32-16l-32 16l-32-16l-32 16V56a8 8 0 0 1 8-8h176a8 8 0 0 1 8 8" opacity=".2"></path><path d="M216 40H40a16 16 0 0 0-16 16v160a8 8 0 0 0 11.58 7.16L64 208.94l28.42 14.22a8 8 0 0 0 7.16 0L128 208.94l28.42 14.22a8 8 0 0 0 7.16 0L192 208.94l28.42 14.22A8 8 0 0 0 232 216V56a16 16 0 0 0-16-16m0 163.06l-20.42-10.22a8 8 0 0 0-7.16 0L160 207.06l-28.42-14.22a8 8 0 0 0-7.16 0L96 207.06l-28.42-14.22a8 8 0 0 0-7.16 0L40 203.06V56h176Zm-155.58-35.9a8 8 0 0 0 10.74-3.58L76.94 152h38.12l5.78 11.58a8 8 0 1 0 14.32-7.16l-32-64a8 8 0 0 0-14.32 0l-32 64a8 8 0 0 0 3.58 10.74M96 113.89L107.06 136H84.94ZM136 128a8 8 0 0 1 8-8h16v-16a8 8 0 0 1 16 0v16h16a8 8 0 0 1 0 16h-16v16a8 8 0 0 1-16 0v-16h-16a8 8 0 0 1-8-8"></path></g></svg>
@@ -629,7 +1354,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--yellow-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ant-design" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
@@ -683,17 +1408,23 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--blue-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact29"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact29)"></path></svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact27"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact27)"></path></svg>
                                                             </span>
     
-                                                            <h2 class="label-medium">حل اختبار المحاضرة الرابعة - الفصل الثاني - عام</h2>
+                                                            <h2 class="label-medium">النموذج الاول ملف الاسئلة</h2>
                                                         </div>
     
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                        <div class="flex items-center gap-[10px]">
+                                                            <div class="btn btn-primary cursor-pointer label-small" data-open-div-open-file>
+                                                                فتح الملف
+                                                            </div>
+
+                                                            <div class="arrow">
+                                                                <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                            </div>
                                                         </div>
                                                     </button>
     
@@ -770,7 +1501,7 @@
     
                                             <div class="collapses-list-card-list">
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--yellow-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify w-[25px] h-[25px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
@@ -824,17 +1555,23 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--blue-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact27"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact27)"></path></svg>
                                                             </span>
     
-                                                            <h2 class="label-medium">المحاضرة الرابعة - الفصل الثاني</h2>
+                                                            <h2 class="label-medium">النموذج الاول ملف الاسئلة</h2>
                                                         </div>
     
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                        <div class="flex items-center gap-[10px]">
+                                                            <div class="btn btn-primary cursor-pointer label-small" data-open-div-open-file>
+                                                                فتح الملف
+                                                            </div>
+
+                                                            <div class="arrow">
+                                                                <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                            </div>
                                                         </div>
                                                     </button>
     
@@ -878,7 +1615,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--green-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M8 4v12h12V4zm6.74 10.69a.96.96 0 0 1-.73.31c-.29 0-.54-.1-.74-.31a1 1 0 0 1-.31-.74c0-.29.1-.54.31-.74s.45-.3.74-.3s.54.1.74.3s.3.45.3.74s-.11.54-.31.74m1.77-5.86c-.23.34-.54.69-.92 1.06c-.3.27-.51.52-.64.75q-.18.345-.18.78v.4h-1.52v-.56c0-.42.09-.78.26-1.09c.18-.32.49-.67.95-1.07c.32-.29.55-.54.69-.74q.21-.3.21-.72q0-.54-.36-.87c-.24-.23-.57-.34-.99-.34c-.4 0-.72.12-.97.36s-.42.53-.53.87l-1.37-.57c.18-.55.52-1.03 1-1.45c.49-.43 1.11-.64 1.85-.64c.56 0 1.05.11 1.49.33q.66.33 1.02.93c.36.6.36.84.36 1.33s-.11.9-.35 1.24" opacity=".3"></path><path fill="currentColor" d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H8V4h12zm-6.49-5.84c.41-.73 1.18-1.16 1.63-1.8c.48-.68.21-1.94-1.14-1.94c-.88 0-1.32.67-1.5 1.23l-1.37-.57C11.51 5.96 12.52 5 13.99 5c1.23 0 2.08.56 2.51 1.26c.37.6.58 1.73.01 2.57c-.63.93-1.23 1.21-1.56 1.81c-.13.24-.18.4-.18 1.18h-1.52c.01-.41-.06-1.08.26-1.66m-.56 3.79c0-.59.47-1.04 1.05-1.04c.59 0 1.04.45 1.04 1.04c0 .58-.44 1.05-1.04 1.05c-.58 0-1.05-.47-1.05-1.05"></path></svg>
@@ -932,7 +1669,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--yellow-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify w-[25px] h-[25px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
@@ -986,17 +1723,23 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--blue-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact28"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact28)"></path></svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact27"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact27)"></path></svg>
                                                             </span>
     
-                                                            <h2 class="label-medium">حل واجب المحاضرة الرابعة - الفصل الثاني - عام</h2>
+                                                            <h2 class="label-medium">النموذج الاول ملف الاسئلة</h2>
                                                         </div>
     
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                        <div class="flex items-center gap-[10px]">
+                                                            <div class="btn btn-primary cursor-pointer label-small" data-open-div-open-file>
+                                                                فتح الملف
+                                                            </div>
+
+                                                            <div class="arrow">
+                                                                <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                            </div>
                                                         </div>
                                                     </button>
     
@@ -1040,7 +1783,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--red-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ph" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><g fill="currentColor"><path d="M224 56v160l-32-16l-32 16l-32-16l-32 16l-32-16l-32 16V56a8 8 0 0 1 8-8h176a8 8 0 0 1 8 8" opacity=".2"></path><path d="M216 40H40a16 16 0 0 0-16 16v160a8 8 0 0 0 11.58 7.16L64 208.94l28.42 14.22a8 8 0 0 0 7.16 0L128 208.94l28.42 14.22a8 8 0 0 0 7.16 0L192 208.94l28.42 14.22A8 8 0 0 0 232 216V56a16 16 0 0 0-16-16m0 163.06l-20.42-10.22a8 8 0 0 0-7.16 0L160 207.06l-28.42-14.22a8 8 0 0 0-7.16 0L96 207.06l-28.42-14.22a8 8 0 0 0-7.16 0L40 203.06V56h176Zm-155.58-35.9a8 8 0 0 0 10.74-3.58L76.94 152h38.12l5.78 11.58a8 8 0 1 0 14.32-7.16l-32-64a8 8 0 0 0-14.32 0l-32 64a8 8 0 0 0 3.58 10.74M96 113.89L107.06 136H84.94ZM136 128a8 8 0 0 1 8-8h16v-16a8 8 0 0 1 16 0v16h16a8 8 0 0 1 0 16h-16v16a8 8 0 0 1-16 0v-16h-16a8 8 0 0 1-8-8"></path></g></svg>
@@ -1094,7 +1837,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--yellow-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ant-design" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
@@ -1148,17 +1891,23 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--blue-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact29"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact29)"></path></svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact27"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact27)"></path></svg>
                                                             </span>
     
-                                                            <h2 class="label-medium">حل اختبار المحاضرة الرابعة - الفصل الثاني - عام</h2>
+                                                            <h2 class="label-medium">النموذج الاول ملف الاسئلة</h2>
                                                         </div>
     
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                        <div class="flex items-center gap-[10px]">
+                                                            <div class="btn btn-primary cursor-pointer label-small" data-open-div-open-file>
+                                                                فتح الملف
+                                                            </div>
+
+                                                            <div class="arrow">
+                                                                <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                            </div>
                                                         </div>
                                                     </button>
     
@@ -1235,7 +1984,7 @@
     
                                             <div class="collapses-list-card-list">
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--yellow-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify w-[25px] h-[25px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
@@ -1289,17 +2038,23 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--blue-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact27"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact27)"></path></svg>
                                                             </span>
     
-                                                            <h2 class="label-medium">المحاضرة الرابعة - الفصل الثاني</h2>
+                                                            <h2 class="label-medium">النموذج الاول ملف الاسئلة</h2>
                                                         </div>
     
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                        <div class="flex items-center gap-[10px]">
+                                                            <div class="btn btn-primary cursor-pointer label-small" data-open-div-open-file>
+                                                                فتح الملف
+                                                            </div>
+
+                                                            <div class="arrow">
+                                                                <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                            </div>
                                                         </div>
                                                     </button>
     
@@ -1343,7 +2098,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--green-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M8 4v12h12V4zm6.74 10.69a.96.96 0 0 1-.73.31c-.29 0-.54-.1-.74-.31a1 1 0 0 1-.31-.74c0-.29.1-.54.31-.74s.45-.3.74-.3s.54.1.74.3s.3.45.3.74s-.11.54-.31.74m1.77-5.86c-.23.34-.54.69-.92 1.06c-.3.27-.51.52-.64.75q-.18.345-.18.78v.4h-1.52v-.56c0-.42.09-.78.26-1.09c.18-.32.49-.67.95-1.07c.32-.29.55-.54.69-.74q.21-.3.21-.72q0-.54-.36-.87c-.24-.23-.57-.34-.99-.34c-.4 0-.72.12-.97.36s-.42.53-.53.87l-1.37-.57c.18-.55.52-1.03 1-1.45c.49-.43 1.11-.64 1.85-.64c.56 0 1.05.11 1.49.33q.66.33 1.02.93c.36.6.36.84.36 1.33s-.11.9-.35 1.24" opacity=".3"></path><path fill="currentColor" d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H8V4h12zm-6.49-5.84c.41-.73 1.18-1.16 1.63-1.8c.48-.68.21-1.94-1.14-1.94c-.88 0-1.32.67-1.5 1.23l-1.37-.57C11.51 5.96 12.52 5 13.99 5c1.23 0 2.08.56 2.51 1.26c.37.6.58 1.73.01 2.57c-.63.93-1.23 1.21-1.56 1.81c-.13.24-.18.4-.18 1.18h-1.52c.01-.41-.06-1.08.26-1.66m-.56 3.79c0-.59.47-1.04 1.05-1.04c.59 0 1.04.45 1.04 1.04c0 .58-.44 1.05-1.04 1.05c-.58 0-1.05-.47-1.05-1.05"></path></svg>
@@ -1397,7 +2152,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--yellow-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify w-[25px] h-[25px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
@@ -1451,17 +2206,23 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--blue-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact28"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact28)"></path></svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact27"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact27)"></path></svg>
                                                             </span>
     
-                                                            <h2 class="label-medium">حل واجب المحاضرة الرابعة - الفصل الثاني - عام</h2>
+                                                            <h2 class="label-medium">النموذج الاول ملف الاسئلة</h2>
                                                         </div>
     
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                        <div class="flex items-center gap-[10px]">
+                                                            <div class="btn btn-primary cursor-pointer label-small" data-open-div-open-file>
+                                                                فتح الملف
+                                                            </div>
+
+                                                            <div class="arrow">
+                                                                <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                            </div>
                                                         </div>
                                                     </button>
     
@@ -1505,7 +2266,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--red-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ph" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><g fill="currentColor"><path d="M224 56v160l-32-16l-32 16l-32-16l-32 16l-32-16l-32 16V56a8 8 0 0 1 8-8h176a8 8 0 0 1 8 8" opacity=".2"></path><path d="M216 40H40a16 16 0 0 0-16 16v160a8 8 0 0 0 11.58 7.16L64 208.94l28.42 14.22a8 8 0 0 0 7.16 0L128 208.94l28.42 14.22a8 8 0 0 0 7.16 0L192 208.94l28.42 14.22A8 8 0 0 0 232 216V56a16 16 0 0 0-16-16m0 163.06l-20.42-10.22a8 8 0 0 0-7.16 0L160 207.06l-28.42-14.22a8 8 0 0 0-7.16 0L96 207.06l-28.42-14.22a8 8 0 0 0-7.16 0L40 203.06V56h176Zm-155.58-35.9a8 8 0 0 0 10.74-3.58L76.94 152h38.12l5.78 11.58a8 8 0 1 0 14.32-7.16l-32-64a8 8 0 0 0-14.32 0l-32 64a8 8 0 0 0 3.58 10.74M96 113.89L107.06 136H84.94ZM136 128a8 8 0 0 1 8-8h16v-16a8 8 0 0 1 16 0v16h16a8 8 0 0 1 0 16h-16v16a8 8 0 0 1-16 0v-16h-16a8 8 0 0 1-8-8"></path></g></svg>
@@ -1559,7 +2320,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--yellow-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ant-design" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
@@ -1613,17 +2374,23 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--blue-color)] hidden lg:block">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact29"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact29)"></path></svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact27"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact27)"></path></svg>
                                                             </span>
     
-                                                            <h2 class="label-medium">حل اختبار المحاضرة الرابعة - الفصل الثاني - عام</h2>
+                                                            <h2 class="label-medium">النموذج الاول ملف الاسئلة</h2>
                                                         </div>
     
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                        <div class="flex items-center gap-[10px]">
+                                                            <div class="btn btn-primary cursor-pointer label-small" data-open-div-open-file>
+                                                                فتح الملف
+                                                            </div>
+
+                                                            <div class="arrow">
+                                                                <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                            </div>
                                                         </div>
                                                     </button>
     
@@ -1691,7 +2458,7 @@
                                     <div class="collapses-list">
                                         <div class="collapses-list-card">
                                             <button type="button" class="collapse-list-btn">
-                                                <h2 class="label-large">الدروس</h2>
+                                                <h2 class="label-large">امتحان</h2>
     
                                                 <div class="arrow">
                                                     <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify !text-[#ffffff] iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
@@ -1700,7 +2467,7 @@
     
                                             <div class="collapses-list-card-list">
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--green-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M8 4v12h12V4zm6.74 10.69a.96.96 0 0 1-.73.31c-.29 0-.54-.1-.74-.31a1 1 0 0 1-.31-.74c0-.29.1-.54.31-.74s.45-.3.74-.3s.54.1.74.3s.3.45.3.74s-.11.54-.31.74m1.77-5.86c-.23.34-.54.69-.92 1.06c-.3.27-.51.52-.64.75q-.18.345-.18.78v.4h-1.52v-.56c0-.42.09-.78.26-1.09c.18-.32.49-.67.95-1.07c.32-.29.55-.54.69-.74q.21-.3.21-.72q0-.54-.36-.87c-.24-.23-.57-.34-.99-.34c-.4 0-.72.12-.97.36s-.42.53-.53.87l-1.37-.57c.18-.55.52-1.03 1-1.45c.49-.43 1.11-.64 1.85-.64c.56 0 1.05.11 1.49.33q.66.33 1.02.93c.36.6.36.84.36 1.33s-.11.9-.35 1.24" opacity=".3"></path><path fill="currentColor" d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H8V4h12zm-6.49-5.84c.41-.73 1.18-1.16 1.63-1.8c.48-.68.21-1.94-1.14-1.94c-.88 0-1.32.67-1.5 1.23l-1.37-.57C11.51 5.96 12.52 5 13.99 5c1.23 0 2.08.56 2.51 1.26c.37.6.58 1.73.01 2.57c-.63.93-1.23 1.21-1.56 1.81c-.13.24-.18.4-.18 1.18h-1.52c.01-.41-.06-1.08.26-1.66m-.56 3.79c0-.59.47-1.04 1.05-1.04c.59 0 1.04.45 1.04 1.04c0 .58-.44 1.05-1.04 1.05c-.58 0-1.05-.47-1.05-1.05"></path></svg>
@@ -1709,8 +2476,14 @@
                                                             <h2 class="label-medium">اختبار على الباب الاول والثاني</h2>
                                                         </div>
     
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                        <div class="flex items-center gap-[10px]">
+                                                            <div class="btn btn-red cursor-pointer label-small" data-open-section-table-exam>
+                                                                بدأ الامتحان
+                                                            </div>
+
+                                                            <div class="arrow">
+                                                                <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                            </div>
                                                         </div>
                                                     </button>
     
@@ -1754,7 +2527,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--yellow-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ant-design" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
@@ -1762,9 +2535,15 @@
     
                                                             <h2 class="label-medium">حل اختبار على الباب الاول والثانى</h2>
                                                         </div>
-    
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+
+                                                        <div class="flex items-center gap-[10px]">
+                                                            <div class="btn btn-red cursor-pointer label-small" data-open-section-table-exam>
+                                                                بدأ الامتحان
+                                                            </div>
+
+                                                            <div class="arrow">
+                                                                <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                            </div>
                                                         </div>
                                                     </button>
     
@@ -1808,7 +2587,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--blue-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact39"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact39)"></path></svg>
@@ -1816,9 +2595,15 @@
     
                                                             <h2 class="label-medium">حل اختبار على الباب الاول والثانى</h2>
                                                         </div>
-    
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+
+                                                        <div class="flex items-center gap-[10px]">
+                                                            <div class="btn btn-red cursor-pointer label-small" data-open-section-table-exam>
+                                                                بدأ الامتحان
+                                                            </div>
+
+                                                            <div class="arrow">
+                                                                <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                            </div>
                                                         </div>
                                                     </button>
     
@@ -1895,7 +2680,7 @@
     
                                             <div class="collapses-list-card-list">
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--yellow-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify w-[25px] h-[25px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
@@ -1949,7 +2734,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--blue-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact27"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact27)"></path></svg>
@@ -2003,7 +2788,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--green-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M8 4v12h12V4zm6.74 10.69a.96.96 0 0 1-.73.31c-.29 0-.54-.1-.74-.31a1 1 0 0 1-.31-.74c0-.29.1-.54.31-.74s.45-.3.74-.3s.54.1.74.3s.3.45.3.74s-.11.54-.31.74m1.77-5.86c-.23.34-.54.69-.92 1.06c-.3.27-.51.52-.64.75q-.18.345-.18.78v.4h-1.52v-.56c0-.42.09-.78.26-1.09c.18-.32.49-.67.95-1.07c.32-.29.55-.54.69-.74q.21-.3.21-.72q0-.54-.36-.87c-.24-.23-.57-.34-.99-.34c-.4 0-.72.12-.97.36s-.42.53-.53.87l-1.37-.57c.18-.55.52-1.03 1-1.45c.49-.43 1.11-.64 1.85-.64c.56 0 1.05.11 1.49.33q.66.33 1.02.93c.36.6.36.84.36 1.33s-.11.9-.35 1.24" opacity=".3"></path><path fill="currentColor" d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H8V4h12zm-6.49-5.84c.41-.73 1.18-1.16 1.63-1.8c.48-.68.21-1.94-1.14-1.94c-.88 0-1.32.67-1.5 1.23l-1.37-.57C11.51 5.96 12.52 5 13.99 5c1.23 0 2.08.56 2.51 1.26c.37.6.58 1.73.01 2.57c-.63.93-1.23 1.21-1.56 1.81c-.13.24-.18.4-.18 1.18h-1.52c.01-.41-.06-1.08.26-1.66m-.56 3.79c0-.59.47-1.04 1.05-1.04c.59 0 1.04.45 1.04 1.04c0 .58-.44 1.05-1.04 1.05c-.58 0-1.05-.47-1.05-1.05"></path></svg>
@@ -2057,7 +2842,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--yellow-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify w-[25px] h-[25px] iconify--ant-design" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
@@ -2111,7 +2896,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--blue-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact28"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact28)"></path></svg>
@@ -2165,7 +2950,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--red-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ph" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><g fill="currentColor"><path d="M224 56v160l-32-16l-32 16l-32-16l-32 16l-32-16l-32 16V56a8 8 0 0 1 8-8h176a8 8 0 0 1 8 8" opacity=".2"></path><path d="M216 40H40a16 16 0 0 0-16 16v160a8 8 0 0 0 11.58 7.16L64 208.94l28.42 14.22a8 8 0 0 0 7.16 0L128 208.94l28.42 14.22a8 8 0 0 0 7.16 0L192 208.94l28.42 14.22A8 8 0 0 0 232 216V56a16 16 0 0 0-16-16m0 163.06l-20.42-10.22a8 8 0 0 0-7.16 0L160 207.06l-28.42-14.22a8 8 0 0 0-7.16 0L96 207.06l-28.42-14.22a8 8 0 0 0-7.16 0L40 203.06V56h176Zm-155.58-35.9a8 8 0 0 0 10.74-3.58L76.94 152h38.12l5.78 11.58a8 8 0 1 0 14.32-7.16l-32-64a8 8 0 0 0-14.32 0l-32 64a8 8 0 0 0 3.58 10.74M96 113.89L107.06 136H84.94ZM136 128a8 8 0 0 1 8-8h16v-16a8 8 0 0 1 16 0v16h16a8 8 0 0 1 0 16h-16v16a8 8 0 0 1-16 0v-16h-16a8 8 0 0 1-8-8"></path></g></svg>
@@ -2219,7 +3004,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--yellow-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ant-design" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" fill-opacity=".15" d="M136 792h576V232H136zm64-488c0-4.4 3.6-8 8-8h112c4.4 0 8 3.6 8 8v48c0 4.4-3.6 8-8 8H208c-4.4 0-8-3.6-8-8z"></path><path fill="currentColor" d="M912 302.3L784 376V224c0-35.3-28.7-64-64-64H128c-35.3 0-64 28.7-64 64v576c0 35.3 28.7 64 64 64h592c35.3 0 64-28.7 64-64V648l128 73.7c21.3 12.3 48-3.1 48-27.6V330c0-24.6-26.7-40-48-27.7M712 792H136V232h576zm176-167l-104-59.8V458.9L888 399z"></path><path fill="currentColor" d="M208 360h112c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8H208c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8"></path></svg>
@@ -2273,7 +3058,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--blue-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact29"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact29)"></path></svg>
@@ -2351,7 +3136,7 @@
                                     <div class="collapses-list">
                                         <div class="collapses-list-card">
                                             <button type="button" class="collapse-list-btn">
-                                                <h2 class="label-large">الدروس</h2>
+                                                <h2 class="label-large">امتحان</h2>
     
                                                 <div class="arrow">
                                                     <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify !text-[#ffffff] iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
@@ -2360,7 +3145,7 @@
     
                                             <div class="collapses-list-card-list">
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--green-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M8 4v12h12V4zm6.74 10.69a.96.96 0 0 1-.73.31c-.29 0-.54-.1-.74-.31a1 1 0 0 1-.31-.74c0-.29.1-.54.31-.74s.45-.3.74-.3s.54.1.74.3s.3.45.3.74s-.11.54-.31.74m1.77-5.86c-.23.34-.54.69-.92 1.06c-.3.27-.51.52-.64.75q-.18.345-.18.78v.4h-1.52v-.56c0-.42.09-.78.26-1.09c.18-.32.49-.67.95-1.07c.32-.29.55-.54.69-.74q.21-.3.21-.72q0-.54-.36-.87c-.24-.23-.57-.34-.99-.34c-.4 0-.72.12-.97.36s-.42.53-.53.87l-1.37-.57c.18-.55.52-1.03 1-1.45c.49-.43 1.11-.64 1.85-.64c.56 0 1.05.11 1.49.33q.66.33 1.02.93c.36.6.36.84.36 1.33s-.11.9-.35 1.24" opacity=".3"></path><path fill="currentColor" d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H8V4h12zm-6.49-5.84c.41-.73 1.18-1.16 1.63-1.8c.48-.68.21-1.94-1.14-1.94c-.88 0-1.32.67-1.5 1.23l-1.37-.57C11.51 5.96 12.52 5 13.99 5c1.23 0 2.08.56 2.51 1.26c.37.6.58 1.73.01 2.57c-.63.93-1.23 1.21-1.56 1.81c-.13.24-.18.4-.18 1.18h-1.52c.01-.41-.06-1.08.26-1.66m-.56 3.79c0-.59.47-1.04 1.05-1.04c.59 0 1.04.45 1.04 1.04c0 .58-.44 1.05-1.04 1.05c-.58 0-1.05-.47-1.05-1.05"></path></svg>
@@ -2369,8 +3154,14 @@
                                                             <h2 class="label-medium">امتحان تصفيه على الباب الاول والثاني</h2>
                                                         </div>
     
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                        <div class="flex items-center gap-[10px]">
+                                                            <div class="btn btn-red cursor-pointer label-small" data-open-section-table-exam>
+                                                                بدأ الامتحان
+                                                            </div>
+
+                                                            <div class="arrow">
+                                                                <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                            </div>
                                                         </div>
                                                     </button>
     
@@ -2414,7 +3205,7 @@
                                                 </div>
 
                                                 <div class="collapses-list-card-list-card">
-                                                    <button type="button" class="collapse-list-btn-list-btn">
+                                                    <button type="button" class="collapse-list-btn-list-btn !flex-wrap gap-[16px]">
                                                         <div class="flex items-center gap-[12px]">
                                                             <span class="text-[var(--blue-color)] hidden lg:block">
                                                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icon-park-twotone" width="25" height="25" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><defs><mask id="iconifyReact48"><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"><path fill="#555" d="M7 37V11a6 6 0 0 1 6-6h22v26H13c-3.3 0-6 2.684-6 6Z"></path><path stroke-linecap="round" d="M35 31H13a6 6 0 0 0 0 12h28V7M14 37h20"></path></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#iconifyReact48)"></path></svg>
@@ -2423,8 +3214,14 @@
                                                             <h2 class="label-medium">حل امتحان تصفيه على الباب الاول والثاني</h2>
                                                         </div>
     
-                                                        <div class="arrow">
-                                                            <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                        <div class="flex items-center gap-[10px]">
+                                                            <div class="btn btn-red cursor-pointer label-small" data-open-section-table-exam>
+                                                                بدأ الامتحان
+                                                            </div>
+
+                                                            <div class="arrow">
+                                                                <svg  xmlns="http://www.w3.org/2000/svg"   class="iconify iconify--ant-design w-[25px] h-[25px]"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" /></svg>
+                                                            </div>
                                                         </div>
                                                     </button>
     
@@ -2573,6 +3370,6 @@
         
         <!-- custom js link -->
         <script src="./src/components.js"></script>
-        <script src="./src/filter.js"></script>
+        <script src="./src/course.js"></script>
     </body>
 </html>

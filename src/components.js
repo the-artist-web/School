@@ -133,36 +133,70 @@ close_aside.forEach(close => {
  * MODAL
  */
 const open_modal = document.querySelectorAll("[data-modal-open]");
+const open_close = document.querySelectorAll("[data-modal-close]");
+
+function closeAllModals() {
+    document.querySelectorAll("[data-modal-target]").forEach(el => {
+        const targetSelector = el.getAttribute("data-modal-target");
+        const modal = document.querySelector(targetSelector);
+
+        if (modal) {
+            modal.classList.add("opacity-[0]", "invisible");
+            modal.classList.remove("top-[50%]");
+        }
+    });
+}
 
 open_modal.forEach(open => {
     open.addEventListener("click", (e) => {
         e.stopPropagation();
 
-        const getAttribute = open.getAttribute("data-modal-target");
-        const modal = document.querySelector(getAttribute);
+        const targetSelector = open.getAttribute("data-modal-target");
+        const modal = document.querySelector(targetSelector);
 
-        modal.classList.remove("opacity-[0]", "invisible");
-        modal.classList.add("top-[50%]");
+        closeAllModals();
 
-        overflow.classList.remove("opacity-0", "invisible");
-        overflow.classList.add("opacity-[0.7]");
+        if (modal) {
+            modal.classList.remove("opacity-[0]", "invisible");
+            modal.classList.add("top-[50%]");
+        }
+
+        if (overflow) {
+            overflow.classList.remove("opacity-0", "invisible");
+            overflow.classList.add("opacity-[0.7]");
+        }
     });
 });
 
-overflow.addEventListener("click", (e) => {
-    e.stopPropagation();
+open_close.forEach(close => {
+    close.addEventListener("click", (e) => {
+        e.stopPropagation();
 
-    open_modal.forEach(open => {
-        const getAttribute = open.getAttribute("data-modal-target");
-        const modal = document.querySelector(getAttribute);
+        const targetSelector = close.getAttribute("data-modal-target");
+        const modal = document.querySelector(targetSelector);
 
-        modal.classList.add("opacity-[0]", "invisible");
-        modal.classList.remove("top-[50%]");
+        if (modal) {
+            modal.classList.add("opacity-[0]", "invisible");
+            modal.classList.remove("top-[50%]");
+        }
+
+        if (overflow) {
+            overflow.classList.add("opacity-0", "invisible");
+            overflow.classList.remove("opacity-[0.7]");
+        }
     });
-
-    overflow.classList.add("opacity-0", "invisible");
-    overflow.classList.remove("opacity-[0.7]");
 });
+
+if (overflow) {
+    overflow.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        closeAllModals();
+
+        overflow.classList.add("opacity-0", "invisible");
+        overflow.classList.remove("opacity-[0.7]");
+    });
+}
 
 /**
  * COLLAPSES
@@ -254,4 +288,32 @@ ar.forEach(ar_ele => {
 
         localStorage.setItem("dir", "rtl");
     });
+});
+
+/**
+ * DROPDOWN
+ */
+const dropdown = document.querySelectorAll(".dropdown");
+
+dropdown.forEach(dropdown_ele => {
+    const button = dropdown_ele.querySelector("button");
+    const dropdown_menu = dropdown_ele.querySelector(".dropdown-menu");
+    
+    button.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        let isActive = dropdown_menu.classList.contains("active");
+
+        document.querySelectorAll(".dropdown-menu").forEach(dropdown_menu_all => dropdown_menu_all.classList.remove("active"));
+
+        if (!isActive) dropdown_menu.classList.add("active");
+    });
+
+    dropdown_menu.addEventListener("click", (e_small) => {
+        e_small.stopPropagation();
+    });
+});
+
+document.addEventListener("click", () => {
+    document.querySelectorAll(".dropdown-menu").forEach(m => m.classList.remove("active"));
 });

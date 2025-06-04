@@ -59,3 +59,8 @@ html[dir="rtl"] .card-collapse .collapses-list .collapses-list-card .collapses-l
 }
 
 html[dir="rtl"] .img-end-section { transform: rotateY(180deg); }
+
+/**
+ * DROPDOWN
+ */
+html[dir="rtl"] .dropdown .dropdown-menu { inset: 50px auto 0 auto; }
