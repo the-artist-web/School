@@ -6,8 +6,8 @@
         <!-- favicon -->
         <link rel="icon" type="ico" href="./src/assets/image/logo.png" />
         <!-- meta tags -->
-        <title>MPS Academy | بحث</title>
-        <meta name="title" content="MPS Academy" />
+        <title>MPS Academy | الدفع</title>
+        <meta name="title" content="MPS Academy | الدفع" />
         <meta name="description" content="This is a MPS Academy" />
         <meta name="keywords" content="Html, Css, Tailwind Css, Js" />
         <meta name="auther" content="The Artist Web" />
@@ -617,397 +617,260 @@
 
         <main class="main">
             <article>
-                <!-- BANNER -->
-                <div class="banner px-[16px] mt-[16px] mb-[40px]">
-                    <div class="relative overflow-hidden rounded-[8px] bg-[var(--blue-color)] h-[320px]">
-                        <div class="absolute top-0 left-0 right-0 bottom-0 opacity-[0.3] bg-[url(https://bassthalk.com/static/media/bg.3b55416e926d51a05f75.png)] bg-center bg-no-repeat bg-cover w-[100%]"></div>
+                <div class="flex items-start justify-between max-w-[900px] px-[16px] mx-auto mt-[50px] mb-[30px]">
+                    <button type="button" class="flex flex-col items-center justify-center gap-[10px]" data-open-tab-one>
+                        <div class="flex items-center justify-center p-[8px] min-w-[60px] max-w-[60px] min-h-[60px] max-h-[60px] rounded-full bg-[var(--second-bg-color)]">
+                            <div class="circle flex items-center justify-center w-[100%] h-[44px] rounded-full bg-[var(--yellow-color)] text-[#000] label-medium">1</div>
+                        </div>
 
-                        <div class="absolute top-0 left-0 right-0 bottom-0 w-[100%]" style="background: linear-gradient(90deg, #0000, #38bdf8, #38bdf8);"></div>
-                    </div>
+                        <div class="p flex items-center gap-[8px] !text-[var(--yellow-color)]">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" /></svg>
+                            <p class="text-nowrap label-medium">معلومات شخصية</p>
+                        </div>
+                    </button>
+
+                    <div class="border-[1.5px] border-[var(--border-color)] w-full mt-[28px] mx-[-100px] relative -z-[1]"></div>
+
+                    <button type="button" class="flex flex-col items-center justify-center gap-[10px]" data-open-tab-two>
+                        <div class="flex items-center justify-center p-[8px] min-w-[60px] max-w-[60px] min-h-[60px] max-h-[60px] rounded-full bg-[var(--second-bg-color)]">
+                            <div class="circle flex items-center justify-center w-[100%] h-[44px] rounded-full bg-[var(--third-bg-color)] text-[var(--second-color)] label-medium">2</div>
+                        </div>
+
+                        <div class="p flex items-center gap-[8px] !text-[var(--second-color)]">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="22"  height="22"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-circle-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M9 12l2 2l4 -4" /></svg>
+                            <p class="text-nowrap label-medium">الطلب والدفع</p>
+                        </div>
+                    </button>
                 </div>
 
-                <div class="container">
-                    <h3 class="mb-[60px] text-center title-small">لقد بحثت عن: </h3>
-                </div>
+                <section class="pt-0 section" data-tab-one>
+                    <div class="container">
+                        <form action="" method="POST" class="relative z-[1] overflow-hidden pt-[40px] pb-[30px] px-[30px] rounded-[8px] bg-[var(--bg-color)] border-[2px] border-[var(--border-color)]">
+                            <div class="box-form mb-[40px]">
+                                <input 
+                                    type="text" 
+                                    name="" 
+                                    id="full_name" 
+                                    class="form-control" 
+                                />
 
-                <section class="section pt-[60px] pb-[0]">
-                    <div class="px-[16px] lg:px-[40px]">
-                        <h3 class="capitalize !mb-[3rem] flex flex-wrap gap-[12px] mb-[36px] headline-small">الإشتراكات <span class="text-[var(--blue-color)]">الشهرية</span></h3>
+                                <label for="full_name" class="label label-large">
+                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-edit"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h3.5" /><path d="M18.42 15.61a2.1 2.1 0 0 1 2.97 2.97l-3.39 3.42h-3v-3l3.42 -3.39z" /></svg>
+                                    الاسم كامل
+                                </label>
+                            </div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px]">
-                            <div class="col">
-                                <div class="card card-course">
-                                    <span class="absolute top-[-22.5px] left-[50%] translate-x-[-50%] z-20 line-1 bg-[var(--bg-color)] border-[1px] border-[var(--green-color)] rounded-[4px] !py-[8px] !px-[20px] h-[45px] flex items-center justify-center label-small">مستر احمد محمد</span>
+                            <div class="box-form mb-[40px]">
+                                <textarea 
+                                    name="" 
+                                    id=""
+                                    class="form-control"
+                                ></textarea>
 
-                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
-                                        <picture>
-                                            <source 
-                                                srcset="./src/assets/image/card-big-2.jpg" 
-                                                type="image/webp" 
-                                            />
-                                            
-                                            <img 
-                                                src="./src/assets/image/card-big-2.jpg" 
-                                                alt="teachers" 
-                                                loading="lazy"
-                                                class="mb-[16px] rounded-[4px] img-cover" 
-                                            />
-                                        </picture>
+                                <label for="full_name" class="label label-large">
+                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" /></svg>
+                                    العنوان
+                                </label>
+                            </div>
 
-                                        <h3 class="absolute flex items-center justify-center text-center top-[40px] right-[-90px] bg-[var(--red-color)] h-[35px] rotate-[45deg] w-[300px] label-medium">دورة مثبتة</h3>
-                                    </div>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-[16px] gap-y-[40px] mb-[40px]">
+                                <div class="box-form">
+                                    <input 
+                                        type="number" 
+                                        name="" 
+                                        id="phone_number" 
+                                        class="form-control" 
+                                    />
 
-                                    <div class="card-body">
-                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
-                                            <div>
-                                                <h3 class="line-2 title-small">الشهر الثاني من الفصل الدراسي الثاني</h3>
+                                    <label for="phone_number" class="label label-large">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-phone"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg>
+                                        رقم التليفون
+                                    </label>
+                                </div>
 
-                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+                                <div class="box-form">
+                                    <input 
+                                        type="number" 
+                                        name="" 
+                                        id="phone_number" 
+                                        class="form-control" 
+                                    />
 
-                                                <p class="text-[var(--second-color)] line-3 label-small">•الكورس ده هينزل فيه امتحانات برنامج حمادة عشان تبقا طبقت على الجزء اللي ذاكرته مع المستر 📝و متنساش الامتحانات الاسترشادية مهمة و هتكون موجودة هنا, شد حيلك يا بطل💪❤️•</p>
-                                            </div>
-
-                                            <div class="grid gap-[10px]">
-                                                <a href="./course.html" class="btn btn-green rounded-full !px-[12px] !py-[4px]">الدخول إلى الدورة</a>
-                                                <!-- <a href="#" class="btn btn-green-mix rounded-full !px-[12px] !py-[4px]">اشترك الآن</a> -->
-                                                <a href="#" class="btn btn-red-mix rounded-full !px-[12px] !py-[4px]">دورة مجانية</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="border-t-[1px] border-[var(--border-color)] w-[100%] mt-[16px] pt-[16px] flex flex-wrap items-start justify-between gap-[16px]">
-                                            <div class="grid gap-[8px]">
-                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
-                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
-                                                    الأحد 14 مايو 2025
-                                                </p>
-
-                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
-                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
-                                                    السبت 5 أبريل 2025
-                                                </p>
-                                            </div>
-
-                                            <div class="px-[12px] py-[4px] rounded-[4px] flex items-start gap-[8px] bg-[var(--green-color)]">
-                                                <div class="py-[1px] px-[8px] rounded-[4px] bg-[var(--bg-color)]">110.00</div>
-                                                ح.م
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <label for="phone_number" class="label label-large">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-phone"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" /></svg>
+                                        رقم هاتف بديل
+                                    </label>
                                 </div>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card card-course">
-                                    <span class="absolute top-[-22.5px] left-[50%] translate-x-[-50%] z-20 line-1 bg-[var(--bg-color)] border-[1px] border-[var(--green-color)] rounded-[4px] !py-[8px] !px-[20px] h-[45px] flex items-center justify-center label-small">مستر احمد محمد</span>
 
-                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
-                                        <picture>
-                                            <source 
-                                                srcset="./src/assets/image/card-big-3.png" 
-                                                type="image/webp" 
-                                            />
-                                            
-                                            <img 
-                                                src="./src/assets/image/card-big-3.png" 
-                                                alt="teachers" 
-                                                loading="lazy"
-                                                class="mb-[16px] rounded-[4px] img-cover" 
-                                            />
-                                        </picture>
+                            <div class="flex flex-col lg:flex-row items-center gap-[16px] mb-[40px] w-full">
+                                <div class="box-form w-full">
+                                    <input 
+                                        type="text" 
+                                        name="" 
+                                        id="full_name" 
+                                        class="form-control" 
+                                    />
 
-                                        <h3 class="absolute flex items-center justify-center text-center top-[40px] right-[-90px] bg-[var(--red-color)] h-[35px] rotate-[45deg] w-[300px] label-medium">دورة مثبتة</h3>
-                                    </div>
-
-                                    <div class="card-body">
-                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
-                                            <div>
-                                                <h3 class="line-2 title-small">الشهر الثاني من الفصل الدراسي الثاني</h3>
-
-                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
-
-                                                <p class="text-[var(--second-color)] line-3 label-small">الشهر الثاني - المراجعة النهائية - (محمد صلاح - لغة عربية - 3 ثانوي )</p>
-                                            </div>
-
-                                            <div class="grid gap-[10px]">
-                                                <a href="./course.html" class="btn btn-green rounded-full !px-[12px] !py-[4px]">الدخول إلى الدورة</a>
-                                                <a href="#" class="btn btn-green-mix rounded-full !px-[12px] !py-[4px]">اشترك الآن</a>
-                                                <!-- <a href="#" class="btn btn-red-mix rounded-full !px-[12px] !py-[4px]">دورة مجانية</a> -->
-                                            </div>
-                                        </div>
-
-                                        <div class="border-t-[1px] border-[var(--border-color)] w-[100%] mt-[16px] pt-[16px] flex flex-wrap items-start justify-between gap-[16px]">
-                                            <div class="grid gap-[8px]">
-                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
-                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
-                                                    الأحد 18 مايو 2025
-                                                </p>
-
-                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
-                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
-                                                    السبت 19 أبريل 2025
-                                                </p>
-                                            </div>
-
-                                            <div class="px-[12px] py-[4px] rounded-[4px] flex items-start gap-[8px] bg-[var(--green-color)]">
-                                                <div class="py-[1px] px-[8px] rounded-[4px] bg-[var(--bg-color)]">110.00</div>
-                                                ج.م
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <label for="full_name" class="label label-large">
+                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-ticket"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2" /><path d="M15 11l0 2" /><path d="M15 17l0 2" /><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" /></svg>
+                                        كوبون الخصم
+                                    </label>
                                 </div>
+
+                                <button type="button" class="btn btn-secondary label-small">اضافة كوبون الخصم</button>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card card-course">
-                                    <span class="absolute top-[-22.5px] left-[50%] translate-x-[-50%] z-20 line-1 bg-[var(--bg-color)] border-[1px] border-[var(--green-color)] rounded-[4px] !py-[8px] !px-[20px] h-[45px] flex items-center justify-center label-small">مستر احمد محمد</span>
-                                    
-                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
-                                        <picture>
-                                            <source 
-                                                srcset="./src/assets/image/card-big.jpg" 
-                                                type="image/webp" 
-                                            />
-                                            
-                                            <img 
-                                                src="./src/assets/image/card-big.jpg" 
-                                                alt="teachers" 
-                                                loading="lazy"
-                                                class="mb-[16px] rounded-[4px] img-cover" 
-                                            />
-                                        </picture>
 
-                                        <h3 class="absolute flex items-center justify-center text-center top-[40px] right-[-90px] bg-[var(--red-color)] h-[35px] rotate-[45deg] w-[300px] label-medium">دورة مثبتة</h3>
-                                    </div>
+                            <div class="box-form">
+                                <input 
+                                    type="text" 
+                                    name="" 
+                                    id="full_name" 
+                                    class="form-control" 
+                                />
 
-                                    <div class="card-body">
-                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
-                                            <div>
-                                                <h3 class="line-2 title-small">الشهر الاول من الفصل الدراسي الثاني</h3>
-
-                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
-
-                                                <p class="text-[var(--second-color)] line-3 label-small">يتكون الشهر من 4 محاضرات - محاضرة أسبوعيًا</p>
-                                            </div>
-
-                                            <div class="grid gap-[10px]">
-                                                <a href="./course.html" class="btn btn-green rounded-full !px-[12px] !py-[4px]">الدخول إلى الدورة</a>
-                                                <!-- <a href="#" class="btn btn-green-mix rounded-full !px-[12px] !py-[4px]">اشترك الآن</a> -->
-                                                <a href="#" class="btn btn-red-mix rounded-full !px-[12px] !py-[4px]">دورة مجانية</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="border-t-[1px] border-[var(--border-color)] w-[100%] mt-[16px] pt-[16px] flex flex-wrap items-start justify-between gap-[16px]">
-                                            <div class="grid gap-[8px]">
-                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
-                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
-                                                    الأحد 18 مايو 2025
-                                                </p>
-
-                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
-                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
-                                                    السبت 19 أبريل 2025
-                                                </p>
-                                            </div>
-
-                                            <div class="px-[12px] py-[4px] rounded-[4px] flex items-start gap-[8px] bg-[var(--green-color)]">
-                                                <div class="py-[1px] px-[8px] rounded-[4px] bg-[var(--bg-color)]">110.00</div>
-                                                ج.م
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <label for="full_name" class="label label-large">
+                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-note"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M13 20l7 -7" /><path d="M13 20v-6a1 1 0 0 1 1 -1h6v-7a2 2 0 0 0 -2 -2h-12a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7" /></svg>
+                                    ملاحظة
+                                </label>
                             </div>
+                        </form>
+
+                        <div class="flex items-center justify-between">
+                            <span></span>
+
+                            <button type="button" class="btn btn-yellow-border mt-[30px] label-small" data-open-tab-two>
+                                التالي
+                                <span class="hidden circle"></span>
+                                <span class="hidden p"></span>
+                            </button>
                         </div>
                     </div>
                 </section>
 
-                <section class="section pt-[60px] pb-[0]">
-                    <div class="px-[16px] lg:px-[40px]">
-                        <h3 class="capitalize !mb-[3rem] flex flex-wrap gap-[12px] mb-[36px] headline-small">كورسات <span class="text-[var(--blue-color)]">منفصلة</span></h3>
+                <section class="hidden pt-0 section" data-tab-two>
+                    <div class="container">
+                        <div class="relative z-[1] overflow-hidden pt-[40px] pb-[30px] px-[30px] rounded-[8px] bg-[var(--bg-color)] border-[2px] border-[var(--border-color)]">
+                            <div class="w-[100%] overflow-scroll scrollbar-none mb-[20px]">
+                                <table class="border-collapse border border-gray-400 w-[100%]">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">صورة المنتج</th>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-[30px]">
-                            <div class="col">
-                                <div class="card card-course">
-                                    <span class="absolute top-[-22.5px] left-[50%] translate-x-[-50%] z-20 line-1 bg-[var(--bg-color)] border-[1px] border-[var(--green-color)] rounded-[4px] !py-[8px] !px-[20px] h-[45px] flex items-center justify-center label-small">مستر احمد محمد</span>
+                                            <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">اسم المنتج</th>
 
-                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
-                                        <picture>
-                                            <source 
-                                                srcset="./src/assets/image/card-big-2.jpg" 
-                                                type="image/webp" 
-                                            />
-                                            
-                                            <img 
-                                                src="./src/assets/image/card-big-2.jpg" 
-                                                alt="teachers" 
-                                                loading="lazy"
-                                                class="mb-[16px] rounded-[4px] img-cover" 
-                                            />
-                                        </picture>
+                                            <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">تكلفة المنتج</th>
 
-                                        <h3 class="absolute flex items-center justify-center text-center top-[40px] right-[-90px] bg-[var(--red-color)] h-[35px] rotate-[45deg] w-[300px] label-medium">دورة مثبتة</h3>
-                                    </div>
+                                            <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">الكمية</th>
 
-                                    <div class="card-body">
-                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
-                                            <div>
-                                                <h3 class="line-2 title-small">الشهر الثاني من الفصل الدراسي الثاني</h3>
+                                            <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">السعر الكلي</th>
+                                        </tr>
+                                    </thead>
 
-                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+                                    <tbody>
+                                        <tr>
+                                            <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">
+                                                <img 
+                                                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1WY_sabK8Hl2dNUq4OWRoTELFCxhypVHh_c1MPI2I9lZ2HXS-kln5VMi3M5QjhmJ3dTF7LiazcKkFTf7zSA3DfzEPZ22BxWt9bzM2tlnz7WoTLPE62PqJUiQdHC2oEosbHSl9O14IRIZhjmzulEcLi8_Qhvwjr-DUV-Xx1zy-RacDIUkMHtY757z5AktZ/w275-h400-rw/%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D8%B5%D8%B1%20%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA%20%D9%84%D9%84%D8%B5%D9%81%20%D8%A7%D9%84%D8%A3%D9%88%D9%84%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D9%85%20%D8%A7%D9%84%D8%A3%D9%88%D9%84%202025%20%D8%AC%D8%B2%D8%A1%20%D8%A7%D9%84%D8%B4%D8%B1%D8%AD%20%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%A6%D9%84%D8%A9.jpg" 
+                                                    alt="img book" 
+                                                    loading="lazy"
+                                                    class="max-w-[50px] max-h-[100px] mx-auto img-cover" 
+                                                />
+                                            </td>
 
-                                                <p class="text-[var(--second-color)] line-3 label-small">•الكورس ده هينزل فيه امتحانات برنامج حمادة عشان تبقا طبقت على الجزء اللي ذاكرته مع المستر 📝و متنساش الامتحانات الاسترشادية مهمة و هتكون موجودة هنا, شد حيلك يا بطل💪❤️•</p>
-                                            </div>
+                                            <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">كتاب المعاصر أولى ثانوي رياضيات</td>
 
-                                            <div class="grid gap-[10px]">
-                                                <a href="./course.html" class="btn btn-green rounded-full !px-[12px] !py-[4px]">الدخول إلى الدورة</a>
-                                                <!-- <a href="#" class="btn btn-green-mix rounded-full !px-[12px] !py-[4px]">اشترك الآن</a> -->
-                                                <a href="#" class="btn btn-red-mix rounded-full !px-[12px] !py-[4px]">دورة مجانية</a>
-                                            </div>
-                                        </div>
+                                            <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">100 ج.م</td>
 
-                                        <div class="border-t-[1px] border-[var(--border-color)] w-[100%] mt-[16px] pt-[16px] flex flex-wrap items-start justify-between gap-[16px]">
-                                            <div class="grid gap-[8px]">
-                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
-                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
-                                                    الأحد 14 مايو 2025
-                                                </p>
+                                            <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">2</td>
 
-                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
-                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
-                                                    السبت 5 أبريل 2025
-                                                </p>
-                                            </div>
-
-                                            <div class="px-[12px] py-[4px] rounded-[4px] flex items-start gap-[8px] bg-[var(--green-color)]">
-                                                <div class="py-[1px] px-[8px] rounded-[4px] bg-[var(--bg-color)]">110.00</div>
-                                                ح.م
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                            <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">200 ج.م</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            
-                            <div class="col">
-                                <div class="card card-course">
-                                    <span class="absolute top-[-22.5px] left-[50%] translate-x-[-50%] z-20 line-1 bg-[var(--bg-color)] border-[1px] border-[var(--green-color)] rounded-[4px] !py-[8px] !px-[20px] h-[45px] flex items-center justify-center label-small">مستر احمد محمد</span>
 
-                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
-                                        <picture>
-                                            <source 
-                                                srcset="./src/assets/image/card-big-3.png" 
-                                                type="image/webp" 
-                                            />
-                                            
-                                            <img 
-                                                src="./src/assets/image/card-big-3.png" 
-                                                alt="teachers" 
-                                                loading="lazy"
-                                                class="mb-[16px] rounded-[4px] img-cover" 
-                                            />
-                                        </picture>
+                            <div class="grid gap-[20px] mb-[20px]">
+                                <div class="flex items-center justify-between gap-[16px]">
+                                    <p class="text-[var(--second-color)] label-large">المجموع الفرعي:</p>
 
-                                        <h3 class="absolute flex items-center justify-center text-center top-[40px] right-[-90px] bg-[var(--red-color)] h-[35px] rotate-[45deg] w-[300px] label-medium">دورة مثبتة</h3>
-                                    </div>
-
-                                    <div class="card-body">
-                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
-                                            <div>
-                                                <h3 class="line-2 title-small">الشهر الثاني من الفصل الدراسي الثاني</h3>
-
-                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
-
-                                                <p class="text-[var(--second-color)] line-3 label-small">الشهر الثاني - المراجعة النهائية - (محمد صلاح - لغة عربية - 3 ثانوي )</p>
-                                            </div>
-
-                                            <div class="grid gap-[10px]">
-                                                <a href="./course.html" class="btn btn-green rounded-full !px-[12px] !py-[4px]">الدخول إلى الدورة</a>
-                                                <a href="#" class="btn btn-green-mix rounded-full !px-[12px] !py-[4px]">اشترك الآن</a>
-                                                <!-- <a href="#" class="btn btn-red-mix rounded-full !px-[12px] !py-[4px]">دورة مجانية</a> -->
-                                            </div>
-                                        </div>
-
-                                        <div class="border-t-[1px] border-[var(--border-color)] w-[100%] mt-[16px] pt-[16px] flex flex-wrap items-start justify-between gap-[16px]">
-                                            <div class="grid gap-[8px]">
-                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
-                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
-                                                    الأحد 18 مايو 2025
-                                                </p>
-
-                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
-                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
-                                                    السبت 19 أبريل 2025
-                                                </p>
-                                            </div>
-
-                                            <div class="px-[12px] py-[4px] rounded-[4px] flex items-start gap-[8px] bg-[var(--green-color)]">
-                                                <div class="py-[1px] px-[8px] rounded-[4px] bg-[var(--bg-color)]">110.00</div>
-                                                ج.م
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <p class="label-large">200 ج.م</p>
                                 </div>
-                            </div>
-                            
-                            <div class="col">
-                                <div class="card card-course">
-                                    <span class="absolute top-[-22.5px] left-[50%] translate-x-[-50%] z-20 line-1 bg-[var(--bg-color)] border-[1px] border-[var(--green-color)] rounded-[4px] !py-[8px] !px-[20px] h-[45px] flex items-center justify-center label-small">مستر احمد محمد</span>
 
-                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
-                                        <picture>
-                                            <source 
-                                                srcset="./src/assets/image/card-big.jpg" 
-                                                type="image/webp" 
-                                            />
-                                            
-                                            <img 
-                                                src="./src/assets/image/card-big.jpg" 
-                                                alt="teachers" 
-                                                loading="lazy"
-                                                class="mb-[16px] rounded-[4px] img-cover" 
-                                            />
-                                        </picture>
+                                <div class="border-[1px] border-[var(--border-color)] w-full"></div>
+                                
+                                <div class="flex items-center justify-between gap-[16px]">
+                                    <p class="text-[var(--second-color)] label-large">المجموع الفرعي للشحن:</p>
 
-                                        <h3 class="absolute flex items-center justify-center text-center top-[40px] right-[-90px] bg-[var(--red-color)] h-[35px] rotate-[45deg] w-[300px] label-medium">دورة مثبتة</h3>
-                                    </div>
-
-                                    <div class="card-body">
-                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
-                                            <div>
-                                                <h3 class="line-2 title-small">الشهر الاول من الفصل الدراسي الثاني</h3>
-
-                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
-
-                                                <p class="text-[var(--second-color)] line-3 label-small">يتكون الشهر من 4 محاضرات - محاضرة أسبوعيًا</p>
-                                            </div>
-
-                                            <div class="grid gap-[10px]">
-                                                <a href="./course.html" class="btn btn-green rounded-full !px-[12px] !py-[4px]">الدخول إلى الدورة</a>
-                                                <!-- <a href="#" class="btn btn-green-mix rounded-full !px-[12px] !py-[4px]">اشترك الآن</a> -->
-                                                <a href="#" class="btn btn-red-mix rounded-full !px-[12px] !py-[4px]">دورة مجانية</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="border-t-[1px] border-[var(--border-color)] w-[100%] mt-[16px] pt-[16px] flex flex-wrap items-start justify-between gap-[16px]">
-                                            <div class="grid gap-[8px]">
-                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
-                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
-                                                    الأحد 18 مايو 2025
-                                                </p>
-
-                                                <p class="flex items-center gap-[8px] text-[var(--second-color)] label-small">
-                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-1"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 7v5" /><path d="M12 12l2 -3" /></svg>
-                                                    السبت 19 أبريل 2025
-                                                </p>
-                                            </div>
-
-                                            <div class="px-[12px] py-[4px] rounded-[4px] flex items-start gap-[8px] bg-[var(--green-color)]">
-                                                <div class="py-[1px] px-[8px] rounded-[4px] bg-[var(--bg-color)]">110.00</div>
-                                                ج.م
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <p class="label-large">70 ج.م</p>
                                 </div>
+
+                                <div class="border-[1px] border-[var(--border-color)] w-full"></div>
+                                
+                                <div class="flex items-center justify-between gap-[16px]">
+                                    <p class="text-[var(--second-color)] label-large">الحساب الكلي:</p>
+
+                                    <p class="label-large">270 ج.م</p>
+                                </div>
+
+                                <div class="border-[1px] border-[var(--border-color)] w-full"></div>
                             </div>
+
+                            <p class="!mb-[30px] label-medium">الرجاء تحديد طريقة الدفع:</p>
+
+                            <div class="flex flex-wrap items-center justify-center gap-[40px]">
+                                <label for="cash" class="flex items-center gap-[10px] cursor-pointer">
+                                    <input 
+                                        type="radio" 
+                                        name="payment" 
+                                        id="cash"
+                                    />
+
+                                    <div class="flex flex-col items-center justify-center gap-[10px]">
+                                        <img 
+                                            src="./src/assets/image/cash.png" 
+                                            alt="" 
+                                            loading="lazy"
+                                            class="rounded-[8px] min-w-[145px] min-h-[90px] max-w-[145px] max-h-[90px] img-cover" 
+                                        />
+
+                                        <h3 class="text-center text-nowrap label-medium">الدفع عند الاستلام</h3>
+                                    </div>
+                                </label>
+                                
+                                <label for="visa" class="flex items-center gap-[10px] cursor-pointer">
+                                    <input 
+                                        type="radio" 
+                                        name="payment" 
+                                        id="visa"
+                                    />
+
+                                    <div class="flex flex-col items-center justify-center gap-[10px]">
+                                        <img 
+                                            src="./src/assets/image/fawry.png" 
+                                            alt="" 
+                                            loading="lazy"
+                                            class="rounded-[8px] min-w-[180px] min-h-[90px] max-w-[180px] max-h-[90px] img-cover" 
+                                        />
+
+                                        <h3 class="text-center text-nowrap label-medium">الدفع عن طريق فوري</h3>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="flex items-center justify-center mt-[30px]">
+                                <button type="button" class="btn btn-yellow-border mt-[30px] label-small">
+                                    ادفع الأن
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-center mt-[30px]">
+                            <button type="button" class="btn btn-yellow-border opacity-[0.7] label-small" data-open-tab-one>
+                                السابق
+                                <span class="hidden circle"></span>
+                                <span class="hidden p"></span>
+                            </button>
                         </div>
                     </div>
                 </section>
@@ -1110,5 +973,6 @@
         
         <!-- custom js link -->
         <script src="./src/components.js"></script>
+        <script src="./src/checkout.js"></script>
     </body>
 </html>

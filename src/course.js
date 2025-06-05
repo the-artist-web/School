@@ -18,6 +18,8 @@ const time = document.querySelector("[data-time]");
 const open_div_open_file = document.querySelectorAll("[data-open-div-open-file]");
 const section_file = document.querySelector("[data-section-file]");
 
+let countdown;
+
 open_row_two_in_table.forEach(ele => {
     ele.addEventListener("click", () => {
         row_two_in_table.classList.remove("hidden");
@@ -31,6 +33,11 @@ open_row_two_in_table.forEach(ele => {
         section_primary.classList.add("hidden");
         section_exam.classList.add("hidden");
         no_results.classList.add("hidden");
+
+        if (countdown) {
+            clearInterval(countdown);
+            countdown = null;
+        };
     });
 });
 
@@ -48,6 +55,11 @@ open_row_one_in_table.forEach(ele => {
         section_file.classList.add("hidden");
         section_exam.classList.add("hidden");
         no_results.classList.add("hidden");
+
+        if (countdown) {
+            clearInterval(countdown);
+            countdown = null;
+        };
     });
 })
 
@@ -64,6 +76,11 @@ open_section_table_exam.forEach(btn => {
             top: 0,
             behavior: 'smooth'
         });
+
+        if (countdown) {
+            clearInterval(countdown);
+            countdown = null;
+        };
     });
 });
 
@@ -71,7 +88,6 @@ open_section_exam.addEventListener("click", () => {
     section_exam.classList.remove("hidden");
     section_table_exam.classList.add("hidden");
     section_primary.classList.add("hidden");
-    section_file.classList.add("hidden");
 
     let [minutes, seconds] = time.dataset.time.split(":").map(Number);
     let totalSeconds = minutes * 60 + seconds;
@@ -84,7 +100,7 @@ open_section_exam.addEventListener("click", () => {
 
     time.textContent = formatTime(totalSeconds);
 
-    const countdown = setInterval(() => {
+    countdown = setInterval(() => {
         totalSeconds--;
 
         if (totalSeconds < 0) {
@@ -102,7 +118,6 @@ open_section_exam.addEventListener("click", () => {
             row_one_in_table.classList.add("hidden");
             btn_start_row_two_in_table.classList.remove("hidden");
             btn_start_row_one_in_table.classList.add("hidden");
-
             return;
         }
 
@@ -173,5 +188,10 @@ open_div_open_file.forEach(ele => {
             top: 0,
             behavior: 'smooth'
         });
+
+        if (countdown) {
+            clearInterval(countdown);
+            countdown = null;
+        };
     });
 });

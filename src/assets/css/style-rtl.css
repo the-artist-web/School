@@ -26,7 +26,7 @@ html[dir="rtl"] .box-file::before {
 html[dir="rtl"] .box-file::before { content: "رفع"; }
 
 html[dir="rtl"] .box-file::after {
-    content: "ارفع شهادة ميلادك | بطاقتك";
+    content: "تحميل صورة الملف الشخصي";
     right: auto;
     left: 0;
     width: calc(100% - 64.36px);

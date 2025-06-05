@@ -84,9 +84,9 @@
     --lh-body-large: 2.2rem;
     --lh-body-medium: 2rem;
     --lh-body-small: 1.6rem;
-    --lh-label-large: 1.8rem;
-    --lh-label-medium: 1.6rem;
-    --lh-label-small: 1.6rem;
+    --lh-label-large: 2rem;
+    --lh-label-medium: 2rem;
+    --lh-label-small: 2rem;
 
     /* Font weight */
     --fw-regular: 400;
@@ -210,7 +210,7 @@ textarea {
     width: 100%;
 }
 
-textarea { resize: none; }
+textarea { resize: none !important; }
 
 input::placeholder { color: var(--second-color) !important; }
 

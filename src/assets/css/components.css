@@ -163,7 +163,7 @@
 }
 
 .box-file::after {
-    content: "Upload your birth certificate | ID card";
+    content: "Upload profile picture";
     position: absolute;
     top: 0;
     right: 0;
@@ -473,8 +473,12 @@
     position: absolute;
     inset: 50px auto auto 0;
     height: max-content;
+    max-height: 600px;
+    overflow-y: scroll;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+.dropdown .dropdown-menu::-webkit-scrollbar { display: none; }
 
 .dropdown .dropdown-menu.active { display: grid; }
 
@@ -589,6 +593,12 @@
     transform: translateY(-50%);
     width: 95px;
     height: 43px;
+}
+
+.card-book {
+    background-color: var(--second-bg-color);
+    padding: 16px;
+    border-radius: 8px;
 }
 
 /**
