@@ -252,6 +252,9 @@ p {
     margin: 0 !important;
 }
 
+th,
+td { text-wrap: nowrap; }
+
 /*-----------------------------------*\
   #DUBLICATE ITEMS
 \*-----------------------------------*/

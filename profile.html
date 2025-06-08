@@ -985,7 +985,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="col">
+                                <div class="col overflow-hidden">
                                     <div class="hidden" data-tab-content="profile">
                                         <div class="grid grid-cols-1 xl:grid-cols-[260px_1fr] gap-[30px]">
                                             <div class="col">
@@ -1214,7 +1214,7 @@
                                     </div>
 
                                     <div class="hidden" data-tab-content="course">
-                                        <h3 class="!mb-[40px] font-[800] headline-small">كورساتي</h3>
+                                        <h3 class="!mb-[40px] font-[800] title-large">كورساتي</h3>
 
                                         <div class="flex flex-wrap items-center justify-between gap-y-[20px] !my-[50px]">
                                             <div class="flex flex-wrap items-center gap-[10px]">
@@ -1502,7 +1502,7 @@
                                     </div>
 
                                     <div class="hidden" data-tab-content="student_forum">
-                                        <h3 class="!mb-[40px] font-[800] headline-small">اسم الجروب والصف</h3>
+                                        <h3 class="!mb-[40px] font-[800] title-large">اسم الجروب والصف</h3>
 
                                         <div class="grid gap-[16px]">
                                             <div class="p-[16px] rounded-[8px] bg-[var(--bg-color)] flex flex-wrap items-center justify-between gap-[20px] hover:translate-y-[-10px] transition-all duration-[0.4s] ease-out">
@@ -1721,9 +1721,9 @@
                                                             <div class="rounded-[4px] py-[4px] px-[6px] bg-[var(--red-color)] text-[#fff] text-nowrap">لم يتم الدفع</div>
                                                         </td>
 
-                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center text-[var(--yellow)] label-small">-- لم يتم الدفع --</td>
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center text-[var(--yellow-color)] label-small">-- لم يتم الدفع --</td>
 
-                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center text-[var(--yellow)] label-small">-- لم يتم الدفع --</td>
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center text-[var(--yellow-color)] label-small">-- لم يتم الدفع --</td>
 
                                                         <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">
                                                             <button type="button" class="text-[var(--green-color)] hover:opacity-[0.7] transition-all duration-[0.4s] ease-out" data-modal-open data-modal-target="#modal-invoice">
@@ -1803,18 +1803,406 @@
                                         </div>
                                     </div>
 
-                                    <div class="hidden" data-tab-content="bills">bills</div>
+                                    <div class="hidden" data-tab-content="bills">
+                                        <div class="flex flex-col md:flex-row items-center gap-[16px] w-[100%] mb-[50px]">
+                                            <button type="button" class="btn btn-second-primary label-small">شحن المحفظة (فوري)</button>
+
+                                            <div class="box-form w-full">
+                                                <input 
+                                                    type="text" 
+                                                    name="" 
+                                                    id="wallet" 
+                                                    class="form-control" 
+                                                />
+
+                                                <label for="wallet" class="label label-large">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-wallet"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" /><path d="M20 12v4h-4a2 2 0 0 1 0 -4h4" /></svg>
+                                                    المبلغ الذي تريد شحنة
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center w-full mb-[50px]">
+                                            <div class="flex items-center justify-center gap-[20px] mb-[16px]">
+                                                <h2 class="title-medium">أو:</h2>
+
+                                                <a href="./profile.html?tab=center_code_charging" class="btn btn-second-primary label-small">شحن كود سنتر</a>
+                                            </div>
+
+                                            <p class="text-[var(--second-color)] label-medium">دي بتدوس عليها لو انت اشتريت كود من السنتر وهتشحنة</p>
+                                        </div>
+                                        
+                                        <div class="overflow-auto scrollbar-none">
+                                            <table class="w-full border-collapse border border-gray-400">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">التسلسل</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">اجمالي سعر الفاتورة</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">التخفيض</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">الكوبون</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">عدد المشتريات</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">المشتريات</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">حالة الدفع</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">وقت الدفع</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">طريقة الدفع</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">رقم الفاتورة</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">الفاتورة</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">وقت انشاء الفاتورة</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">1919269</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">100.00</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">0.00</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center text-[var(--yellow-color)] label-small">-- لا يوجد كوبون --</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">1</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center text-[var(--red-color)] label-small">-- تم حذف المشتريات --</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">
+                                                            <div class="rounded-[4px] py-[4px] px-[6px] bg-[var(--red-color)] text-[#fff] text-nowrap">لم يتم الدفع</div>
+                                                        </td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center text-[var(--yellow-color)] label-small">-- لم يتم الدفع --</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center text-[var(--yellow-color)] label-small">-- لم يتم الدفع --</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">
+                                                            <button type="button" class="text-[var(--green-color)] hover:opacity-[0.7] transition-all duration-[0.4s] ease-out" data-modal-open data-modal-target="#modal-invoice">
+                                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-file"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2l.117 .007a1 1 0 0 1 .876 .876l.007 .117v4l.005 .15a2 2 0 0 0 1.838 1.844l.157 .006h4l.117 .007a1 1 0 0 1 .876 .876l.007 .117v9a3 3 0 0 1 -2.824 2.995l-.176 .005h-10a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-14a3 3 0 0 1 2.824 -2.995l.176 -.005h5z" /><path d="M19 7h-4l-.001 -4.001z" /></svg>
+                                                            </button>
+                                                        </td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">DLhLZfJHP</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">الثلاثاء 3 يونيو 2025</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="flex flex-wrap items-center justify-center gap-[15px] mt-[20px]">
+                                            <button type="button" class="btn !bg-[#ddd] !text-[#505050] hover:opacity-[0.7] label-small">السابق</button>
+
+                                            <div class="btn bg-[var(--blue-color)] text-[#fff] label-small">1 / 1</div>
+
+                                            <button type="button" class="btn !bg-[#ddd] !text-[#505050] hover:opacity-[0.7] label-small">التالي</button>
+                                        </div>
+                                    </div>
 
                                     <div class="hidden" data-tab-content="lectures">lectures</div>
 
-                                    <div class="hidden" data-tab-content="live_online_lessons">live_online_lessons</div>
+                                    <div class="hidden" data-tab-content="live_online_lessons">
+                                        <h3 class="!mb-[40px] font-[800] title-large">دروس اونلاين مباشرة</h3>
+
+                                        <div class="flex flex-wrap items-center justify-between gap-y-[20px] !my-[50px]">
+                                            <div class="flex flex-wrap items-center gap-[10px]">
+                                                <p class="label-large">تصفية حسب:</p>
+
+                                                <div class="box-select">
+                                                    <select name="" id="" class="select-control label-small">
+                                                        <option value="1">الجميع</option>
+                                                        <option value="2">اللغة العربية</option>
+                                                        <option value="3">فيزياء</option>
+                                                        <option value="4">لغة انجليزية</option>
+                                                        <option value="5">رياضة</option>
+                                                    </select>
+                                                    <div class="arrow">
+                                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex items-center gap-[10px]">
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+
+                                                <input 
+                                                    type="text" 
+                                                    name="" 
+                                                    placeholder="بحث في دروس اونلاين مباشرة"
+                                                    class="label-large"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-[30px]">
+                                            <div class="col">
+                                                <div class="card card-course">
+                                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                                        <picture>
+                                                            <source 
+                                                                srcset="./src/assets/image/card-big.jpg" 
+                                                                type="image/webp" 
+                                                            />
+                                                            
+                                                            <img 
+                                                                src="./src/assets/image/card-big.jpg" 
+                                                                alt="teachers" 
+                                                                loading="lazy"
+                                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                                            />
+                                                        </picture>
+                                                    </div>
+
+                                                    <div class="card-body !bg-[var(--bg-color)]">
+                                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                                            <div>
+                                                                <h3 class="line-2 title-small">الشهر الاول من الفصل الدراسي الثاني</h3>
+
+                                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                                <p class="text-[var(--second-color)] line-3 label-small">يتكون الشهر من 4 محاضرات - محاضرة أسبوعيًا</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="w-full mt-[16px] flex flex-col items-start gap-[20px]">
+                                                            <div class="grid gap-[5px] w-full">
+                                                                <p class="text-[var(--second-color)] label-small">30% مكتمل</p>
+                                                                <div class="w-full h-[10px] border-[1px] border-[var(--border-color)] rounded-full">
+                                                                    <div class="w-[30%] h-[10px] rounded-full" style="background: linear-gradient(to right, var(--red-color), var(--purple-color));"></div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="./course-details.html" class="btn btn-red-mix rounded-full">أكمل هذه الدورة</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col">
+                                                <div class="card card-course">
+                                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                                        <picture>
+                                                            <source 
+                                                                srcset="./src/assets/image/card-big-2.jpg" 
+                                                                type="image/webp" 
+                                                            />
+                                                            
+                                                            <img 
+                                                                src="./src/assets/image/card-big-2.jpg" 
+                                                                alt="teachers" 
+                                                                loading="lazy"
+                                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                                            />
+                                                        </picture>
+                                                    </div>
+
+                                                    <div class="card-body !bg-[var(--bg-color)]">
+                                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                                            <div>
+                                                                <h3 class="line-2 title-small">الشهر الثاني من الفصل الدراسي الثاني</h3>
+
+                                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                                <p class="text-[var(--second-color)] line-3 label-small">•الكورس ده هينزل فيه امتحانات برنامج حمادة عشان تبقا طبقت على الجزء اللي ذاكرته مع المستر 📝و متنساش الامتحانات الاسترشادية مهمة و هتكون موجودة هنا, شد حيلك يا بطل💪❤️•</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="w-full mt-[16px] flex flex-col items-start gap-[20px]">
+                                                            <div class="grid gap-[5px] w-full">
+                                                                <p class="text-[var(--second-color)] label-small">67% مكتمل</p>
+                                                                <div class="w-full h-[10px] border-[1px] border-[var(--border-color)] rounded-full">
+                                                                    <div class="w-[67%] h-[10px] rounded-full" style="background: linear-gradient(to right, var(--red-color), var(--purple-color));"></div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="./course-details.html" class="btn btn-red-mix rounded-full">أكمل هذه الدورة</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col">
+                                                <div class="card card-course">
+                                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                                        <picture>
+                                                            <source 
+                                                                srcset="./src/assets/image/card-big-3.png" 
+                                                                type="image/webp" 
+                                                            />
+                                                            
+                                                            <img 
+                                                                src="./src/assets/image/card-big-3.png" 
+                                                                alt="teachers" 
+                                                                loading="lazy"
+                                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                                            />
+                                                        </picture>
+                                                    </div>
+
+                                                    <div class="card-body !bg-[var(--bg-color)]">
+                                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                                            <div>
+                                                                <h3 class="line-2 title-small">الشهر الثاني من الفصل الدراسي الثاني</h3>
+
+                                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                                <p class="text-[var(--second-color)] line-3 label-small">الشهر الثاني - المراجعة النهائية - (محمد صلاح - لغة عربية - 3 ثانوي )</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="w-full mt-[16px] flex flex-col items-start gap-[20px]">
+                                                            <div class="grid gap-[5px] w-full">
+                                                                <p class="text-[var(--second-color)] label-small">0% مكتمل</p>
+                                                                <div class="w-full h-[10px] border-[1px] border-[var(--border-color)] rounded-full">
+                                                                    <div class="w-[0%] h-[10px] rounded-full" style="background: linear-gradient(to right, var(--red-color), var(--purple-color));"></div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="./course-details.html" class="btn btn-red-mix rounded-full">أكمل هذه الدورة</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col">
+                                                <div class="card card-course">
+                                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                                        <picture>
+                                                            <source 
+                                                                srcset="./src/assets/image/card-big-3.png" 
+                                                                type="image/webp" 
+                                                            />
+                                                            
+                                                            <img 
+                                                                src="./src/assets/image/card-big-3.png" 
+                                                                alt="teachers" 
+                                                                loading="lazy"
+                                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                                            />
+                                                        </picture>
+                                                    </div>
+
+                                                    <div class="card-body !bg-[var(--bg-color)]">
+                                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                                            <div>
+                                                                <h3 class="line-2 title-small">الشهر الثاني من الفصل الدراسي الثاني</h3>
+
+                                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                                <p class="text-[var(--second-color)] line-3 label-small">الشهر الثاني - المراجعة النهائية - (محمد صلاح - لغة عربية - 3 ثانوي )</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="w-full mt-[16px] flex flex-col items-start gap-[20px]">
+                                                            <div class="grid gap-[5px] w-full">
+                                                                <p class="text-[var(--second-color)] label-small">22% مكتمل</p>
+                                                                <div class="w-full h-[10px] border-[1px] border-[var(--border-color)] rounded-full">
+                                                                    <div class="w-[22%] h-[10px] rounded-full" style="background: linear-gradient(to right, var(--red-color), var(--purple-color));"></div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="./course-details.html" class="btn btn-red-mix rounded-full">أكمل هذه الدورة</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col">
+                                                <div class="card card-course">
+                                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                                        <picture>
+                                                            <source 
+                                                                srcset="./src/assets/image/card-big.jpg" 
+                                                                type="image/webp" 
+                                                            />
+                                                            
+                                                            <img 
+                                                                src="./src/assets/image/card-big.jpg" 
+                                                                alt="teachers" 
+                                                                loading="lazy"
+                                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                                            />
+                                                        </picture>
+                                                    </div>
+
+                                                    <div class="card-body !bg-[var(--bg-color)]">
+                                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                                            <div>
+                                                                <h3 class="line-2 title-small">الشهر الاول من الفصل الدراسي الثاني</h3>
+
+                                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                                <p class="text-[var(--second-color)] line-3 label-small">يتكون الشهر من 4 محاضرات - محاضرة أسبوعيًا</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="w-full mt-[16px] flex flex-col items-start gap-[20px]">
+                                                            <div class="grid gap-[5px] w-full">
+                                                                <p class="text-[var(--second-color)] label-small">30% مكتمل</p>
+                                                                <div class="w-full h-[10px] border-[1px] border-[var(--border-color)] rounded-full">
+                                                                    <div class="w-[30%] h-[10px] rounded-full" style="background: linear-gradient(to right, var(--red-color), var(--purple-color));"></div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="./course-details.html" class="btn btn-red-mix rounded-full">أكمل هذه الدورة</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col">
+                                                <div class="card card-course">
+                                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                                        <picture>
+                                                            <source 
+                                                                srcset="./src/assets/image/card-big-2.jpg" 
+                                                                type="image/webp" 
+                                                            />
+                                                            
+                                                            <img 
+                                                                src="./src/assets/image/card-big-2.jpg" 
+                                                                alt="teachers" 
+                                                                loading="lazy"
+                                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                                            />
+                                                        </picture>
+                                                    </div>
+
+                                                    <div class="card-body !bg-[var(--bg-color)]">
+                                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                                            <div>
+                                                                <h3 class="line-2 title-small">الشهر الثاني من الفصل الدراسي الثاني</h3>
+
+                                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                                <p class="text-[var(--second-color)] line-3 label-small">•الكورس ده هينزل فيه امتحانات برنامج حمادة عشان تبقا طبقت على الجزء اللي ذاكرته مع المستر 📝و متنساش الامتحانات الاسترشادية مهمة و هتكون موجودة هنا, شد حيلك يا بطل💪❤️•</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="w-full mt-[16px] flex flex-col items-start gap-[20px]">
+                                                            <div class="grid gap-[5px] w-full">
+                                                                <p class="text-[var(--second-color)] label-small">10% مكتمل</p>
+                                                                <div class="w-full h-[10px] border-[1px] border-[var(--border-color)] rounded-full">
+                                                                    <div class="w-[10%] h-[10px] rounded-full" style="background: linear-gradient(to right, var(--red-color), var(--purple-color));"></div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="./course-details.html" class="btn btn-red-mix rounded-full">أكمل هذه الدورة</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
                                     <div class="hidden" data-tab-content="exam_result">exam_result</div>
 
                                     <div class="hidden" data-tab-content="homework_results">homework_results</div>
 
                                     <div class="hidden" data-tab-content="shop">
-                                        <h3 class="!mb-[40px] font-[800] headline-small">التسوق</h3>
+                                        <h3 class="!mb-[40px] font-[800] title-large">التسوق</h3>
 
                                         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[30px] lg:gap-[60px]">
                                             <div class="col">
