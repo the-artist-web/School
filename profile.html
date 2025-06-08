@@ -594,7 +594,7 @@
         </aside>
 
         <!-- MODAL -->
-        <div class="fixed top-[40%] left-[50%] z-50 translate-y-[-50%] opacity-[0] invisible translate-x-[-50%] p-[20px] rounded-[8px] bg-[--third-bg-color] w-[100%] max-w-[312px] max-h-500px overflow-hidden transition-all duration-[0.6s]" id="modal-search">
+        <div class="fixed top-[40%] left-[50%] z-50 translate-y-[-50%] opacity-[0] invisible translate-x-[-50%] p-[20px] rounded-[8px] bg-[--third-bg-color] w-[100%] max-w-[312px] max-h-500px overflow-scroll scrollbar-none transition-all max-h-[90vh] duration-[0.6s]" id="modal-search">
             <h2 class="!mb-[20px] label-medium">ابحث عن دورات الموقع.</h2>
             <form action="#" method="get" class="grid gap-[20px]">
                 <div class="box-form">
@@ -616,11 +616,11 @@
         </div>
 
         <!-- MODAL SETTINGS -->
-        <div class="fixed top-[40%] left-[50%] z-50 translate-y-[-50%] opacity-[0] invisible translate-x-[-50%] p-[20px] rounded-[8px] bg-[--third-bg-color] w-[100%] max-w-[650px] max-h-500px overflow-hidden transition-all duration-[0.6s]" id="modal-settings">
+        <div class="fixed top-[40%] left-[50%] z-50 translate-y-[-50%] opacity-[0] invisible translate-x-[-50%] p-[20px] rounded-[8px] bg-[--third-bg-color] w-[100%] max-w-[650px] max-h-500px overflow-scroll scrollbar-none transition-all max-h-[90vh] duration-[0.6s]" id="modal-settings">
             <form action="#" method="POST">
                 <h3 class="!mb-[30px] title-small">تعديل الملف الشخصي</h3>
 
-                <div class="!mb-[30px] overflow-hidden relative min-w-[80px] max-w-[80px] min-h-[max-content] max-h-[max-content] rounded-full border-[1px] border-[var(--border-color)]">
+                <div class="mx-auto !mb-[30px] overflow-hidden relative min-w-[80px] max-w-[80px] min-h-[max-content] max-h-[max-content] rounded-full border-[1px] border-[var(--border-color)]">
                     <img src="https://khaled-sakr.com/static/media/userIcon.117b8ea4f0faadadcb46.png" alt="img username" loading="lazy" class="min-w-[80px] max-w-[80px] min-h-[80px] max-h-[80px] rounded-full img-cover">
                 </div>
 
@@ -669,6 +669,86 @@
             </form>
         </div>
 
+        <!-- MODEL INVOICE -->
+        <div class="fixed top-[40%] left-[50%] z-50 translate-y-[-50%] opacity-[0] invisible translate-x-[-50%] p-[20px] rounded-[8px] bg-[--bg-color] w-[100%] max-w-[1000px] max-h-500px overflow-scroll scrollbar-none max-h-[90vh] transition-all duration-[0.6s]" id="modal-invoice">
+            <div class="flex items-center justify-between pb-[20px] mb-[20px] border-b-[1px] border-b-[var(--border-color)]">
+                <h3 class="!text-[var(--red-color)] title-small">فاتورة</h3>
+
+                <button type="button" class="btn p-0 hover:opacity-[0.7]" data-modal-close data-modal-target="#modal-invoice">
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="30"  height="30"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg>
+                </button>
+            </div>
+
+            <div class="flex items-center justify-between mb-[30px]">
+                <span></span>
+
+
+                <button type="button" class="btn btn-red label-small">طباعة الفاتورة</button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-[30px] mb-[30px]">
+                <div class="col">
+                    <div class="mb-[50px] overflow-hidden relative min-w-[80px] max-w-[80px] min-h-[80px] max-h-[80px] rounded-full border-[1px] border-[var(--border-color)]">
+                        <img 
+                            src="https://khaled-sakr.com/static/media/userIcon.117b8ea4f0faadadcb46.png"
+                            alt="img username" 
+                            loading="lazy"
+                            class="min-w-[80px] max-w-[80px] min-h-[80px] max-h-[80px] rounded-full img-cover" 
+                        />
+                    </div>
+
+                    <h2 class="!mb-[5px] title-medium">محمد</h2>
+                    <p class="!mb-[50px] text-[var(--second-color)] label-medium">رمز فريد: DLhLZfJHP</p>
+
+                    <div class="p-[16px] bg-[var(--second-bg-color)] border-[1px] border-[var(--border-color)] grid gap-[5px]">
+                        <h3 class="text-[var(--second-color)] font-[600] label-medium">مشروع قانون ل</h3>
+
+                        <h3 class="text-[var(--second-color)] inline-flex items-center gap-[5px] label-medium"><b>الاسم:</b> محمد</h3>
+
+                        <h3 class="text-[var(--second-color)] inline-flex items-center gap-[5px] label-medium"><b>الرقم:</b> 01550799286</h3>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <h2 class="text-end bg-[var(--blue-color)] text-[#fff] !mb-[30px] !p-[5px] title-medium">فاتورة طلبك</h2>
+
+                    <div class="p-[16px] bg-[var(--third-bg-color)] grid gap-[5px] ms-auto max-w-[max-content]">
+                        <h3 class="text-[var(--second-color)] inline-flex items-center gap-[5px] label-medium"><b>كود الفاتورة:</b> DLhLZfJHP</h3>
+
+                        <h3 class="text-[var(--second-color)] inline-flex items-center gap-[5px] label-medium"><b>التاريخ:</b> الثلاثاء 3 يونيو 2025</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-[100%] overflow-scroll scrollbar-none">
+                <table class="border-collapse border border-gray-400 w-[100%]">
+                    <thead>
+                        <tr>
+                            <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">#</th>
+
+                            <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">الوصف</th>
+
+                            <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">المبالغ</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">1</td>
+
+                            <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">كورس A</td>
+
+                            <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">100.00 ج.م</td>
+                        </tr>
+
+                        <tr>
+                            <td  class="!py-[30px] !px-[20px] text-center inline-flex items-center gap-[5px] label-small"><b>إجمالي المبالغ:</b> 100.00 ج.م</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
         <main class="main">
             <article>
                 <!-- BANNER -->
@@ -701,6 +781,24 @@
                                         >
                                             <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" /></svg>
                                             حسابي
+                                        </a>
+                                        
+                                        <a 
+                                            href="./profile.html?tab=center_code_charging" 
+                                            class="rounded-[8px] bg-[var(--bg-color)] shadow-md py-[8px] px-[12px] flex items-center gap-[10px] border-[2px] border-[transparent] hover:!text-[var(--blue-dark-color)] hover:border-[var(--blue-dark-color)] transition-all duration-[0.4s] ease-out label-medium"
+                                            data-tab-btn="center_code_charging"
+                                        >
+                                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-battery-charging"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 7h1a2 2 0 0 1 2 2v.5a.5 .5 0 0 0 .5 .5a.5 .5 0 0 1 .5 .5v3a.5 .5 0 0 1 -.5 .5a.5 .5 0 0 0 -.5 .5v.5a2 2 0 0 1 -2 2h-2" /><path d="M8 7h-2a2 2 0 0 0 -2 2v6a2 2 0 0 0 2 2h1" /><path d="M12 8l-2 4h3l-2 4" /></svg>
+                                            شحن كود سنتر
+                                        </a>
+                                        
+                                        <a 
+                                            href="./profile.html?tab=center_lectures_and_codes" 
+                                            class="rounded-[8px] bg-[var(--bg-color)] shadow-md py-[8px] px-[12px] flex items-center gap-[10px] border-[2px] border-[transparent] hover:!text-[var(--blue-dark-color)] hover:border-[var(--blue-dark-color)] transition-all duration-[0.4s] ease-out label-medium"
+                                            data-tab-btn="center_lectures_and_codes"
+                                        >
+                                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-notebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-11a1 1 0 0 1 -1 -1v-14a1 1 0 0 1 1 -1m3 0v18" /><path d="M13 8l2 0" /><path d="M13 12l2 0" /></svg>
+                                            محاضرات واكواد السنتر
                                         </a>
                                         
                                         <a 
@@ -995,69 +1093,46 @@
                                                     </div>
                                                 </div>
 
-                                                <div class="relative rounded-[12px] p-[35px] bg-[var(--bg-color)] h-[680px] max-w-[590px] overflow-hidden">
-                                                    <button type="button" class="absolute top-[50%] rtl:left-[10px] z-[1] ltr:right-[10px] translate-y-[-50%] text-[var(--second-color)] min-w-[40px] max-w-[40px] min-h-[40px] max-h-[40px] rounded-full flex items-center justify-center bg-[#000] opacity-[0.7] hover:opacity-[1] transition-all duration-[0.4s] ease-out label-medium" data-next>></button>
+                                                <div class="relative rounded-[12px] p-[20px] sm:p-[35px] bg-[var(--bg-color)] max-w-full sm:max-w-[590px]">
+                                                    <button type="button" class="absolute top-1/2 rtl:left-[5px] ltr:right-[5px] translate-y-[-50%] z-[10] text-[var(--second-color)] w-[35px] h-[35px] sm:w-[40px] sm:h-[40px] rounded-full flex items-center justify-center bg-[#000] hover:bg-[var(--blue-color)] hover:text-[#fff] transition-all duration-300 ease-out label-medium" data-next>
+                                                        &gt;
+                                                    </button>
 
-                                                    <div class="flex transition-transform duration-500 ease-out gap-[20px] overflow-hidden" id="slider" style="scroll-behavior: smooth;">
-                                                        <div class="card card-course h-[max-content] w-[520px] flex-shrink-0">
-                                                            <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                                    <div class="flex transition-transform duration-500 ease-out gap-[16px] sm:gap-[20px] overflow-x-auto scrollbar-none" id="slider">
+                                                        <div class="card card-course w-[280px] sm:w-[420px] lg:w-[520px] flex-shrink-0">
+                                                            <div class="relative rounded-[4px] overflow-hidden">
                                                                 <picture>
-                                                                    <source 
-                                                                        srcset="./src/assets/image/card-big.jpg" 
-                                                                        type="image/webp" 
-                                                                    />
-                                                                    
-                                                                    <img 
-                                                                        src="./src/assets/image/card-big.jpg" 
-                                                                        alt="teachers" 
-                                                                        loading="lazy"
-                                                                        class="mb-[16px] rounded-[4px] img-cover" 
-                                                                    />
+                                                                    <source srcset="./src/assets/image/card-big.jpg" type="image/webp" />
+                                                                    <img src="./src/assets/image/card-big.jpg" alt="teachers" loading="lazy" class="mb-[16px] h-auto rounded-[4px] img-cover" />
                                                                 </picture>
                                                             </div>
-    
+
                                                             <div class="card-body">
                                                                 <div class="flex flex-col lg:flex-row items-start gap-[16px]">
                                                                     <div>
                                                                         <h3 class="line-1 title-small">الشهر الاول من الفصل الدراسي الثاني</h3>
-    
-                                                                        <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
-    
+                                                                        <div class="border-[2px] border-[var(--second-green-color)] w-full my-[16px]"></div>
                                                                         <p class="text-[var(--second-color)] line-1 label-small">يتكون الشهر من 4 محاضرات - محاضرة أسبوعيًا</p>
                                                                     </div>
-    
-                                                                    <div class="grid gap-[10px]">
-                                                                        <a href="./course-details.html" class="btn btn-green rounded-full !px-[12px] !py-[4px]">الدخول إلى الدورة</a>
-                                                                    </div>
                                                                 </div>
-    
-                                                                <div class="border-t-[1px] border-[var(--border-color)] w-[100%] mt-[16px] pt-[16px] flex flex-col items-start justify-between gap-[20px]">
+
+                                                                <div class="border-t-[1px] border-[var(--border-color)] w-full mt-[16px] pt-[16px] flex flex-col items-start gap-[20px]">
                                                                     <div class="grid gap-[5px] w-full">
-                                                                        <p class="text-[var(--second-color)] label-small">67% Complete</p>
+                                                                        <p class="text-[var(--second-color)] label-small">67% مكتمل</p>
                                                                         <div class="w-full h-[10px] border-[1px] border-[var(--border-color)] rounded-full">
                                                                             <div class="w-[67%] h-[10px] rounded-full" style="background: linear-gradient(to right, var(--red-color), var(--purple-color));"></div>
                                                                         </div>
                                                                     </div>
-    
                                                                     <a href="./course-details.html" class="btn btn-red-mix rounded-full">أكمل هذه الدورة</a>
                                                                 </div>
                                                             </div>
                                                         </div>
 
-                                                        <div class="card card-course h-[max-content] w-[520px] flex-shrink-0">
-                                                            <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                                        <div class="card card-course w-[280px] sm:w-[420px] lg:w-[520px] flex-shrink-0">
+                                                            <div class="relative rounded-[4px] overflow-hidden">
                                                                 <picture>
-                                                                    <source 
-                                                                        srcset="./src/assets/image/card-big-3.png" 
-                                                                        type="image/webp" 
-                                                                    />
-                                                                    
-                                                                    <img 
-                                                                        src="./src/assets/image/card-big-3.png" 
-                                                                        alt="teachers" 
-                                                                        loading="lazy"
-                                                                        class="mb-[16px] rounded-[4px] img-cover" 
-                                                                    />
+                                                                    <source srcset="./src/assets/image/card-big-3.png" type="image/webp" />
+                                                                    <img src="./src/assets/image/card-big-3.png" alt="teachers" loading="lazy" class="mb-[16px] h-auto rounded-[4px] img-cover" />
                                                                 </picture>
                                                             </div>
 
@@ -1065,44 +1140,668 @@
                                                                 <div class="flex flex-col lg:flex-row items-start gap-[16px]">
                                                                     <div>
                                                                         <h3 class="line-1 title-small">الشهر الثاني من الفصل الدراسي الثاني</h3>
-
-                                                                        <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
-
+                                                                        <div class="border-[2px] border-[var(--second-green-color)] w-full my-[16px]"></div>
                                                                         <p class="text-[var(--second-color)] line-1 label-small">الشهر الثاني - المراجعة النهائية - (محمد صلاح - لغة عربية - 3 ثانوي )</p>
-                                                                    </div>
-
-                                                                    <div class="grid gap-[10px]">
-                                                                        <a href="./course-details.html" class="btn btn-green rounded-full !px-[12px] !py-[4px]">الدخول إلى الدورة</a>
                                                                     </div>
                                                                 </div>
 
-                                                                <div class="border-t-[1px] border-[var(--border-color)] w-[100%] mt-[16px] pt-[16px] flex flex-col items-start justify-between gap-[20px]">
+                                                                <div class="border-t-[1px] border-[var(--border-color)] w-full mt-[16px] pt-[16px] flex flex-col items-start gap-[20px]">
                                                                     <div class="grid gap-[5px] w-full">
-                                                                        <p class="text-[var(--second-color)] label-small">30% Complete</p>
+                                                                        <p class="text-[var(--second-color)] label-small">30% مكتمل</p>
                                                                         <div class="w-full h-[10px] border-[1px] border-[var(--border-color)] rounded-full">
                                                                             <div class="w-[30%] h-[10px] rounded-full" style="background: linear-gradient(to right, var(--red-color), var(--purple-color));"></div>
                                                                         </div>
                                                                     </div>
-    
                                                                     <a href="./course-details.html" class="btn btn-red-mix rounded-full">أكمل هذه الدورة</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
 
-                                                    <button type="button" class="absolute top-[50%] rtl:right-[10px] z-[1] ltr:left-[10px] translate-y-[-50%] text-[var(--second-color)] min-w-[40px] max-w-[40px] min-h-[40px] max-h-[40px] rounded-full flex items-center justify-center bg-[#000] opacity-[0.7] hover:opacity-[1] transition-all duration-[0.4s] ease-out label-medium" data-prev><</button>
+                                                    <button type="button" class="absolute top-1/2 rtl:right-[5px] ltr:left-[5px] translate-y-[-50%] z-[10] text-[var(--second-color)] w-[35px] h-[35px] sm:w-[40px] sm:h-[40px] rounded-full flex items-center justify-center bg-[#000] hover:bg-[var(--blue-color)] hover:text-[#fff] transition-all duration-300 ease-out label-medium" data-prev>
+                                                        &lt;
+                                                    </button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="hidden" data-tab-content="center_code_charging">
+                                        <div class="flex flex-col items-center justify-center text-center mx-auto max-w-[700px]">
+                                            <h3 class="!mb-[16px] title-small">شحن كود سنتر</h3>
+                                            <p class="!mb-[40px] label-medium">اكتب الكود المكون من 11 رقم علي كارت السنتر بتاعك هنا علشان تفتح ليك باقي محاضرات السنتر بتاعتك</p>
+
+                                            <div class="box-form mb-[30px] w-[100%]">
+                                                <input 
+                                                    type="number" 
+                                                    name="" 
+                                                    id="code" 
+                                                    class="form-control" 
+                                                />
+
+                                                <label for="code" class="label label-large">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
+                                                    كود السنتر الخاص بك
+                                                </label>
+                                            </div>
+
+                                            <button type="button" class="btn btn-primary label-small">شحن الكود</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="hidden" data-tab-content="center_lectures_and_codes">
+                                        <div class="flex flex-col items-center justify-center text-center mx-auto max-w-[700px]">
+                                            <h3 class="!mb-[16px] title-small">لو كنت طالب سنتر:</h3>
+                                            <p class="!mb-[40px] label-medium">اكتب الكود المكون من 11 رقم علي كارت السنتر بتاعك هنا علشان تفتح ليك باقي محاضرات السنتر بتاعتك</p>
+
+                                            <div class="box-form mb-[30px] w-[100%]">
+                                                <input 
+                                                    type="number" 
+                                                    name="" 
+                                                    id="code" 
+                                                    class="form-control" 
+                                                />
+
+                                                <label for="code" class="label label-large">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 8l-4 4l4 4" /><path d="M17 8l4 4l-4 4" /><path d="M14 4l-4 16" /></svg>
+                                                    كود السنتر الخاص بك
+                                                </label>
+                                            </div>
+
+                                            <button type="button" class="btn btn-primary label-small">ربط الكود بالأكونت بتاعك</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="hidden" data-tab-content="course">
+                                        <h3 class="!mb-[40px] font-[800] headline-small">كورساتي</h3>
+
+                                        <div class="flex flex-wrap items-center justify-between gap-y-[20px] !my-[50px]">
+                                            <div class="flex flex-wrap items-center gap-[10px]">
+                                                <p class="label-large">تصفية حسب:</p>
+
+                                                <div class="box-select">
+                                                    <select name="" id="" class="select-control label-small">
+                                                        <option value="1">الجميع</option>
+                                                        <option value="2">اللغة العربية</option>
+                                                        <option value="3">فيزياء</option>
+                                                        <option value="4">لغة انجليزية</option>
+                                                        <option value="5">رياضة</option>
+                                                    </select>
+                                                    <div class="arrow">
+                                                        <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" /></svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex items-center gap-[10px]">
+                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+
+                                                <input 
+                                                    type="text" 
+                                                    name="" 
+                                                    placeholder="بحث في كورساتي"
+                                                    class="label-large"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-[30px]">
+                                            <div class="col">
+                                                <div class="card card-course">
+                                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                                        <picture>
+                                                            <source 
+                                                                srcset="./src/assets/image/card-big.jpg" 
+                                                                type="image/webp" 
+                                                            />
+                                                            
+                                                            <img 
+                                                                src="./src/assets/image/card-big.jpg" 
+                                                                alt="teachers" 
+                                                                loading="lazy"
+                                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                                            />
+                                                        </picture>
+                                                    </div>
+
+                                                    <div class="card-body !bg-[var(--bg-color)]">
+                                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                                            <div>
+                                                                <h3 class="line-2 title-small">الشهر الاول من الفصل الدراسي الثاني</h3>
+
+                                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                                <p class="text-[var(--second-color)] line-3 label-small">يتكون الشهر من 4 محاضرات - محاضرة أسبوعيًا</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="w-full mt-[16px] flex flex-col items-start gap-[20px]">
+                                                            <div class="grid gap-[5px] w-full">
+                                                                <p class="text-[var(--second-color)] label-small">30% مكتمل</p>
+                                                                <div class="w-full h-[10px] border-[1px] border-[var(--border-color)] rounded-full">
+                                                                    <div class="w-[30%] h-[10px] rounded-full" style="background: linear-gradient(to right, var(--red-color), var(--purple-color));"></div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="./course-details.html" class="btn btn-red-mix rounded-full">أكمل هذه الدورة</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col">
+                                                <div class="card card-course">
+                                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                                        <picture>
+                                                            <source 
+                                                                srcset="./src/assets/image/card-big-2.jpg" 
+                                                                type="image/webp" 
+                                                            />
+                                                            
+                                                            <img 
+                                                                src="./src/assets/image/card-big-2.jpg" 
+                                                                alt="teachers" 
+                                                                loading="lazy"
+                                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                                            />
+                                                        </picture>
+                                                    </div>
+
+                                                    <div class="card-body !bg-[var(--bg-color)]">
+                                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                                            <div>
+                                                                <h3 class="line-2 title-small">الشهر الثاني من الفصل الدراسي الثاني</h3>
+
+                                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                                <p class="text-[var(--second-color)] line-3 label-small">•الكورس ده هينزل فيه امتحانات برنامج حمادة عشان تبقا طبقت على الجزء اللي ذاكرته مع المستر 📝و متنساش الامتحانات الاسترشادية مهمة و هتكون موجودة هنا, شد حيلك يا بطل💪❤️•</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="w-full mt-[16px] flex flex-col items-start gap-[20px]">
+                                                            <div class="grid gap-[5px] w-full">
+                                                                <p class="text-[var(--second-color)] label-small">67% مكتمل</p>
+                                                                <div class="w-full h-[10px] border-[1px] border-[var(--border-color)] rounded-full">
+                                                                    <div class="w-[67%] h-[10px] rounded-full" style="background: linear-gradient(to right, var(--red-color), var(--purple-color));"></div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="./course-details.html" class="btn btn-red-mix rounded-full">أكمل هذه الدورة</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col">
+                                                <div class="card card-course">
+                                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                                        <picture>
+                                                            <source 
+                                                                srcset="./src/assets/image/card-big-3.png" 
+                                                                type="image/webp" 
+                                                            />
+                                                            
+                                                            <img 
+                                                                src="./src/assets/image/card-big-3.png" 
+                                                                alt="teachers" 
+                                                                loading="lazy"
+                                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                                            />
+                                                        </picture>
+                                                    </div>
+
+                                                    <div class="card-body !bg-[var(--bg-color)]">
+                                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                                            <div>
+                                                                <h3 class="line-2 title-small">الشهر الثاني من الفصل الدراسي الثاني</h3>
+
+                                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                                <p class="text-[var(--second-color)] line-3 label-small">الشهر الثاني - المراجعة النهائية - (محمد صلاح - لغة عربية - 3 ثانوي )</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="w-full mt-[16px] flex flex-col items-start gap-[20px]">
+                                                            <div class="grid gap-[5px] w-full">
+                                                                <p class="text-[var(--second-color)] label-small">0% مكتمل</p>
+                                                                <div class="w-full h-[10px] border-[1px] border-[var(--border-color)] rounded-full">
+                                                                    <div class="w-[0%] h-[10px] rounded-full" style="background: linear-gradient(to right, var(--red-color), var(--purple-color));"></div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="./course-details.html" class="btn btn-red-mix rounded-full">أكمل هذه الدورة</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col">
+                                                <div class="card card-course">
+                                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                                        <picture>
+                                                            <source 
+                                                                srcset="./src/assets/image/card-big-3.png" 
+                                                                type="image/webp" 
+                                                            />
+                                                            
+                                                            <img 
+                                                                src="./src/assets/image/card-big-3.png" 
+                                                                alt="teachers" 
+                                                                loading="lazy"
+                                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                                            />
+                                                        </picture>
+                                                    </div>
+
+                                                    <div class="card-body !bg-[var(--bg-color)]">
+                                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                                            <div>
+                                                                <h3 class="line-2 title-small">الشهر الثاني من الفصل الدراسي الثاني</h3>
+
+                                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                                <p class="text-[var(--second-color)] line-3 label-small">الشهر الثاني - المراجعة النهائية - (محمد صلاح - لغة عربية - 3 ثانوي )</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="w-full mt-[16px] flex flex-col items-start gap-[20px]">
+                                                            <div class="grid gap-[5px] w-full">
+                                                                <p class="text-[var(--second-color)] label-small">22% مكتمل</p>
+                                                                <div class="w-full h-[10px] border-[1px] border-[var(--border-color)] rounded-full">
+                                                                    <div class="w-[22%] h-[10px] rounded-full" style="background: linear-gradient(to right, var(--red-color), var(--purple-color));"></div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="./course-details.html" class="btn btn-red-mix rounded-full">أكمل هذه الدورة</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col">
+                                                <div class="card card-course">
+                                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                                        <picture>
+                                                            <source 
+                                                                srcset="./src/assets/image/card-big.jpg" 
+                                                                type="image/webp" 
+                                                            />
+                                                            
+                                                            <img 
+                                                                src="./src/assets/image/card-big.jpg" 
+                                                                alt="teachers" 
+                                                                loading="lazy"
+                                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                                            />
+                                                        </picture>
+                                                    </div>
+
+                                                    <div class="card-body !bg-[var(--bg-color)]">
+                                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                                            <div>
+                                                                <h3 class="line-2 title-small">الشهر الاول من الفصل الدراسي الثاني</h3>
+
+                                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                                <p class="text-[var(--second-color)] line-3 label-small">يتكون الشهر من 4 محاضرات - محاضرة أسبوعيًا</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="w-full mt-[16px] flex flex-col items-start gap-[20px]">
+                                                            <div class="grid gap-[5px] w-full">
+                                                                <p class="text-[var(--second-color)] label-small">30% مكتمل</p>
+                                                                <div class="w-full h-[10px] border-[1px] border-[var(--border-color)] rounded-full">
+                                                                    <div class="w-[30%] h-[10px] rounded-full" style="background: linear-gradient(to right, var(--red-color), var(--purple-color));"></div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="./course-details.html" class="btn btn-red-mix rounded-full">أكمل هذه الدورة</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col">
+                                                <div class="card card-course">
+                                                    <div class="relative rounded-[4px] overflow-hidden img-cover">
+                                                        <picture>
+                                                            <source 
+                                                                srcset="./src/assets/image/card-big-2.jpg" 
+                                                                type="image/webp" 
+                                                            />
+                                                            
+                                                            <img 
+                                                                src="./src/assets/image/card-big-2.jpg" 
+                                                                alt="teachers" 
+                                                                loading="lazy"
+                                                                class="mb-[16px] rounded-[4px] img-cover" 
+                                                            />
+                                                        </picture>
+                                                    </div>
+
+                                                    <div class="card-body !bg-[var(--bg-color)]">
+                                                        <div class="flex flex-col lg:flex-row items-start gap-[16px]">
+                                                            <div>
+                                                                <h3 class="line-2 title-small">الشهر الثاني من الفصل الدراسي الثاني</h3>
+
+                                                                <div class="border-[2px] border-[var(--second-green-color)] w-[100%] my-[16px]"></div>
+
+                                                                <p class="text-[var(--second-color)] line-3 label-small">•الكورس ده هينزل فيه امتحانات برنامج حمادة عشان تبقا طبقت على الجزء اللي ذاكرته مع المستر 📝و متنساش الامتحانات الاسترشادية مهمة و هتكون موجودة هنا, شد حيلك يا بطل💪❤️•</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="w-full mt-[16px] flex flex-col items-start gap-[20px]">
+                                                            <div class="grid gap-[5px] w-full">
+                                                                <p class="text-[var(--second-color)] label-small">10% مكتمل</p>
+                                                                <div class="w-full h-[10px] border-[1px] border-[var(--border-color)] rounded-full">
+                                                                    <div class="w-[10%] h-[10px] rounded-full" style="background: linear-gradient(to right, var(--red-color), var(--purple-color));"></div>
+                                                                </div>
+                                                            </div>
+                                                            <a href="./course-details.html" class="btn btn-red-mix rounded-full">أكمل هذه الدورة</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="hidden" data-tab-content="course">course</div>
+                                    <div class="hidden" data-tab-content="student_forum">
+                                        <h3 class="!mb-[40px] font-[800] headline-small">اسم الجروب والصف</h3>
 
-                                    <div class="hidden" data-tab-content="student_forum">student_forum</div>
+                                        <div class="grid gap-[16px]">
+                                            <div class="p-[16px] rounded-[8px] bg-[var(--bg-color)] flex flex-wrap items-center justify-between gap-[20px] hover:translate-y-[-10px] transition-all duration-[0.4s] ease-out">
+                                                <div class="flex items-center gap-[20px]">
+                                                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" 
+                                                        alt="" loading="lazy"
+                                                        class="rounded-[8px] min-w-[90px] min-h-[80px] max-w-[90px] max-h-[80px] img-cover" />
+                                                    <div class="grid gap-[16px]">
+                                                        <h2 class="label-medium">الصف الأول الثانوي - بنين</h2>
+                                                        <p class="text-[var(--second-color)] line-2 label-medium">مجموعة دراسية مخصصة لطلاب الصف الأول الثانوي البنين تشمل شرح الدروس وحل التمارين.</p>
+                                                    </div>
+                                                </div>
 
-                                    <div class="hidden" data-tab-content="wallet">wallet</div>
+                                                <a href="#" class="btn soft-purple label-small">
+                                                    الذهاب إلى المجموعة
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></svg>
+                                                </a>
+                                            </div>
 
-                                    <div class="hidden" data-tab-content="lock">lock</div>
+                                            <div class="p-[16px] rounded-[8px] bg-[var(--bg-color)] flex flex-wrap items-center justify-between gap-[20px] hover:translate-y-[-10px] transition-all duration-[0.4s] ease-out">
+                                                <div class="flex items-center gap-[20px]">
+                                                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" 
+                                                        alt="" loading="lazy"
+                                                        class="rounded-[8px] min-w-[90px] min-h-[80px] max-w-[90px] max-h-[80px] img-cover" />
+                                                    <div class="grid gap-[16px]">
+                                                        <h2 class="label-medium">الصف الأول الثانوي - بنات</h2>
+                                                        <p class="text-[var(--second-color)] line-2 label-medium">دروس وواجبات مخصصة لطالبات الصف الأول الثانوي بأسلوب تعليمي مبسط ومباشر.</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <a href="#" class="btn soft-purple label-small">
+                                                    الذهاب إلى المجموعة
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></svg>
+                                                </a>
+                                            </div>
+
+                                            <div class="p-[16px] rounded-[8px] bg-[var(--bg-color)] flex flex-wrap items-center justify-between gap-[20px] hover:translate-y-[-10px] transition-all duration-[0.4s] ease-out">
+                                                <div class="flex items-center gap-[20px]">
+                                                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" 
+                                                        alt="" loading="lazy"
+                                                        class="rounded-[8px] min-w-[90px] min-h-[80px] max-w-[90px] max-h-[80px] img-cover" />
+                                                    <div class="grid gap-[16px]">
+                                                        <h2 class="label-medium">الصف الثاني الثانوي - بنين</h2>
+                                                        <p class="text-[var(--second-color)] line-2 label-medium">شرح شامل لمنهج الصف الثاني الثانوي للبنين، مع اختبارات دورية وتقييمات.</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <a href="#" class="btn soft-purple label-small">
+                                                    الذهاب إلى المجموعة
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></svg>
+                                                </a>
+                                            </div>
+
+                                            <div class="p-[16px] rounded-[8px] bg-[var(--bg-color)] flex flex-wrap items-center justify-between gap-[20px] hover:translate-y-[-10px] transition-all duration-[0.4s] ease-out">
+                                                <div class="flex items-center gap-[20px]">
+                                                    <img src="https://cdn-icons-png.flaticon.com/512/4140/4140051.png" 
+                                                        alt="" loading="lazy"
+                                                        class="rounded-[8px] min-w-[90px] min-h-[80px] max-w-[90px] max-h-[80px] img-cover" />
+                                                    <div class="grid gap-[16px]">
+                                                        <h2 class="label-medium">الصف الثاني الثانوي - بنات</h2>
+                                                        <p class="text-[var(--second-color)] line-2 label-medium">دروس تفاعلية ومراجعات لطالبات الصف الثاني الثانوي بأسلوب مبسط وعملي.</p>
+                                                    </div>
+                                                </div>
+
+                                                <a href="#" class="btn soft-purple label-small">
+                                                    الذهاب إلى المجموعة
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></svg>
+                                                </a>
+                                            </div>
+
+                                            <div class="p-[16px] rounded-[8px] bg-[var(--bg-color)] flex flex-wrap items-center justify-between gap-[20px] hover:translate-y-[-10px] transition-all duration-[0.4s] ease-out">
+                                                <div class="flex items-center gap-[20px]">
+                                                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" 
+                                                        alt="" loading="lazy"
+                                                        class="rounded-[8px] min-w-[90px] min-h-[80px] max-w-[90px] max-h-[80px] img-cover" />
+                                                    <div class="grid gap-[16px]">
+                                                        <h2 class="label-medium">الصف الثالث الثانوي - بنين</h2>
+                                                        <p class="text-[var(--second-color)] line-2 label-medium">كل ما يحتاجه طلاب الصف الثالث الثانوي من مراجعات نهائية ومهارات لحل الامتحانات.</p>
+                                                    </div>
+                                                </div>
+
+                                                <a href="#" class="btn soft-purple label-small">
+                                                    الذهاب إلى المجموعة
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></svg>
+                                                </a>
+                                            </div>
+
+                                            <div class="p-[16px] rounded-[8px] bg-[var(--bg-color)] flex flex-wrap items-center justify-between gap-[20px] hover:translate-y-[-10px] transition-all duration-[0.4s] ease-out">
+                                                <div class="flex items-center gap-[20px]">
+                                                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" 
+                                                        alt="" loading="lazy"
+                                                        class="rounded-[8px] min-w-[90px] min-h-[80px] max-w-[90px] max-h-[80px] img-cover" />
+                                                    <div class="grid gap-[16px]">
+                                                        <h2 class="label-medium">الصف الثالث الثانوي - بنات</h2>
+                                                        <p class="text-[var(--second-color)] line-2 label-medium">شرح مبسط ومراجعات قوية لطالبات الصف الثالث الثانوي لتحقيق أفضل النتائج.</p>
+                                                    </div>
+                                                </div>
+
+                                                <a href="#" class="btn soft-purple label-small">
+                                                    الذهاب إلى المجموعة
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></svg>
+                                                </a>
+                                            </div>
+                                            
+                                            <div class="p-[16px] rounded-[8px] bg-[var(--bg-color)] flex flex-wrap items-center justify-between gap-[20px] hover:translate-y-[-10px] transition-all duration-[0.4s] ease-out">
+                                                <div class="flex items-center gap-[20px]">
+                                                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" 
+                                                        alt="" loading="lazy"
+                                                        class="rounded-[8px] min-w-[90px] min-h-[80px] max-w-[90px] max-h-[80px] img-cover" />
+                                                    <div class="grid gap-[16px]">
+                                                        <h2 class="label-medium">الصف الأول الثانوي - بنين</h2>
+                                                        <p class="text-[var(--second-color)] line-2 label-medium">مجموعة دراسية مخصصة لطلاب الصف الأول الثانوي البنين تشمل شرح الدروس وحل التمارين.</p>
+                                                    </div>
+                                                </div>
+
+                                                <a href="#" class="btn soft-purple label-small">
+                                                    الذهاب إلى المجموعة
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></svg>
+                                                </a>
+                                            </div>
+
+                                            <div class="p-[16px] rounded-[8px] bg-[var(--bg-color)] flex flex-wrap items-center justify-between gap-[20px] hover:translate-y-[-10px] transition-all duration-[0.4s] ease-out">
+                                                <div class="flex items-center gap-[20px]">
+                                                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" 
+                                                        alt="" loading="lazy"
+                                                        class="rounded-[8px] min-w-[90px] min-h-[80px] max-w-[90px] max-h-[80px] img-cover" />
+                                                    <div class="grid gap-[16px]">
+                                                        <h2 class="label-medium">الصف الأول الثانوي - بنات</h2>
+                                                        <p class="text-[var(--second-color)] line-2 label-medium">دروس وواجبات مخصصة لطالبات الصف الأول الثانوي بأسلوب تعليمي مبسط ومباشر.</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <a href="#" class="btn soft-purple label-small">
+                                                    الذهاب إلى المجموعة
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></svg>
+                                                </a>
+                                            </div>
+
+                                            <div class="p-[16px] rounded-[8px] bg-[var(--bg-color)] flex flex-wrap items-center justify-between gap-[20px] hover:translate-y-[-10px] transition-all duration-[0.4s] ease-out">
+                                                <div class="flex items-center gap-[20px]">
+                                                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" 
+                                                        alt="" loading="lazy"
+                                                        class="rounded-[8px] min-w-[90px] min-h-[80px] max-w-[90px] max-h-[80px] img-cover" />
+                                                    <div class="grid gap-[16px]">
+                                                        <h2 class="label-medium">الصف الثاني الثانوي - بنين</h2>
+                                                        <p class="text-[var(--second-color)] line-2 label-medium">شرح شامل لمنهج الصف الثاني الثانوي للبنين، مع اختبارات دورية وتقييمات.</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <a href="#" class="btn soft-purple label-small">
+                                                    الذهاب إلى المجموعة
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-link"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="hidden" data-tab-content="wallet">
+                                        <div class="flex flex-col md:flex-row items-center gap-[16px] w-[100%] mb-[50px]">
+                                            <button type="button" class="btn btn-second-primary label-small">شحن المحفظة (فوري)</button>
+
+                                            <div class="box-form w-full">
+                                                <input 
+                                                    type="text" 
+                                                    name="" 
+                                                    id="wallet" 
+                                                    class="form-control" 
+                                                />
+
+                                                <label for="wallet" class="label label-large">
+                                                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-wallet"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12" /><path d="M20 12v4h-4a2 2 0 0 1 0 -4h4" /></svg>
+                                                    المبلغ الذي تريد شحنة
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center w-full mb-[50px]">
+                                            <div class="flex items-center justify-center gap-[20px] mb-[16px]">
+                                                <h2 class="title-medium">أو:</h2>
+
+                                                <a href="./profile.html?tab=center_code_charging" class="btn btn-second-primary label-small">شحن كود سنتر</a>
+                                            </div>
+
+                                            <p class="text-[var(--second-color)] label-medium">دي بتدوس عليها لو انت اشتريت كود من السنتر وهتشحنة</p>
+                                        </div>
+
+                                        <div class="w-[100%] overflow-scroll scrollbar-none">
+                                            <table class="border-collapse border border-gray-400 w-[100%]">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">التسلسل</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">اجمالي سعر الفاتورة</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">حالة الدفع</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">وقت الدفع</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">طريقة الدفع</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">الفاتورة</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">رقم الفاتورة</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">وقت انشاء الفاتورة</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">1919269</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">100.00</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">
+                                                            <div class="rounded-[4px] py-[4px] px-[6px] bg-[var(--red-color)] text-[#fff] text-nowrap">لم يتم الدفع</div>
+                                                        </td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center text-[var(--yellow)] label-small">-- لم يتم الدفع --</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center text-[var(--yellow)] label-small">-- لم يتم الدفع --</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">
+                                                            <button type="button" class="text-[var(--green-color)] hover:opacity-[0.7] transition-all duration-[0.4s] ease-out" data-modal-open data-modal-target="#modal-invoice">
+                                                                <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-file"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2l.117 .007a1 1 0 0 1 .876 .876l.007 .117v4l.005 .15a2 2 0 0 0 1.838 1.844l.157 .006h4l.117 .007a1 1 0 0 1 .876 .876l.007 .117v9a3 3 0 0 1 -2.824 2.995l-.176 .005h-10a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-14a3 3 0 0 1 2.824 -2.995l.176 -.005h5z" /><path d="M19 7h-4l-.001 -4.001z" /></svg>
+                                                            </button>
+                                                        </td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">DLhLZfJHP</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">الثلاثاء 3 يونيو 2025</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="flex flex-wrap items-center justify-center gap-[15px] mt-[20px]">
+                                            <button type="button" class="btn !bg-[#ddd] !text-[#505050] hover:opacity-[0.7] label-small">السابق</button>
+
+                                            <div class="btn bg-[var(--blue-color)] text-[#fff] label-small">1 / 1</div>
+
+                                            <button type="button" class="btn !bg-[#ddd] !text-[#505050] hover:opacity-[0.7] label-small">التالي</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="hidden" data-tab-content="lock">
+                                        <div class="flex flex-col items-center justify-center gap-[8px] mb-[50px]">
+                                            <p class="label-medium">عدد مرات تسجيل الدخول في اليوم</p>
+                                            <div class="bg-[var(--red-color)] text-[#000] py-[5px] px-[10px] rounded-[6px] label-medium">لم يتم تسجيل الخروج بواسطة المستخدم اليوم</div>
+                                            <div class="bg-[var(--third-yellow-color)] text-[#000] py-[5px] px-[10px] rounded-[6px] inline-flex items-center gap-[5px] label-medium">تلقائي من خلال التسجيل في جهاذ اخر: <div class="rounded-full bg-[#fff] text-[#000] py-[4px] px-[6px]">1</div> مره واحدة</div>
+                                            <p class="label-medium">عدد مرات تسجيل الخروج خلال الاسبوع</p>
+                                            <div class="bg-[var(--red-color)] text-[#000] py-[5px] px-[10px] rounded-[6px] label-medium">لم يتم تسجيل الخروج بواسطة المستخدم هذا الاسبوع</div>
+                                            <div class="bg-[var(--third-yellow-color)] text-[#000] py-[5px] px-[10px] rounded-[6px] inline-flex items-center gap-[5px] label-medium">تلقائي من خلال التسجيل في جهاذ اخر: <div class="rounded-full bg-[#fff] text-[#000] py-[4px] px-[6px]">1</div> مره واحدة</div>
+                                        </div>
+
+                                        <div class="w-[100%] overflow-scroll scrollbar-none">
+                                            <table class="border-collapse border border-gray-400 w-[100%]">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">نوع الجهاذ</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">اسم الجهاذ</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">نظام التشغيل</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">المتصفح</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">اخر نشاط</th>
+
+                                                        <th class="border-[2px] border-[var(--second-color)] bg-[var(--third-bg-color)] py-[30px] px-[20px] text-center label-small">تاريخ تسجيل الدخول</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">Desktop</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">غير معروف</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">window 10</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">chrome 136</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">الأحد 18 مايو 2025</td>
+
+                                                        <td class="border-[2px] border-[var(--second-color)] py-[30px] px-[20px] text-center label-small">السبت 5 يونيو 2023</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="flex flex-wrap items-center justify-center gap-[15px] mt-[20px]">
+                                            <button type="button" class="btn !bg-[#ddd] !text-[#505050] hover:opacity-[0.7] label-small">السابق</button>
+
+                                            <div class="btn bg-[var(--blue-color)] text-[#fff] label-small">1 / 1</div>
+
+                                            <button type="button" class="btn !bg-[#ddd] !text-[#505050] hover:opacity-[0.7] label-small">التالي</button>
+                                        </div>
+                                    </div>
 
                                     <div class="hidden" data-tab-content="bills">bills</div>
 
@@ -1114,7 +1813,197 @@
 
                                     <div class="hidden" data-tab-content="homework_results">homework_results</div>
 
-                                    <div class="hidden" data-tab-content="shop">shop</div>
+                                    <div class="hidden" data-tab-content="shop">
+                                        <h3 class="!mb-[40px] font-[800] headline-small">التسوق</h3>
+
+                                        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[30px] lg:gap-[60px]">
+                                            <div class="col">
+                                                <div class="card-book bg-[var(--bg-color)]">
+                                                    <img 
+                                                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1WY_sabK8Hl2dNUq4OWRoTELFCxhypVHh_c1MPI2I9lZ2HXS-kln5VMi3M5QjhmJ3dTF7LiazcKkFTf7zSA3DfzEPZ22BxWt9bzM2tlnz7WoTLPE62PqJUiQdHC2oEosbHSl9O14IRIZhjmzulEcLi8_Qhvwjr-DUV-Xx1zy-RacDIUkMHtY757z5AktZ/w275-h400-rw/%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D8%B5%D8%B1%20%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA%20%D9%84%D9%84%D8%B5%D9%81%20%D8%A7%D9%84%D8%A3%D9%88%D9%84%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D9%85%20%D8%A7%D9%84%D8%A3%D9%88%D9%84%202025%20%D8%AC%D8%B2%D8%A1%20%D8%A7%D9%84%D8%B4%D8%B1%D8%AD%20%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%A6%D9%84%D8%A9.jpg" 
+                                                        alt="img book" 
+                                                        loading="lazy"
+                                                        class="mb-[16px] mx-auto max-w-[245px] h-[300px] rounded-[8px] img-cover" 
+                                                    />
+
+                                                    <div class="card-body mt-[20px]">
+                                                        <a href="./shop-details.html" class="text-center line-1 !mb-[16px] label-large">كتاب المعاصر أولى ثانوي رياضيات</a>
+                                                        <p class="text-center text-[var(--second-color)] line-2 !mb-[16px] label-small">
+                                                            يشمل شرح مفصل لدروس الرياضيات للصف الأول الثانوي بنظام التابلت الحديث، مع تدريبات وأسئلة بالنظام الجديد.
+                                                        </p>
+                                                        <div class="flex flex-wrap items-center justify-between gap-[10px] mb-[20px]">
+                                                            <div class="flex items-center gap-[10px]">
+                                                                <button type="button" class="!text-[var(--green-color)] hover:opacity-[0.5] transtiion-all duration-[0.4s] ease-out">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M12 5v14M5 12h14"/></svg>
+                                                                </button>
+                                                                <div class="border-[1px] border-[var(--border-color)] px-[20px] py-[5px] rounded-[8px] bg-[var(--second-bg-color)]">0</div>
+                                                                <button type="button" class="!text-[var(--red-color)] opacity-[0.7] hover:opacity-[1] transtiion-all duration-[0.4s] ease-out">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M5 12h14"/></svg>
+                                                                </button>
+                                                            </div>
+                                                            <p class="label-small">70 ج.م <span class="text-[var(--second-color)] line-through">100 ج.م</span></p>
+                                                        </div>
+                                                        <a href="./shop-details.html" class="btn btn-secondary rounded-full label-small">أضف الي السلة</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col">
+                                                <div class="card-book bg-[var(--bg-color)]">
+                                                    <img 
+                                                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfTuFTzeWFP2q8QpJzNqh6lFzcOdBbSx9cg4OXHmGtiLwSSK7qpKWu9GFHEDMrEJQTypg1nGfq7Z-6RyZxPJoXyGHxdJyNVO6cBu7DS6oLJDxk3I7I-cvBzqiFpfwKluoF92dXlFn6WA0XuNUUQ93CmGxpzxE9FK_7ntZ20FnTwn_dsyNiXJSUhI8MGYU/w220-h320/Ashampoo_Snap_2025.01.18_07h33m42s_005_.png" 
+                                                        alt="img book" 
+                                                        loading="lazy"
+                                                        class="mb-[16px] mx-auto max-w-[245px] h-[300px] rounded-[8px] img-cover" 
+                                                    />
+
+                                                    <div class="card-body mt-[20px]">
+                                                        <a href="./shop-details.html" class="text-center line-1 !mb-[16px] label-large">كتاب الامتحان تانية ثانوي كيمياء</a>
+                                                        <p class="text-center text-[var(--second-color)] line-2 !mb-[16px] label-small">
+                                                            يحتوي على شرح منهجي شامل لمادة الكيمياء مع بنك أسئلة وتدريبات لنظام الأسئلة الجديد مع نماذج امتحانات.
+                                                        </p>
+                                                        <div class="flex flex-wrap items-center justify-between gap-[10px] mb-[20px]">
+                                                            <div class="flex items-center gap-[10px]">
+                                                                <button type="button" class="!text-[var(--green-color)] hover:opacity-[0.5] transtiion-all duration-[0.4s] ease-out">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M12 5v14M5 12h14"/></svg>
+                                                                </button>
+                                                                <div class="border-[1px] border-[var(--border-color)] px-[20px] py-[5px] rounded-[8px] bg-[var(--second-bg-color)]">0</div>
+                                                                <button type="button" class="!text-[var(--red-color)] opacity-[0.7] hover:opacity-[1] transtiion-all duration-[0.4s] ease-out">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M5 12h14"/></svg>
+                                                                </button>
+                                                            </div>
+                                                            <p class="label-small">65 ج.م <span class="text-[var(--second-color)] line-through">95 ج.م</span></p>
+                                                        </div>
+                                                        <a href="./shop-details.html" class="btn btn-secondary rounded-full label-small">أضف الي السلة</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col">
+                                                <div class="card-book bg-[var(--bg-color)]">
+                                                    <img 
+                                                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgK9K7cOso736wb_FnOQQqSQI4kphct4wmyKCG5-WP1KZDPRD3qwu6_ND78Ki9mevkkEw1na-H7MZ1OlaEKWjl1URtj9VGpjNYbOH5EKFaOteNXDyI-HT6GsIUrHwBAbtmbyvYg3PuijA/w458-h640-rw/%25D8%25AA%25D8%25AD%25D9%2585%25D9%258A%25D9%2584+%25D9%2583%25D8%25AA%25D8%25A7%25D8%25A8+%25D8%25A7%25D9%2584%25D8%25A7%25D8%25B6%25D9%2588%25D8%25A7%25D8%25A1+%25D9%2581%25D9%258A+%25D8%25A7%25D9%2584%25D9%2584%25D8%25BA%25D8%25A9+%25D8%25A7%25D9%2584%25D8%25B9%25D8%25B1%25D8%25A8%25D9%258A%25D8%25A9+%25D8%25A7%25D9%2584%25D8%25AC%25D8%25B2%25D8%25A1+%25D8%25A7%25D9%2584%25D8%25A7%25D9%2588%25D9%2584+1+%25D9%2584%25D9%2584%25D8%25B5%25D9%2581+%25D8%25A7%25D9%2584%25D8%25AB%25D8%25A7%25D9%2584%25D8%25AB+%25D8%25A7%25D9%2584%25D8%25AB%25D8%25A7%25D9%2586%25D9%2588%25D9%258A+2022+-+%25D9%2585%25D9%2588%25D9%2582%25D8%25B9+%25D9%2581%25D9%258A%25D8%25B1%25D9%2588%25D8%25B2+%25D8%25A7%25D9%2584%25D8%25AA%25D8%25B9%25D9%2584%25D9%258A%25D9%2585%25D9%258A.jpg" 
+                                                        alt="img book" 
+                                                        loading="lazy"
+                                                        class="mb-[16px] mx-auto max-w-[245px] h-[300px] rounded-[8px] img-cover" 
+                                                    />
+
+                                                    <div class="card-body mt-[20px]">
+                                                        <a href="./shop-details.html" class="text-center line-1 !mb-[16px] label-large">كتاب الأضواء تالتة ثانوي لغة عربية</a>
+                                                        <p class="text-center text-[var(--second-color)] line-2 !mb-[16px] label-small">
+                                                            يشمل شروحات وافية لمنهج اللغة العربية للصف الثالث الثانوي مع تدريبات محلولة ومتنوعة واختبارات شاملة.
+                                                        </p>
+                                                        <div class="flex flex-wrap items-center justify-between gap-[10px] mb-[20px]">
+                                                            <div class="flex items-center gap-[10px]">
+                                                                <button type="button" class="!text-[var(--green-color)] hover:opacity-[0.5] transtiion-all duration-[0.4s] ease-out">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M12 5v14M5 12h14"/></svg>
+                                                                </button>
+                                                                <div class="border-[1px] border-[var(--border-color)] px-[20px] py-[5px] rounded-[8px] bg-[var(--second-bg-color)]">0</div>
+                                                                <button type="button" class="!text-[var(--red-color)] opacity-[0.7] hover:opacity-[1] transtiion-all duration-[0.4s] ease-out">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M5 12h14"/></svg>
+                                                                </button>
+                                                            </div>
+                                                            <p class="label-small">60 ج.م <span class="text-[var(--second-color)] line-through">90 ج.م</span></p>
+                                                        </div>
+                                                        <a href="./shop-details.html" class="btn btn-secondary rounded-full label-small">أضف الي السلة</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col">
+                                                <div class="card-book bg-[var(--bg-color)]">
+                                                    <img 
+                                                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJHzpLUUNE2NUPalF0pz2T_kpyl-FYv7c9cQRCzqnwI_Z4kgncyUMKfOI8wwKQc_kd6DNG2lv0PfTgldvD7N4OGV7q9FX6si7skn99AGRyobjwQ83Aflhh49Ha_cMCPSS62Hwhpj4zqOysNLBf2y6DcnufTX0_n3jJ7Rs8fzI8p19YygGhNB8S6EJCmRWg/w280-h400-rw/%D9%83%D8%AA%D8%A7%D8%A8%20%D8%AC%D9%8A%D9%85%20GEM%20%D8%A7%D9%86%D8%AC%D9%84%D9%8A%D8%B2%D9%8A%20%D8%AA%D8%A7%D9%84%D8%AA%D8%A9%20%D8%AB%D8%A7%D9%86%D9%88%D9%8A%202025.jpg" 
+                                                        alt="img book" 
+                                                        loading="lazy"
+                                                        class="mb-[16px] mx-auto max-w-[245px] h-[300px] rounded-[8px] img-cover" 
+                                                    />
+
+                                                    <div class="card-body mt-[20px]">
+                                                        <a href="./shop-details.html" class="text-center line-1 !mb-[16px] label-large">كتاب جيم تالتة ثانوي إنجليزي</a>
+                                                        <p class="text-center text-[var(--second-color)] line-2 !mb-[16px] label-small">
+                                                            مراجعة شاملة لكتاب اللغة الإنجليزية مع تدريبات بالنظام الجديد وإجابات كاملة ونماذج للامتحانات المتوقعة.
+                                                        </p>
+                                                        <div class="flex flex-wrap items-center justify-between gap-[10px] mb-[20px]">
+                                                            <div class="flex items-center gap-[10px]">
+                                                                <button type="button" class="!text-[var(--green-color)] hover:opacity-[0.5] transtiion-all duration-[0.4s] ease-out">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M12 5v14M5 12h14"/></svg>
+                                                                </button>
+                                                                <div class="border-[1px] border-[var(--border-color)] px-[20px] py-[5px] rounded-[8px] bg-[var(--second-bg-color)]">0</div>
+                                                                <button type="button" class="!text-[var(--red-color)] opacity-[0.7] hover:opacity-[1] transtiion-all duration-[0.4s] ease-out">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M5 12h14"/></svg>
+                                                                </button>
+                                                            </div>
+                                                            <p class="label-small">75 ج.م <span class="text-[var(--second-color)] line-through">105 ج.م</span></p>
+                                                        </div>
+                                                        <a href="./shop-details.html" class="btn btn-secondary rounded-full label-small">أضف الي السلة</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col">
+                                                <div class="card-book bg-[var(--bg-color)]">
+                                                    <img 
+                                                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1WY_sabK8Hl2dNUq4OWRoTELFCxhypVHh_c1MPI2I9lZ2HXS-kln5VMi3M5QjhmJ3dTF7LiazcKkFTf7zSA3DfzEPZ22BxWt9bzM2tlnz7WoTLPE62PqJUiQdHC2oEosbHSl9O14IRIZhjmzulEcLi8_Qhvwjr-DUV-Xx1zy-RacDIUkMHtY757z5AktZ/w275-h400-rw/%D9%83%D8%AA%D8%A7%D8%A8%20%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D8%B5%D8%B1%20%D8%B1%D9%8A%D8%A7%D8%B6%D9%8A%D8%A7%D8%AA%20%D9%84%D9%84%D8%B5%D9%81%20%D8%A7%D9%84%D8%A3%D9%88%D9%84%20%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%20%D8%A7%D9%84%D8%AA%D8%B1%D9%85%20%D8%A7%D9%84%D8%A3%D9%88%D9%84%202025%20%D8%AC%D8%B2%D8%A1%20%D8%A7%D9%84%D8%B4%D8%B1%D8%AD%20%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%A6%D9%84%D8%A9.jpg" 
+                                                        alt="img book" 
+                                                        loading="lazy"
+                                                        class="mb-[16px] mx-auto max-w-[245px] h-[300px] rounded-[8px] img-cover" 
+                                                    />
+
+                                                    <div class="card-body mt-[20px]">
+                                                        <a href="./shop-details.html" class="text-center line-1 !mb-[16px] label-large">كتاب المعاصر أولى ثانوي رياضيات</a>
+                                                        <p class="text-center text-[var(--second-color)] line-2 !mb-[16px] label-small">
+                                                            يشمل شرح مفصل لدروس الرياضيات للصف الأول الثانوي بنظام التابلت الحديث، مع تدريبات وأسئلة بالنظام الجديد.
+                                                        </p>
+                                                        <div class="flex flex-wrap items-center justify-between gap-[10px] mb-[20px]">
+                                                            <div class="flex items-center gap-[10px]">
+                                                                <button type="button" class="!text-[var(--green-color)] hover:opacity-[0.5] transtiion-all duration-[0.4s] ease-out">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M12 5v14M5 12h14"/></svg>
+                                                                </button>
+                                                                <div class="border-[1px] border-[var(--border-color)] px-[20px] py-[5px] rounded-[8px] bg-[var(--second-bg-color)]">0</div>
+                                                                <button type="button" class="!text-[var(--red-color)] opacity-[0.7] hover:opacity-[1] transtiion-all duration-[0.4s] ease-out">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M5 12h14"/></svg>
+                                                                </button>
+                                                            </div>
+                                                            <p class="label-small">70 ج.م <span class="text-[var(--second-color)] line-through">100 ج.م</span></p>
+                                                        </div>
+                                                        <a href="./shop-details.html" class="btn btn-secondary rounded-full label-small">أضف الي السلة</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col">
+                                                <div class="card-book bg-[var(--bg-color)]">
+                                                    <img 
+                                                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfTuFTzeWFP2q8QpJzNqh6lFzcOdBbSx9cg4OXHmGtiLwSSK7qpKWu9GFHEDMrEJQTypg1nGfq7Z-6RyZxPJoXyGHxdJyNVO6cBu7DS6oLJDxk3I7I-cvBzqiFpfwKluoF92dXlFn6WA0XuNUUQ93CmGxpzxE9FK_7ntZ20FnTwn_dsyNiXJSUhI8MGYU/w220-h320/Ashampoo_Snap_2025.01.18_07h33m42s_005_.png" 
+                                                        alt="img book" 
+                                                        loading="lazy"
+                                                        class="mb-[16px] mx-auto max-w-[245px] h-[300px] rounded-[8px] img-cover" 
+                                                    />
+
+                                                    <div class="card-body mt-[20px]">
+                                                        <a href="./shop-details.html" class="text-center line-1 !mb-[16px] label-large">كتاب الامتحان تانية ثانوي كيمياء</a>
+                                                        <p class="text-center text-[var(--second-color)] line-2 !mb-[16px] label-small">
+                                                            يحتوي على شرح منهجي شامل لمادة الكيمياء مع بنك أسئلة وتدريبات لنظام الأسئلة الجديد مع نماذج امتحانات.
+                                                        </p>
+                                                        <div class="flex flex-wrap items-center justify-between gap-[10px] mb-[20px]">
+                                                            <div class="flex items-center gap-[10px]">
+                                                                <button type="button" class="!text-[var(--green-color)] hover:opacity-[0.5] transtiion-all duration-[0.4s] ease-out">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M12 5v14M5 12h14"/></svg>
+                                                                </button>
+                                                                <div class="border-[1px] border-[var(--border-color)] px-[20px] py-[5px] rounded-[8px] bg-[var(--second-bg-color)]">0</div>
+                                                                <button type="button" class="!text-[var(--red-color)] opacity-[0.7] hover:opacity-[1] transtiion-all duration-[0.4s] ease-out">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M5 12h14"/></svg>
+                                                                </button>
+                                                            </div>
+                                                            <p class="label-small">65 ج.م <span class="text-[var(--second-color)] line-through">95 ج.م</span></p>
+                                                        </div>
+                                                        <a href="./shop-details.html" class="btn btn-secondary rounded-full label-small">أضف الي السلة</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
                                     <div class="hidden" data-tab-content="level_indicator">level_indicator</div>
 

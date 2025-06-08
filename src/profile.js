@@ -34,13 +34,18 @@ const slider = document.getElementById("slider");
 const nextBtn = document.querySelector("[data-next]");
 const prevBtn = document.querySelector("[data-prev]");
 
-let scrollAmount = 0;
-const cardWidth = slider.querySelector(".card").offsetWidth + 20;
+function getCardWidth() {
+    const card = slider.querySelector(".card");
+    const style = window.getComputedStyle(card);
+    const marginRight = parseFloat(style.marginRight || 0);
+    const marginLeft = parseFloat(style.marginLeft || 0);
+    return card.offsetWidth + marginLeft + marginRight;
+}
 
 nextBtn.addEventListener("click", () => {
-    slider.scrollLeft += cardWidth;
+    slider.scrollLeft += getCardWidth();
 });
 
 prevBtn.addEventListener("click", () => {
-    slider.scrollLeft -= cardWidth;
+    slider.scrollLeft -= getCardWidth();
 });
