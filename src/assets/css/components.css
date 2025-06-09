@@ -469,6 +469,24 @@
     color: #fff !important;
 }
 
+.btn-tab {
+    border: 3px solid var(--border-color);
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.btn-tab.active {
+    border: 3px solid #0089c4;
+    background-color: var(--blue-color);
+    color: #fff;
+}
+
+.btn-tab:hover {
+    border: 3px solid #0089c4;
+    background-color: var(--blue-color);
+    color: #fff;
+}
+
 /**
  * DROPDOWN
  */

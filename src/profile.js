@@ -49,3 +49,19 @@ nextBtn.addEventListener("click", () => {
 prevBtn.addEventListener("click", () => {
     slider.scrollLeft -= getCardWidth();
 });
+
+/**
+ * TABS QUESTION BANK
+ */
+const btn_tab = document.querySelectorAll("[data-btn-tab]");
+const tab = document.querySelectorAll("[data-tab]");
+
+btn_tab.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        btn_tab.forEach(btn_all => btn_all.classList.remove("active"));
+        btn.classList.add("active");
+
+        tab.forEach(tab_all => tab_all.classList.add("hidden"));
+        tab[index].classList.remove("hidden");
+    });
+});
