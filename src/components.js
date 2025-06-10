@@ -205,42 +205,53 @@ const collapses = document.querySelectorAll(".card-collapse");
 
 collapses.forEach(card_collapse => {
     const collapse_btn = card_collapse.querySelector(".collapse-btn");
-    const arrow_collapse_btn = collapse_btn.querySelector(".arrow");
+    const arrow_collapse_btn = collapse_btn?.querySelector(".arrow");
     const collapses_list = card_collapse.querySelector(".collapses-list");
 
     const collapse_list_btn = card_collapse.querySelector(".collapse-list-btn");
-    const arrow_collapse_list_btn = collapse_list_btn.querySelector(".arrow");
+    const arrow_collapse_list_btn = collapse_list_btn?.querySelector(".arrow");
     const collapses_list_card_list = card_collapse.querySelector(".collapses-list-card-list");
 
     const collapse_list_btn_list_btn = card_collapse.querySelectorAll(".collapse-list-btn-list-btn");
     const collapses_list_card_list_card_body = card_collapse.querySelectorAll(".collapses-list-card-list-card-body");
 
-    collapse_btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-
-        collapse_btn.classList.toggle("active");
-        arrow_collapse_btn.classList.toggle("rotate-[180deg]");
-        collapses_list.classList.toggle("active");
-    });
-
-    collapse_list_btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-
-        arrow_collapse_list_btn.classList.toggle("rotate-[180deg]");
-        collapses_list_card_list.classList.toggle("active");
-    });
-
-    collapse_list_btn_list_btn.forEach((btn, index) => {
-        const arrow = btn.querySelector(".arrow");
-        const body = collapses_list_card_list_card_body[index];
-
-        btn.addEventListener("click", (e) => {
+    // زر collapse الرئيسي
+    if (collapse_btn && arrow_collapse_btn && collapses_list) {
+        collapse_btn.addEventListener("click", (e) => {
             e.stopPropagation();
 
-            arrow.classList.toggle("rotate-[180deg]");
-            body.classList.toggle("active");
+            collapse_btn.classList.toggle("active");
+            arrow_collapse_btn.classList.toggle("rotate-[180deg]");
+            collapses_list.classList.toggle("active");
         });
-    });
+    }
+
+    // زر القائمة الداخلية
+    if (collapse_list_btn && arrow_collapse_list_btn && collapses_list_card_list) {
+        collapse_list_btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+
+            arrow_collapse_list_btn.classList.toggle("rotate-[180deg]");
+            collapses_list_card_list.classList.toggle("active");
+        });
+    }
+
+    // الأزرار الفرعية داخل القائمة
+    if (collapse_list_btn_list_btn.length && collapses_list_card_list_card_body.length) {
+        collapse_list_btn_list_btn.forEach((btn, index) => {
+            const arrow = btn.querySelector(".arrow");
+            const body = collapses_list_card_list_card_body[index];
+
+            if (arrow && body) {
+                btn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+
+                    arrow.classList.toggle("rotate-[180deg]");
+                    body.classList.toggle("active");
+                });
+            }
+        });
+    }
 });
 
 /**

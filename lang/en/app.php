@@ -1,116 +1,115 @@
 <?php
 
 return [
-    /**
-     * HEADER
-     */
-    "login" => "Login",
-    "create_a_new_account" => "Create a new account",
-
-    /**
-     * HOME PAGE 
-     */
-
-    // SECTION TWO
-    "choose_teachers" => "Choose teachers",
-    "view_more_teachers" => "View more teachers",
-
-    // SECTION THREE
-    "our_suggested_courses" => "Our suggested courses",
-    "view_more_courses" => "View more courses",
-    "entry_to_the_course" => "Entry to the course",
-    "subscribe_now" => "Subscribe now",
-    "egp" => "EGP",
-
-    // SECTION FOUR
-    "browse_courses" => "Browse courses",
-    
-    // SECTION FIVE
-    "materials_section" => "Materials Section",
-
-    // SECTION SEX
-    "how_section" => "How Section",
-
-    // SECTION SEVEN
-    "your_chance_has_come" => "Your chance has come",
-
-    // SECTION EIGHT
-    "let_me_simplify_this" => "Let me simplify this",
-
-    // SECTION NINE
-    "start_now" => "Start now",
-
-    // FOOTER
-    "hotline" => "Hotline:",
-
-    /**
-     * AUTH
-     */
-
-    // LOGIN
-    "phone_number" => "Phone Number",
-    "password" => "Password",
-    "or_log_in_using_the_code" => "Or log in using the code",
-    "from_here" => "From here",
-    "forgot_your_password_click_here" => "Forgot your password? Click here",
-    "dont_have_an_account_create_one_now" => "Don't have an account? Create one now!",
-    "enter_the_code" => "Enter The Code",
-    "re_enter_the_code" => "Re-Enter The Code",
-
-    // REGISTER
-    "request_create_an_account" => "Request Create an account:",
-    "first_name" => "First Name",
-    "second_name" => "Second Name",
-    "third_name" => "Third Name",
-    "last_name" => "Last Name",
-    "fathers_phone_number" => "Father's Phone Number",
-    "mothers_phone_number" => "Mother's Phone Number",
-    "school_name" => "School Name",
-    "email_address" => "Email Address",
-    "confirm_password" => "Confirm Password",
-    "create_an_account" => "Create an account",
-    "already_have_an_account_log_in_now" => "Already have an account? Log in now!",
-
-    /**
-     * COURSE PAGE
-     */
-    "course_creation_date" => "Course creation date",
-    "latest_course_update" => "Latest course update",
-    "book_your_session_appointment" => "Book your session appointment",
-    "fairy" => "fairy",
-    "subscribe_now" => "Subscribe now",
-    "course_content" => "Course content",
-
-    /**
-     * FILTER
-     */
-    "choose_the_academic_year" => "Choose the academic year",
-    "choose_the_teacher_whose_courses_you_want" => "Choose the teacher whose courses you want",
-    "select_the_subject" => "Select the subject",
-    "search" => "Search",
-
-    /**
-     * SEARCH
-     */
-    "you_searched_for" => "You searched for:",
-    "subscriptions_monthly" => "Subscriptions monthly",
-    "courses_separate" => "Courses separate",
-
-    /**
-     * STORE LOCATOR
-     */
-    "the_knowledge_is_yours_and_we_made_it_easy_for_you" => "The knowledge is yours... and we made it easy for you! 😉💡",
-    "governorate" => "governorate",
-    "show_more" => "Show more",
-
-    /**
-     * TEATCHER
-     */
-    "materials" => "Materials",
-    "courses" => "Courses",
-    "teacher" => "teacher",
-    "number_of_subjects" => "Number of subjects",
-    "number_of_courses" => "Number of courses",
-    "separate_courses_for_the_teacher" => "Separate courses for the teacher",
-    "teachers_monthly_subscription" => "Teacher's monthly subscription",
+    'welcome' => 'Welcome mps platform',
+    'home' => 'Home',
+    'my_account' => 'My Account',
+    'students_forum' => 'Students Forum',
+    'my_wallet' => 'My Wallet',
+    'my_lectures' => 'My Lectures',
+    'shop' => 'Shop',
+    'logout' => 'Logout',
+    'logged_in_successfully' => 'Logged in successfully',
+    'price' => 'Price:',
+    'total_price' => 'Total Price:',
+    'pay_now' => 'Pay Now (EGP)',
+    'search_site' => 'Search the site',
+    'login' => 'Login',
+    'register' => 'Register a new account',
+    'search_courses' => 'Search for site courses.',
+    'search' => 'Search',
+    'edit_profile' => 'Edit Profile',
+    'username' => 'Username',
+    'phone' => 'Phone Number',
+    'edit' => 'Edit',
+    'invoice' => 'Invoice',
+    'print_invoice' => 'Print Invoice',
+    'unique_code' => 'Unique Code:',
+    'invoice_for' => 'Invoice for',
+    'name' => 'Name:',
+    'number' => 'Number:',
+    'invoice_code' => 'Invoice Code:',
+    'date' => 'Date:',
+    'description' => 'Description',
+    'amounts' => 'Amounts',
+    'course' => 'Course',
+    'total_amounts' => 'Total Amounts:',
+    'learn_more' => 'Learn More',
+    'user_file' => 'User File',
+    'recharge_center_code' => 'Recharge Center Code',
+    'center_lectures' => 'Center Lectures & Codes',
+    'my_courses' => 'My Courses',
+    'security_login_history' => 'Security & Login History',
+    'bills' => 'Bills',
+    'live_online_classes' => 'Live Online Classes',
+    'exam_results' => 'Exam Results',
+    'homework_results' => 'Homework Results',
+    'level_indicator' => 'Level Indicator',
+    'questions_bank' => 'Questions Bank',
+    'my_orders' => 'My Orders',
+    'account_settings' => 'Account Settings',
+    'points' => 'Points',
+    'total_transfers' => 'Total Transfers',
+    'total_spending' => 'Total Spending',
+    'course_in_progress' => 'Course In Progress',
+    'course_purchased' => 'Course Purchased',
+    'completed_courses' => 'Completed Courses',
+    'month_1_title' => 'First Month of Second Term',
+    'month_1_info' => 'The month consists of weekly lectures',
+    'completed' => 'Completed',
+    'continue_course' => 'Continue this Course',
+    'month_2_title' => 'Second Month of Second Term',
+    'month_2_info' => 'Second Month - Final Review',
+    'center_code_input' => 'Enter the code from your center card here',
+    'your_center_code' => 'Your Center Code',
+    'recharge_code' => 'Recharge Code',
+    'if_center_student' => 'If you are a center student:',
+    'link_code_account' => 'Link the code to your account',
+    'filter_by' => 'Filter by:',
+    'all' => 'All',
+    'arabic' => 'Arabic',
+    'english' => 'English',
+    'physics' => 'Physics',
+    'create_account' => 'Create Account:',
+    'enter_data_correctly' => 'Enter your data correctly and we will contact you within hours to activate the account!',
+    'first_name' => 'First Name',
+    'last_name' => 'Last Name',
+    'father_phone' => 'Father\'s Phone Number',
+    'password' => 'Password',
+    'confirm_password' => 'Confirm Password',
+    'create_account_btn' => 'Create Account',
+    'have_account' => 'Already have an account?',
+    'login_now' => 'Login Now!',
+    'how_to_use_platform' => 'How to Use the Platform',
+    'hotline' => 'Hotline:',
+    'platform_goal' => 'This platform was created to prepare students for all aspects of high school and beyond.',
+    'you_searched_for' => 'You searched for:',
+    'subscriptions' => 'Subscriptions',
+    'monthly' => 'Monthly',
+    'pinned_course' => 'Pinned Course',
+    'course_note' => '• This course includes exams and mandatory exercises to prepare you. Good luck! 💪❤️ •',
+    'enter_course' => 'Enter Course',
+    'free_course' => 'Free Course',
+    'subscribe_now' => 'Subscribe Now',
+    'courses' => 'Courses',
+    'books' => 'Books',
+    'add_to_cart' => 'Add to Cart',
+    'similar_books' => 'Similar Books',
+    'not_chasing_you' => 'We are not chasing you... we are just everywhere! 🤭',
+    'we_made_it_easy' => 'We made it easy for you everywhere!',
+    'choose_governorate' => 'Choose your governorate and you\'ll find us!',
+    'easy_for_you' => 'We made it easy for you! 😉💡',
+    'show_branches_for' => 'Choose nearby branches in your governorate if you don\'t want to view all branches.',
+    'all_branches' => 'Display Outlets for All Governorates',
+    'governorate' => 'Governorate',
+    'center_name' => 'Center Name',
+    'contact_number' => 'Contact Number:',
+    'address' => 'Address:',
+    'available_books_only' => 'Only Available Books',
+    'center_reviews' => 'Colleagues\' Feedback about this Center:',
+    'show_more' => 'Show More',
+    'subjects' => 'Subjects',
+    'teacher' => 'Teacher',
+    'number_of_courses' => 'Number of Courses',
+    'monthly_subscription' => 'Monthly Subscription',
 ];
