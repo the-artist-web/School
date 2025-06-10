@@ -20,16 +20,16 @@ const section = document.querySelector("[data-section]");
 const col_section = document.querySelector("[data-col-section]");
 const row_section = document.querySelector("[data-row-section]");
 
-const isColMode = localStorage.getItem("section") === "col";
+const isColMode = localStorage.getItem("section") === "row";
 
 if (isColMode) {
-    section.classList.add("lg:grid-cols-[1fr_420px]");
-    col_section.classList.remove("hidden");
-    row_section.classList.add("hidden");
-} else {
     section.classList.remove("lg:grid-cols-[1fr_420px]");
     col_section.classList.add("hidden");
     row_section.classList.remove("hidden");
+} else {
+    section.classList.add("lg:grid-cols-[1fr_420px]");
+    col_section.classList.remove("hidden");
+    row_section.classList.add("hidden");
 }
 
 col_section.addEventListener("click", () => {
