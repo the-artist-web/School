@@ -328,3 +328,47 @@ dropdown.forEach(dropdown_ele => {
 document.addEventListener("click", () => {
     document.querySelectorAll(".dropdown-menu").forEach(m => m.classList.remove("active"));
 });
+
+/**
+ * QUANTITY SHOP
+ */
+document.querySelectorAll('[data-plus], [data-minus]').forEach(button => {
+    button.addEventListener('click', () => {
+        const parent = button.closest('.quantity-container');
+
+        if (!parent) {
+            console.warn('لم يتم العثور على الحاوية القريبة للزرار');
+            return;
+        }
+
+        const plusBtn = parent.querySelector('[data-plus]');
+        const minusBtn = parent.querySelector('[data-minus]');
+        const quantityEl = parent.querySelector('[data-value-quantity]');
+
+        if (!plusBtn || !minusBtn || !quantityEl) {
+            console.warn('عنصر ناقص في هذا القسم');
+            return;
+        }
+
+        let quantity = parseInt(quantityEl.textContent);
+
+        if (button.hasAttribute('data-plus')) {
+            quantity++;
+        } else if (button.hasAttribute('data-minus') && quantity > 1) {
+            quantity--;
+        }
+
+        quantityEl.textContent = quantity;
+        minusBtn.disabled = quantity <= 1;
+    });
+});
+
+document.querySelectorAll('.quantity-container').forEach(parent => {
+    const minusBtn = parent.querySelector('[data-minus]');
+    const quantityEl = parent.querySelector('[data-value-quantity]');
+
+    if (!minusBtn || !quantityEl) return;
+
+    const quantity = parseInt(quantityEl.textContent);
+    minusBtn.disabled = quantity <= 1;
+});

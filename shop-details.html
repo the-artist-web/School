@@ -664,14 +664,14 @@
                                     <div class="flex flex-wrap items-center justify-between gap-[10px]">
                                         <p class="label-large">كمية:</p>
 
-                                        <div class="flex flex-wrap items-center justify-center gap-[6px]">
-                                            <button type="button" class="btn btn-primary label-small">
+                                        <div class="quantity-container flex flex-wrap items-center justify-center gap-[6px]">
+                                            <button type="button" class="btn btn-primary label-small" data-plus>
                                                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-plus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 5l0 14" /><path d="M5 12l14 0" /></svg>
                                             </button>
 
-                                            <div class="flex items-center justify-center h-[45px] px-[20px] bg-[#fff] text-[#000] rounded-[8px] label-small">2</div>
+                                            <div class="flex items-center justify-center h-[45px] px-[20px] bg-[#fff] text-[#000] rounded-[8px] label-small" data-value-quantity>0</div>
 
-                                            <button type="button" class="btn btn-primary label-small">
+                                            <button type="button" class="btn btn-primary label-small" data-minus>
                                                 <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-minus"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /></svg>
                                             </button>
                                         </div>
@@ -706,12 +706,12 @@
                                             يشمل شرح مفصل لدروس الرياضيات للصف الأول الثانوي بنظام التابلت الحديث، مع تدريبات وأسئلة بالنظام الجديد.
                                         </p>
                                         <div class="flex flex-wrap items-center justify-between gap-[10px] mb-[20px]">
-                                            <div class="flex items-center gap-[10px]">
-                                                <button type="button" class="!text-[var(--green-color)] hover:opacity-[0.5] transtiion-all duration-[0.4s] ease-out">
+                                            <div class="quantity-container flex items-center gap-[10px]">
+                                                <button type="button" class="!text-[var(--green-color)] hover:opacity-[0.5] transtiion-all duration-[0.4s] ease-out" data-plus>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M12 5v14M5 12h14"/></svg>
                                                 </button>
-                                                <div class="border-[1px] border-[var(--border-color)] px-[20px] py-[5px] rounded-[8px] bg-[var(--second-bg-color)]">0</div>
-                                                <button type="button" class="!text-[var(--red-color)] opacity-[0.7] hover:opacity-[1] transtiion-all duration-[0.4s] ease-out">
+                                                <div class="border-[1px] border-[var(--border-color)] px-[20px] py-[5px] rounded-[8px] bg-[var(--second-bg-color)]" data-value-quantity>0</div>
+                                                <button type="button" class="!text-[var(--red-color)] opacity-[0.7] hover:opacity-[1] transtiion-all duration-[0.4s] ease-out" data-minus>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M5 12h14"/></svg>
                                                 </button>
                                             </div>
@@ -737,12 +737,12 @@
                                             يحتوي على شرح منهجي شامل لمادة الكيمياء مع بنك أسئلة وتدريبات لنظام الأسئلة الجديد مع نماذج امتحانات.
                                         </p>
                                         <div class="flex flex-wrap items-center justify-between gap-[10px] mb-[20px]">
-                                            <div class="flex items-center gap-[10px]">
-                                                <button type="button" class="!text-[var(--green-color)] hover:opacity-[0.5] transtiion-all duration-[0.4s] ease-out">
+                                            <div class="quantity-container flex items-center gap-[10px]">
+                                                <button type="button" class="!text-[var(--green-color)] hover:opacity-[0.5] transtiion-all duration-[0.4s] ease-out" data-plus>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M12 5v14M5 12h14"/></svg>
                                                 </button>
-                                                <div class="border-[1px] border-[var(--border-color)] px-[20px] py-[5px] rounded-[8px] bg-[var(--second-bg-color)]">0</div>
-                                                <button type="button" class="!text-[var(--red-color)] opacity-[0.7] hover:opacity-[1] transtiion-all duration-[0.4s] ease-out">
+                                                <div class="border-[1px] border-[var(--border-color)] px-[20px] py-[5px] rounded-[8px] bg-[var(--second-bg-color)]" data-value-quantity>0</div>
+                                                <button type="button" class="!text-[var(--red-color)] opacity-[0.7] hover:opacity-[1] transtiion-all duration-[0.4s] ease-out" data-minus>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M5 12h14"/></svg>
                                                 </button>
                                             </div>
@@ -768,12 +768,12 @@
                                             يشمل شروحات وافية لمنهج اللغة العربية للصف الثالث الثانوي مع تدريبات محلولة ومتنوعة واختبارات شاملة.
                                         </p>
                                         <div class="flex flex-wrap items-center justify-between gap-[10px] mb-[20px]">
-                                            <div class="flex items-center gap-[10px]">
-                                                <button type="button" class="!text-[var(--green-color)] hover:opacity-[0.5] transtiion-all duration-[0.4s] ease-out">
+                                            <div class="quantity-container flex items-center gap-[10px]">
+                                                <button type="button" class="!text-[var(--green-color)] hover:opacity-[0.5] transtiion-all duration-[0.4s] ease-out" data-plus>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M12 5v14M5 12h14"/></svg>
                                                 </button>
-                                                <div class="border-[1px] border-[var(--border-color)] px-[20px] py-[5px] rounded-[8px] bg-[var(--second-bg-color)]">0</div>
-                                                <button type="button" class="!text-[var(--red-color)] opacity-[0.7] hover:opacity-[1] transtiion-all duration-[0.4s] ease-out">
+                                                <div class="border-[1px] border-[var(--border-color)] px-[20px] py-[5px] rounded-[8px] bg-[var(--second-bg-color)]" data-value-quantity>0</div>
+                                                <button type="button" class="!text-[var(--red-color)] opacity-[0.7] hover:opacity-[1] transtiion-all duration-[0.4s] ease-out" data-minus>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M5 12h14"/></svg>
                                                 </button>
                                             </div>
@@ -799,12 +799,12 @@
                                             مراجعة شاملة لكتاب اللغة الإنجليزية مع تدريبات بالنظام الجديد وإجابات كاملة ونماذج للامتحانات المتوقعة.
                                         </p>
                                         <div class="flex flex-wrap items-center justify-between gap-[10px] mb-[20px]">
-                                            <div class="flex items-center gap-[10px]">
-                                                <button type="button" class="!text-[var(--green-color)] hover:opacity-[0.5] transtiion-all duration-[0.4s] ease-out">
+                                            <div class="quantity-container flex items-center gap-[10px]">
+                                                <button type="button" class="!text-[var(--green-color)] hover:opacity-[0.5] transtiion-all duration-[0.4s] ease-out" data-plus>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M12 5v14M5 12h14"/></svg>
                                                 </button>
-                                                <div class="border-[1px] border-[var(--border-color)] px-[20px] py-[5px] rounded-[8px] bg-[var(--second-bg-color)]">0</div>
-                                                <button type="button" class="!text-[var(--red-color)] opacity-[0.7] hover:opacity-[1] transtiion-all duration-[0.4s] ease-out">
+                                                <div class="border-[1px] border-[var(--border-color)] px-[20px] py-[5px] rounded-[8px] bg-[var(--second-bg-color)]" data-value-quantity>0</div>
+                                                <button type="button" class="!text-[var(--red-color)] opacity-[0.7] hover:opacity-[1] transtiion-all duration-[0.4s] ease-out" data-minus>
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="icon"><path d="M5 12h14"/></svg>
                                                 </button>
                                             </div>
