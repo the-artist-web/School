@@ -4,7 +4,7 @@
 document.querySelectorAll("input[type='radio']").forEach(radio => {
     radio.addEventListener("change", () => {
         const name = radio.name;
-        const radioInGroup = document.querySelectorAll(`input[name='${name}'`);
+        const radioInGroup = document.querySelectorAll(`input[name='${name}']`);
 
         radioInGroup.forEach(r => {
             const label = r.closest("label");
