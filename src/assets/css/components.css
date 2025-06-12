@@ -410,7 +410,6 @@
 .btn-secondary:hover {
     border: 2px solid var(--four-bg-color);
     background-color: transparent;
-    color: var(--four-bg-color) !important;
 }
 
 .btn-red-mix {
