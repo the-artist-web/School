@@ -372,3 +372,35 @@ document.querySelectorAll('.quantity-container').forEach(parent => {
     const quantity = parseInt(quantityEl.textContent);
     minusBtn.disabled = quantity <= 1;
 });
+
+/**
+ * Add Placeholder in all form input + textarea
+ */
+document.querySelectorAll('.form-control').forEach(el => {
+    if (!el.hasAttribute('placeholder')) {
+        el.setAttribute('placeholder', ' ');
+    }
+});
+
+/**
+ * TOGGLE INPUT PASSWORD
+ */
+const show_password = document.querySelectorAll("[data-show-password]");
+const hidden_password = document.querySelectorAll("[data-hidden-password]");
+const input_password = document.querySelectorAll("[data-input-password]");
+
+show_password.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        input_password[index].type = "text";
+        btn.classList.add("hidden");
+        hidden_password[index].classList.remove("hidden");
+    });
+});
+
+hidden_password.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        input_password[index].type = "password";
+        btn.classList.add("hidden");
+        show_password[index].classList.remove("hidden");
+    });
+});

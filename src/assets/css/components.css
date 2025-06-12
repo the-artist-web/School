@@ -12,46 +12,48 @@
     transition: all 0.4s ease-out;
 }
 
-.box-form::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
-    background-color: var(--second-bg-color);
-    width: 0;
-    height: 50px;
-    transition: all 0.4s ease-out;
-}
-
+.box-form::before,
 .box-form::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
     pointer-events: none;
+    transition: all 0.4s ease-out;
+}
+
+.box-form::before {
+    top: 0;
+    bottom: 0;
+    background-color: var(--second-bg-color);
+    width: 0;
+    height: 50px;
+}
+
+.box-form::after {
+    bottom: 0;
     background-color: var(--blue-color);
     width: 0;
     height: 2px;
-    transition: all 0.4s ease-out 0.3s;
+    transition-delay: 0.3s;
 }
 
 .box-form:has(.form-control:focus-visible)::before,
-.box-form:has(.form-control:focus-visible)::after { width: 100%; }
+.box-form:has(.form-control:focus-visible)::after {
+    width: 100%;
+}
 
 .box-form .label {
-    text-transform: capitalize;
-    color: var(--second-color);
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     left: 0;
     display: flex;
     align-items: center;
     gap: 8px;
+    color: var(--second-color);
+    text-transform: capitalize;
+    transform: translateY(-50%);
+    pointer-events: none;
     transition: all 0.4s ease-out;
 }
 
@@ -61,20 +63,24 @@
 }
 
 .box-form .form-control {
-    border-bottom: 1px solid var(--second-color) !important;
     position: relative;
     min-height: 50px;
     max-height: 50px;
+    border-bottom: 1px solid var(--second-color) !important;
+    background: transparent;
+    padding-inline: 10px;
     transition: all 0.4s ease-out;
 }
 
-.box-form .form-control:where(:hover, :focus-visible) + .label { 
+.box-form .form-control:focus-visible + .label,
+.box-form .form-control:not(:placeholder-shown) + .label {
     top: -11px; 
     color: var(--blue-color);
     font-size: var(--fs-base) !important;
 }
 
-.box-form .form-control:where(:hover, :focus-visible) + .label svg {
+.box-form .form-control:focus-visible + .label svg,
+.box-form .form-control:not(:placeholder-shown) + .label svg {
     width: 16px !important;
     height: 16px !important;
 }

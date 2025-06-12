@@ -53,6 +53,11 @@ function activateTab(tabName) {
 
         sessionStorage.setItem("activeTab", "tab-two");
     }
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 }
 
 open_tab_one.forEach(open => {
