@@ -19,14 +19,39 @@ html[dir="rtl"] .box-select .arrow {
 }
 
 html[dir="rtl"] .box-file::before {
+    content: "رفع";
     right: 0;
     left: auto;
 }
 
-html[dir="rtl"] .box-file::before { content: "رفع"; }
-
 html[dir="rtl"] .box-file::after {
     content: "تحميل صورة الملف الشخصي";
+    right: auto;
+    left: 0;
+    width: calc(100% - 64.36px);
+}
+
+html[dir="rtl"]  .box-file2::before { 
+    content: "رفع"; 
+    right: 0;
+    left: auto;
+}
+
+html[dir="rtl"]  .box-file2::after {
+    content: "رفع صورة البطاقة الشخصية";
+    right: auto;
+    left: 0;
+    width: calc(100% - 64.36px);
+}
+
+html[dir="rtl"]  .box-file3::before { 
+    content: "رفع"; 
+    right: 0;
+    left: auto;
+}
+
+html[dir="rtl"]  .box-file3::after {
+    content: "السيرة الذاتية \ البورتفوليو";
     right: auto;
     left: 0;
     width: calc(100% - 64.36px);

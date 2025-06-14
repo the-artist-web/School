@@ -30,24 +30,64 @@ tabContents.forEach((content) => {
 /**
  * CARD SLIDER
  */
-const slider = document.getElementById("slider");
-const nextBtn = document.querySelector("[data-next]");
-const prevBtn = document.querySelector("[data-prev]");
+document.addEventListener("DOMContentLoaded", function() {
+    const slider = document.getElementById("slider");
+    const nextBtn = document.querySelector("[data-next]");
+    const prevBtn = document.querySelector("[data-prev]");
 
-function getCardWidth() {
-    const card = slider.querySelector(".card");
-    const style = window.getComputedStyle(card);
-    const marginRight = parseFloat(style.marginRight || 0);
-    const marginLeft = parseFloat(style.marginLeft || 0);
-    return card.offsetWidth + marginLeft + marginRight;
-}
+    const cards = slider.querySelectorAll(".card-course");
+    let currentIndex = 0;
 
-nextBtn.addEventListener("click", () => {
-    slider.scrollLeft += getCardWidth();
-});
+    const dir = localStorage.getItem("dir") || "ltr";
+    const isRTL = dir.toLowerCase() === "rtl";
 
-prevBtn.addEventListener("click", () => {
-    slider.scrollLeft -= getCardWidth();
+    function moveSlider() {
+        const cardWidth = cards[0].offsetWidth;
+        const offset = cardWidth * currentIndex;
+
+        if (isRTL) {
+            slider.style.transform = `translateX(${offset}px)`;
+        } else {
+            slider.style.transform = `translateX(-${offset}px)`;
+        }
+    }
+
+    function goNext() {
+        currentIndex++;
+        if (currentIndex >= cards.length) {
+            currentIndex = 0;
+        }
+        moveSlider();
+    }
+
+    function goPrev() {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = cards.length - 1;
+        }
+        moveSlider();
+    }
+
+    nextBtn.addEventListener("click", () => {
+        goNext();
+        resetAutoSlide();
+    });
+
+    prevBtn.addEventListener("click", () => {
+        goPrev();
+        resetAutoSlide();
+    });
+
+    window.addEventListener("resize", moveSlider);
+
+    moveSlider();
+
+    let autoSlide = setInterval(goNext, 3000);
+
+    function resetAutoSlide() {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(goNext, 3000);
+    }
 });
 
 /**
