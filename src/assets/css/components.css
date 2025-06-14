@@ -58,7 +58,7 @@
 }
 
 .box-form .label svg { 
-    color: var(--blue-color); 
+    color: var(--blue-color) !important; 
     transition: all 0.4s ease-out;
 }
 
@@ -66,7 +66,7 @@
     position: relative;
     min-height: 50px;
     max-height: 50px;
-    border-bottom: 1px solid var(--second-color);
+    border-bottom: 1px solid var(--second-color) !important;
     background: transparent;
     padding-inline: 10px;
     transition: all 0.4s ease-out;
@@ -76,17 +76,17 @@
 .box-form .form-control:not(:placeholder-shown) + .label {
     top: -11px; 
     color: var(--blue-color);
-    font-size: var(--fs-base);
+    font-size: var(--fs-base) !important;
 }
 
 .box-form .form-control:focus-visible + .label svg,
 .box-form .form-control:not(:placeholder-shown) + .label svg {
-    width: 16px;
-    height: 16px;
+    width: 16px !important;
+    height: 16px !important;
 }
 
 .box-select { 
-    background-color: var(--bg-color);
+    background-color: var(--bg-color) !important;
     border: 1px solid var(--border-color);
     border-radius: 4px;
     position: relative; 
@@ -94,7 +94,7 @@
 
 .box-select .select-control {
     background-color: var(--bg-color);
-    color: var(--second-color);
+    color: var(--second-color) !important;
     border-radius: 4px;
     min-height: 44px;
     max-height: 44px;
@@ -102,13 +102,13 @@
     transition: all 0.4s ease-out;
 }
 
-.box-select .select-control:hover { color: var(--text-color); }
+.box-select .select-control:hover { color: var(--text-color) !important; }
 
 .box-select .arrow {
     background-color: var(--bg-color);
     position: absolute;
     border-radius: 0 4px 4px 0;
-    color: var(--second-color);
+    color: var(--second-color) !important;
     top: 0;
     right: 0;
     bottom: 0;
@@ -134,31 +134,9 @@
     opacity: 0.5;
 }
 
-.box-select:hover .arrow { color: var(--text-color); }
+.box-select:hover .arrow { color: var(--text-color) !important; }
 
 .box-file {
-    border: 1px solid transparent;
-    background-color: var(--second-bg-color);
-    border-radius: 12px;
-    overflow: hidden;
-    min-height: 46px;
-    max-height: 46px;
-    position: relative;
-    transition: all 0.4s ease-out;
-}
-
-.box-file2 {
-    border: 1px solid transparent;
-    background-color: var(--second-bg-color);
-    border-radius: 12px;
-    overflow: hidden;
-    min-height: 46px;
-    max-height: 46px;
-    position: relative;
-    transition: all 0.4s ease-out;
-}
-
-.box-file3 {
     border: 1px solid transparent;
     background-color: var(--second-bg-color);
     border-radius: 12px;
@@ -174,16 +152,6 @@
     opacity: 0.8;
 }
 
-.box-file2:hover {
-    border: 1px solid var(--border-color);
-    opacity: 0.8;
-}
-
-.box-file3:hover {
-    border: 1px solid var(--border-color);
-    opacity: 0.8;
-}
-
 .box-file::before {
     content: "Upload";
     position: absolute;
@@ -191,8 +159,8 @@
     left: 0;
     bottom: 0;
     background-color: var(--blue-color);
-    font-size: var(--fs-label-medium);
-    font-weight: var(--fw-label-medium);
+    font-size: var(--fs-label-medium) !important;
+    font-weight: var(--fw-label-medium) !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -208,76 +176,8 @@
     bottom: 0;
     background-color: var(--second-bg-color);
     color: var(--second-color);
-    font-size: var(--fs-label-medium);
-    font-weight: var(--fw-label-medium);
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    width: calc(100% - 97.4px);
-    padding-inline: 16px;
-    pointer-events: none;
-}
-
-.box-file2::before {
-    content: "Upload";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    background-color: var(--blue-color);
-    font-size: var(--fs-label-medium);
-    font-weight: var(--fw-label-medium);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    pointer-events: none;
-}
-
-.box-file2::after {
-    content: "Upload a photo of your ID card";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--second-bg-color);
-    color: var(--second-color);
-    font-size: var(--fs-label-medium);
-    font-weight: var(--fw-label-medium);
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    width: calc(100% - 97.4px);
-    padding-inline: 16px;
-    pointer-events: none;
-}
-
-.box-file3::before {
-    content: "Upload";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    background-color: var(--blue-color);
-    font-size: var(--fs-label-medium);
-    font-weight: var(--fw-label-medium);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    pointer-events: none;
-}
-
-.box-file3::after {
-    content: "Upload a CV/Portfolio";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--second-bg-color);
-    color: var(--second-color);
-    font-size: var(--fs-label-medium);
-    font-weight: var(--fw-label-medium);
+    font-size: var(--fs-label-medium) !important;
+    font-weight: var(--fw-label-medium) !important;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -287,16 +187,6 @@
 }
 
 .box-file input {
-    min-height: 46px;
-    max-height: 46px;
-}
-
-.box-file2 input {
-    min-height: 46px;
-    max-height: 46px;
-}
-
-.box-file3 input {
     min-height: 46px;
     max-height: 46px;
 }
@@ -438,7 +328,7 @@
 .btn-border-yellow:hover { border: 1px solid var(--yellow-color); }
 
 .btn-primary {
-    color: #ffffff;
+    color: #ffffff !important;
     border: 1px solid transparent;
     background-color: var(--blue-color);
 }
@@ -446,11 +336,11 @@
 .btn-primary:hover {
     border: 1px solid var(--blue-color);
     background-color: transparent;
-    color: var(--blue-color);
+    color: var(--blue-color) !important;
 }
 
 .btn-second-primary {
-    color: #ffffff;
+    color: #ffffff !important;
     border: 1px solid transparent;
     background-color: var(--blue-dark-color);
 }
@@ -458,19 +348,19 @@
 .btn-second-primary:hover {
     border: 1px solid var(--blue-dark-color);
     background-color: transparent;
-    color: var(--blue-dark-color);
+    color: var(--blue-dark-color) !important;
 }
 
 .btn-red {
     border: 1px solid transparent;
-    color: #ffffff;
+    color: #ffffff !important;
     background-color: var(--red-color);
 }
 
 .btn-red:hover {
     border: 1px solid var(--red-color);
     background-color: transparent;
-    color: var(--red-color);
+    color: var(--red-color) !important;
 }
 
 .btn-green {
@@ -479,13 +369,13 @@
 }
 
 .btn-green:hover { 
-    color: #fff;
+    color: #fff !important;
     background-color: var(--green-color); 
 }
 
 .btn-green-mix { 
     background: linear-gradient(to right, var(--green-color), var(--blue-color)); 
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .btn-green-mix:hover { opacity: 0.7; }
@@ -493,7 +383,7 @@
 .btn-yellow {
     border-radius: 16px;
     background-color: var(--yellow-color);
-    color: #000000;
+    color: #000000 !important;
     width: max-content;
 }
 
@@ -501,20 +391,20 @@
 
 .third-btn-yellow {
     border: 1px solid transparent;
-    color: #000000;
+    color: #000000 !important;
     background-color: var(--third-yellow-color);
 }
 
 .third-btn-yellow:hover {
     border: 1px solid var(--third-yellow-color);
     background-color: transparent;
-    color: var(--third-yellow-color);
+    color: var(--third-yellow-color) !important;
 }
 
 .btn-secondary {
     border: 2px solid transparent;
     background-color: var(--four-bg-color);
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .btn-secondary:hover {
@@ -524,7 +414,7 @@
 
 .btn-red-mix {
     background: linear-gradient(to right, var(--red-color), var(--purple-color)); 
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .btn-red-mix:hover { opacity: 0.7; }
@@ -543,14 +433,14 @@
 
 .btn-yellow-border {
     border: 1px solid transparent;
-    color: #ffffff;
+    color: #ffffff !important;
     background-color: var(--third-yellow-color);
 }
 
 .btn-yellow-border:hover {
     border: 1px solid var(--third-yellow-color);
     background-color: transparent;
-    color: var(--third-yellow-color);
+    color: var(--third-yellow-color) !important;
 }
 
 .btn-tag {
@@ -599,7 +489,7 @@
 .dropdown .dropdown-menu {
     background-color: var(--second-bg-color);
     border-radius: 8px;
-    padding: 20px 16px;
+    padding: 20px 16px !important;
     width: 200px;
     display: none;
     gap: 16px;
@@ -686,12 +576,12 @@
 
 .card-materials .card-body .btn-card {
     background-color: transparent;
-    color: #ffffff;
+    color: #ffffff !important;
     text-align: center;
     border-radius: 16px;
     text-wrap: wrap;
     height: max-content;
-    padding: 16px 20px;
+    padding: 16px 20px !important;
 }
 
 .card-materials .card-body .btn-card:hover { background-color: #102542; }

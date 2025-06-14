@@ -166,14 +166,14 @@
 ol,
 ul,
 menu {
-    padding: 0;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 li {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 a,
@@ -186,8 +186,8 @@ button,
 textarea { display: block; }
 
 a {
-    font-family: var(--font-family);
-    color: var(--text-color);
+    font-family: var(--font-family) !important;
+    color: var(--text-color) !important;
     text-decoration: none;
 }
 
@@ -197,7 +197,7 @@ input,
 select,
 button,
 textarea {
-    font-family: var(--font-family);
+    font-family: var(--font-family) !important;
     background: none;
     border: none;
 }
@@ -205,18 +205,18 @@ textarea {
 input,
 select,
 textarea {
-    box-shadow: 0 0 0 transparent;
+    box-shadow: 0 0 0 transparent !important;
     outline: none;
     width: 100%;
 }
 
-textarea { resize: none; }
+textarea { resize: none !important; }
 
-input::placeholder { color: var(--second-color); }
+input::placeholder { color: var(--second-color) !important; }
 
-select::placeholder { color: var(--second-color); }
+select::placeholder { color: var(--second-color) !important; }
 
-textarea::placeholder { color: var(--second-color); }
+textarea::placeholder { color: var(--second-color) !important; }
 
 button { cursor: pointer; }
 
@@ -227,10 +227,10 @@ div { width: auto; }
 html { scroll-behavior: smooth; }
 
 body {
-    font-family: var(--font-family);
+    font-family: var(--font-family) !important;
     background-color: var(--bg-color);
-    color: var(--text-color);
     font-size: var(--fs-base);
+    color: var(--text-color);
     font-weight: normal;
     display: flex;
     flex-direction: column;
@@ -242,14 +242,14 @@ h3,
 h4,
 h5,
 h6 { 
-    padding: 0;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
     font-weight: bolder;
 }
 
 p {
-    padding: 0;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 th,
@@ -262,9 +262,9 @@ td { text-wrap: nowrap; }
 .section { padding-block: 120px; }
 
 .container {
-    padding-inline: 16px;
+    padding-inline: 16px !important;
     margin-inline: auto;
-    max-width: 1300px;
+    max-width: 1300px !important;
     width: 100%;
 }
 
@@ -275,7 +275,7 @@ td { text-wrap: nowrap; }
 }
 
 .img-holder {
-    background-color: var(--second-bg-color);
+    background-color: var(--second-bg-color) !important;
     overflow: hidden;
 }
 
