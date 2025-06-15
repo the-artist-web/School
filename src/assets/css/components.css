@@ -191,6 +191,116 @@
     max-height: 46px;
 }
 
+.box-file2 {
+    border: 1px solid transparent;
+    background-color: var(--second-bg-color);
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 46px;
+    max-height: 46px;
+    position: relative;
+    transition: all 0.4s ease-out;
+}
+
+.box-file2:hover {
+    border: 1px solid var(--border-color);
+    opacity: 0.8;
+}
+
+.box-file2::before {
+    content: "Upload";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--blue-color);
+    font-size: var(--fs-label-medium) !important;
+    font-weight: var(--fw-label-medium) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    pointer-events: none;
+}
+
+.box-file2::after {
+    content: "Upload a photo of your ID card";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--second-bg-color);
+    color: var(--second-color);
+    font-size: var(--fs-label-medium) !important;
+    font-weight: var(--fw-label-medium) !important;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: calc(100% - 97.4px);
+    padding-inline: 16px;
+    pointer-events: none;
+}
+
+.box-file2 input {
+    min-height: 46px;
+    max-height: 46px;
+}
+
+.box-file3 {
+    border: 1px solid transparent;
+    background-color: var(--second-bg-color);
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 46px;
+    max-height: 46px;
+    position: relative;
+    transition: all 0.4s ease-out;
+}
+
+.box-file3:hover {
+    border: 1px solid var(--border-color);
+    opacity: 0.8;
+}
+
+.box-file3::before {
+    content: "Upload";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--blue-color);
+    font-size: var(--fs-label-medium) !important;
+    font-weight: var(--fw-label-medium) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    pointer-events: none;
+}
+
+.box-file3::after {
+    content: "CV/Portfolio";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--second-bg-color);
+    color: var(--second-color);
+    font-size: var(--fs-label-medium) !important;
+    font-weight: var(--fw-label-medium) !important;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: calc(100% - 97.4px);
+    padding-inline: 16px;
+    pointer-events: none;
+}
+
+.box-file3 input {
+    min-height: 46px;
+    max-height: 46px;
+}
+
 /**
  * LOGO
  */
